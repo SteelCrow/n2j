@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Sep  4 13:31:36 2020 as: nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-09-04_123258_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.209 10.11.1.209 -->
+<nmaprun scanner="nmap" args="nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-09-04_123258_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.209 10.11.1.209" start="1599240696" startstr="Fri Sep  4 13:31:36 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-dhcp-discover" output="&#xa;  Response 1 of 1: &#xa;    IP Offered: 192.168.0.21&#xa;    Server Identifier: 192.168.0.1&#xa;    Subnet Mask: 255.255.255.0&#xa;    Router: 192.168.0.1&#xa;    Domain Name Server: 75.75.75.75, 75.75.76.76"><table key="Response 1 of 1">
+<elem key="IP Offered">192.168.0.21</elem>
+<elem key="Server Identifier">192.168.0.1</elem>
+<elem key="Subnet Mask">255.255.255.0</elem>
+<elem key="Router">192.168.0.1</elem>
+<table key="Domain Name Server">
+<elem>75.75.75.75</elem>
+<elem>75.75.76.76</elem>
+</table>
+</table>
+</script><script id="broadcast-igmp-discovery" output="&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.2&#xa;    Description: All Routers on this Subnet&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.22&#xa;    Description: IGMP&#xa;  192.168.0.27&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.251&#xa;    Description: mDNS (rfc6762)&#xa;  192.168.0.27&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  192.168.0.254&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  Use the newtargets script-arg to add the results as targets&#xa;"/><script id="broadcast-listener" output="&#xa;  udp&#xa;      DHCP&#xa;        srv ip       cli ip        mask           gw           dns                       vendor&#xa;        192.168.0.1  192.168.0.21  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.21  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.23  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.23  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;"/><script id="broadcast-netbios-master-browser" output="&#xa;ip  server  domain&#xa;"/><script id="broadcast-upnp-info" output="&#xa;  239.255.255.250&#xa;      Server: Unspecified, UPnP/1.0, Unspecified&#xa;      Location: http://192.168.0.254:49152/wps_device.xml&#xa;"/><script id="eap-info" output="please specify an interface with -e"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><host starttime="1599240737" endtime="1599242720"><status state="up" reason="echo-reply" reason_ttl="254"/>
+<address addr="10.11.1.209" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65529">
+<extrareasons reason="resets" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.5" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.5</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_7.5"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    gssapi-keyex&#xa;    gssapi-with-mic&#xa;    password&#xa;    keyboard-interactive"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>gssapi-keyex</elem>
+<elem>gssapi-with-mic</elem>
+<elem>password</elem>
+<elem>keyboard-interactive</elem>
+</table>
+</script><script id="ssh-hostkey" output="&#xa;  2048 a1:33:be:71:1a:0a:48:ef:82:90:e1:9c:f4:3e:ae:0c (RSA)&#xa;  256 91:d4:3c:25:ce:97:72:4b:55:3c:fe:d4:3b:23:c4:8e (ED25519)"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">a133be711a0a48ef8290e19cf43eae0c</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC3iVv8zy95mtabwcoBXSgJC/TgCHwDbcy0SxaLdRpec/OHY6vM5U33XBmzrpmHcHXh0jdN2ys7NN7VTMi+YyYzQvE/Neb5zSuw0gWUhoEd4TBKktVix2rzdWTai/8TDU1uAoGP7EALZZgOocLxhYqias0aAUIzcdoySyyxD8lQGcUqSY4bCulfbX27IM4TNB9FzN5CVSTG90AlUZcoJFbxABf323+6gv0DpCwAdQngkMQkg6QdzKRUI66ZydHysfTYQpq9vPSvs8oqmAQ+56PMb8W75iQ9KBpyIsoFFfFfAsBfTu4xsHISgl0qIFPKC7K0SWlvAsc0w4op7g+5msxL</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">91d43c25ce97724b553cfed43b23c48e</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIO9EoeLiybci3rUa3gYC8P9+1C6CvCEhfKu67jYK4a+7</elem>
+</table>
+</script><script id="ssh-publickey-acceptance" output="&#xa;  Accepted Public Keys: No public keys accepted"><elem key="Accepted Public Keys">No public keys accepted</elem>
+</script><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (10)&#xa;  server_host_key_algorithms: (4)&#xa;  encryption_algorithms: (6)&#xa;  mac_algorithms: (10)&#xa;  compression_algorithms: (2)"><table key="kex_algorithms">
+<elem>curve25519-sha256</elem>
+<elem>curve25519-sha256@libssh.org</elem>
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group16-sha512</elem>
+<elem>diffie-hellman-group18-sha512</elem>
+<elem>diffie-hellman-group14-sha256</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>ssh-rsa</elem>
+<elem>rsa-sha2-512</elem>
+<elem>rsa-sha2-256</elem>
+<elem>ssh-ed25519</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>chacha20-poly1305@openssh.com</elem>
+<elem>aes128-ctr</elem>
+<elem>aes192-ctr</elem>
+<elem>aes256-ctr</elem>
+<elem>aes128-gcm@openssh.com</elem>
+<elem>aes256-gcm@openssh.com</elem>
+</table>
+<table key="mac_algorithms">
+<elem>umac-64-etm@openssh.com</elem>
+<elem>umac-128-etm@openssh.com</elem>
+<elem>hmac-sha2-256-etm@openssh.com</elem>
+<elem>hmac-sha2-512-etm@openssh.com</elem>
+<elem>hmac-sha1-etm@openssh.com</elem>
+<elem>umac-64@openssh.com</elem>
+<elem>umac-128@openssh.com</elem>
+<elem>hmac-sha2-256</elem>
+<elem>hmac-sha2-512</elem>
+<elem>hmac-sha1</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script><script id="vulners" output="&#xa;  cpe:/a:openbsd:openssh:7.5: &#xa;    &#x9;CVE-2020-15778&#x9;6.8&#x9;https://vulners.com/cve/CVE-2020-15778&#xa;    &#x9;CVE-2020-15778&#x9;6.8&#x9;https://vulners.com/cve/CVE-2020-15778&#xa;    &#x9;CVE-2018-15919&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-15919&#xa;    &#x9;CVE-2018-15919&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-15919&#xa;    &#x9;CVE-2017-15906&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-15906&#xa;    &#x9;CVE-2017-15906&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-15906&#xa;    &#x9;CVE-2020-14145&#x9;4.3&#x9;https://vulners.com/cve/CVE-2020-14145&#xa;    &#x9;CVE-2020-14145&#x9;4.3&#x9;https://vulners.com/cve/CVE-2020-14145&#xa;    &#x9;CVE-2014-9278&#x9;4.0&#x9;https://vulners.com/cve/CVE-2014-9278"><table key="cpe:/a:openbsd:openssh:7.5">
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-15778</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-15778</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-15919</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-15919</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2017-15906</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2017-15906</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-14145</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-14145</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2014-9278</elem>
+<elem key="is_exploit">false</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="515"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="printer" servicefp="SF-Port515-TCP:V=7.80%I=7%D=9/4%Time=5F5280AC%P=x86_64-pc-linux-gnu%r(GetRequest,1,&quot;\x01&quot;);" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="6787"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="http" product="Apache httpd" version="2.4.33" extrainfo="(Unix) OpenSSL/1.0.2o mod_wsgi/4.5.1 Python/2.7.14" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.33</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.209&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/webui.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;         * Copyright (c) 2015, 2016, Oracle and/or its affiliates. All rights reserved.&#xa;         */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/webui.css&#xa;    Line number: 40&#xa;    Comment: &#xa;        /* global page box specs */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/override.css&#xa;    Line number: 29&#xa;    Comment: &#xa;        /* Override overly large header font sizes introduced in JET 2.3.0 */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/&#xa;    Line number: 1&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;            Copyright (c) 2015, 2018, Oracle and/or its affiliates. All rights reserved.&#xa;        -&#45;&gt;&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/&#xa;    Line number: 16&#xa;    Comment: &#xa;        &lt;!-&#45; This is where you would add any app specific styling -&#45;&gt;&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/override.css&#xa;    Line number: 38&#xa;    Comment: &#xa;        /* Override black/gray text color for (unselected) Nav tab options */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/override.css&#xa;    Line number: 20&#xa;    Comment: &#xa;        /* Hide IE&apos;s non-standard text field clear button - we do our own */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/override.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;         * Copyright (c) 2015, 2017, Oracle and/or its affiliates. All rights reserved.&#xa;         */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/&#xa;    Line number: 45&#xa;    Comment: &#xa;        /* determines size */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/css/webui.css&#xa;    Line number: 14&#xa;    Comment: &#xa;        /* CONTAINERS */&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/&#xa;    Line number: 65&#xa;    Comment: &#xa;        &lt;!-&#45; Provide a temporary loading message, removed later on load -&#45;&gt;&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/&#xa;    Line number: 13&#xa;    Comment: &#xa;        &lt;!-&#45; This is the main css file for the default Alta theme -&#45;&gt;&#xa;    &#xa;    Path: https://10.11.1.209:6787/solaris/&#xa;    Line number: 20&#xa;    Comment: &#xa;        &lt;!-&#45; RequireJS bootstrap file -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Fri, 04 Sep 2020 18:02:58 GMT; -7s from local time."><elem key="date">2020-09-04T18:02:58+00:00</elem>
+<elem key="delta">-7.0</elem>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /solaris/: Potentially interesting folder&#xa;"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Fri, 04 Sep 2020 18:02:55 GMT&#xa;  Server: Apache/2.4.33 (Unix) OpenSSL/1.0.2o mod_wsgi/4.5.1 Python/2.7.14&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  Last-Modified: Fri, 17 Aug 2018 02:07:09 GMT&#xa;  ETag: &quot;f46-57398045d4d40&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 3910&#xa;  Cache-Control: max-age=7200&#xa;  Expires: Fri, 04 Sep 2020 20:02:55 GMT&#xa;  Vary: Accept-Encoding&#xa;  Strict-Transport-Security: max-age=15768000&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    Header: Strict-Transport-Security: max-age=15768000&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: SAMEORIGIN&#xa;    Description: The browser must not display this content in any frame from a page of different origin than the content itself.&#xa;  Cache_Control: &#xa;    Header: Cache-Control: max-age=7200&#xa;  Expires: &#xa;    Header: Expires: Fri, 04 Sep 2020 20:02:58 GMT"><table key="Strict_Transport_Security">
+<elem>Header: Strict-Transport-Security: max-age=15768000</elem>
+</table>
+<table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: SAMEORIGIN</elem>
+<elem>Description: The browser must not display this content in any frame from a page of different origin than the content itself.</elem>
+</table>
+<table key="Cache_Control">
+<elem>Header: Cache-Control: max-age=7200</elem>
+</table>
+<table key="Expires">
+<elem>Header: Expires: Fri, 04 Sep 2020 20:02:58 GMT</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.33 (Unix) OpenSSL/1.0.2o mod_wsgi/4.5.1 Python/2.7.14"><elem>Apache/2.4.33 (Unix) OpenSSL/1.0.2o mod_wsgi/4.5.1 Python/2.7.14</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Solaris Dashboard&#xa;Requested resource was https://10.11.1.209:6787/solaris/"><elem key="title">Solaris Dashboard</elem>
+<elem key="redirect_url">https://10.11.1.209:6787/solaris/</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: https://10.11.1.209:6787/solaris/&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34&#xa;  Change in Status Code: &#xa;    Snoopy: false"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">https://10.11.1.209:6787/solaris/</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+<table key="Change in Status Code">
+<elem key="Snoopy">false</elem>
+</table>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/><script id="ssl-cert" output="Subject: commonName=kraken&#xa;Subject Alternative Name: DNS:kraken&#xa;Not valid before: 2019-11-07T18:40:00&#xa;Not valid after:  2029-11-04T18:40:00"><table key="subject">
+<elem key="commonName">kraken</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">kraken</elem>
+<elem key="organizationName">Host Root CA</elem>
+</table>
+<table key="pubkey">
+<elem key="exponent">userdata: 0x5602cad28468</elem>
+<elem key="modulus">userdata: 0x5602cad284a8</elem>
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:kraken</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notAfter">2029-11-04T18:40:00</elem>
+<elem key="notBefore">2019-11-07T18:40:00</elem>
+</table>
+<elem key="md5">586a76f9fc1c033ae44854f5f91bbc92</elem>
+<elem key="sha1">f525e040b986459a18d59635ba87faffbdfd64d5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC4DCCAcqgAwIBAgIHAJVWu2QdAzALBgkqhkiG9w0BAQswKDEVMBMGA1UEChMM&#xa;SG9zdCBSb290IENBMQ8wDQYDVQQDEwZrcmFrZW4wHhcNMTkxMTA3MTg0MDAwWhcN&#xa;MjkxMTA0MTg0MDAwWjARMQ8wDQYDVQQDEwZrcmFrZW4wggEiMA0GCSqGSIb3DQEB&#xa;AQUAA4IBDwAwggEKAoIBAQDNPk0aRfeP8DHe1zDenaLCoJODSpXra8GVRNvBiDn2&#xa;6fSCl/l5MJMdUmJQHrYFubPA3svfWNfeyqmpNFsTvVkTzUbr8UyRNELqQWycezR7&#xa;34S4oXU718fBgrAF/47kwdAfvrnREXH9Bz3YU8gmjN83b9ofDUVBeacMolct8QWZ&#xa;vyMCC6I6C2NP4ExTxCzGQVz35tJIDvTKXzdrRDZIxl75yPPTMGa6QCzzQhm73VE8&#xa;xbjpiEa4F7yeZsq5CtzJEg1w7rgiLJxdcAGczuc9V619cM5Xpc2vOvRfuNRS7onx&#xa;pKFz7nNHmly9oyzvPTP/5qOMeVOYoMpRgBxQuC9ranETAgMBAAGjKjAoMBEGA1Ud&#xa;EQQKMAiCBmtyYWtlbjATBgNVHSUEDDAKBggrBgEFBQcDATALBgkqhkiG9w0BAQsD&#xa;ggEBADhmuBQimh8KVSFwJpAlgjiyM1lCcVoHEagJEUTTWoqowNxe9AopugHspmcz&#xa;AkHl95I7pPg7/jUnRhun8rpC7ukDRQTBiPy8Ic+EtRU5ydrJK3Vs/ake65ycc1j2&#xa;Nblb/Yx750ULNf2mBtm6RZ2PTXnGTckEdWf1p/kSYsTjk2ZmiBbkxCJmLr1L4ub3&#xa;hfl+JzucccYCKCxssac3BqihHcwSQO8ANmjnYw1/Ksn0QVD2vSD/nn7oDs2z3shj&#xa;q8eFPvpIMppchTpPTePT/QD3mXWHj6hISlsHUfnYAwiJhfW7G4DliYo5xHZ5+Fha&#xa;iDtHfdbPsWYc6uWuZqrYrcXzHd8=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="sslv2-drown" output="&#xa;"></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="unusual-port" output="http unexpected on port tcp/6787"/><script id="vulners" output="&#xa;  cpe:/a:apache:http_server:2.4.33: &#xa;    &#x9;CVE-2020-11984&#x9;7.5&#x9;https://vulners.com/cve/CVE-2020-11984&#xa;    &#x9;CVE-2020-11984&#x9;7.5&#x9;https://vulners.com/cve/CVE-2020-11984&#xa;    &#x9;CVE-2019-0211&#x9;7.2&#x9;https://vulners.com/cve/CVE-2019-0211&#xa;    &#x9;CVE-2019-10082&#x9;6.4&#x9;https://vulners.com/cve/CVE-2019-10082&#xa;    &#x9;CVE-2019-10082&#x9;6.4&#x9;https://vulners.com/cve/CVE-2019-10082&#xa;    &#x9;CVE-2019-10097&#x9;6.0&#x9;https://vulners.com/cve/CVE-2019-10097&#xa;    &#x9;CVE-2019-0217&#x9;6.0&#x9;https://vulners.com/cve/CVE-2019-0217&#xa;    &#x9;CVE-2020-1927&#x9;5.8&#x9;https://vulners.com/cve/CVE-2020-1927&#xa;    &#x9;CVE-2020-1927&#x9;5.8&#x9;https://vulners.com/cve/CVE-2020-1927&#xa;    &#x9;CVE-2019-10098&#x9;5.8&#x9;https://vulners.com/cve/CVE-2019-10098&#xa;    &#x9;CVE-2019-10098&#x9;5.8&#x9;https://vulners.com/cve/CVE-2019-10098&#xa;    &#x9;CVE-2020-9490&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-9490&#xa;    &#x9;CVE-2020-9490&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-9490&#xa;    &#x9;CVE-2020-1934&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-1934&#xa;    &#x9;CVE-2020-1934&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-1934&#xa;    &#x9;CVE-2019-10081&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-10081&#xa;    &#x9;CVE-2019-10081&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-10081&#xa;    &#x9;CVE-2019-0220&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-0220&#xa;    &#x9;CVE-2019-0220&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-0220&#xa;    &#x9;CVE-2019-0196&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-0196&#xa;    &#x9;CVE-2019-0196&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-0196&#xa;    &#x9;CVE-2018-8011&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-8011&#xa;    &#x9;CVE-2018-17199&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-17199&#xa;    &#x9;CVE-2018-17199&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-17199&#xa;    &#x9;CVE-2018-1333&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-1333&#xa;    &#x9;CVE-2018-1333&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-1333&#xa;    &#x9;CVE-2019-0197&#x9;4.9&#x9;https://vulners.com/cve/CVE-2019-0197&#xa;    &#x9;CVE-2020-11993&#x9;4.3&#x9;https://vulners.com/cve/CVE-2020-11993&#xa;    &#x9;CVE-2019-10092&#x9;4.3&#x9;https://vulners.com/cve/CVE-2019-10092&#xa;    &#x9;CVE-2019-10092&#x9;4.3&#x9;https://vulners.com/cve/CVE-2019-10092&#xa;    &#x9;CVE-2018-11763&#x9;4.3&#x9;https://vulners.com/cve/CVE-2018-11763"><table key="cpe:/a:apache:http_server:2.4.33">
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-11984</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-11984</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.2</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0211</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.4</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10082</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.4</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10082</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10097</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">6.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0217</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1927</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1927</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10098</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10098</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-9490</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-9490</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1934</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1934</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10081</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10081</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0220</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0220</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0196</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0196</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-8011</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-17199</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-17199</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-1333</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-1333</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.9</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-0197</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-11993</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10092</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-10092</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2018-11763</elem>
+<elem key="is_exploit">false</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/><script id="ajp-headers" output="&#xa;  Content-Type: text/html;charset=UTF-8&#xa;"/><script id="ajp-methods" output="&#xa;  Supported methods: GET HEAD POST OPTIONS&#xa;"/><script id="ajp-request" output="&#xa;AJP/1.3 200 200&#xa;Content-Type: text/html;charset=UTF-8&#xa;&#xa;tps://tomcat.apache.org/taglibs/&quot;&gt;Taglibs&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;/docs/deployer-howto.html&quot;&gt;Deployer&lt;/a&gt;&lt;/li&gt;&#xa;                        &lt;/ul&gt;&#xa;                    &lt;/div&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;col20&quot;&gt;&#xa;                    &lt;div class=&quot;container&quot;&gt;&#xa;                        &lt;h4&gt;Other Documentation&lt;/h4&gt;&#xa;                        &lt;ul&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/connectors-doc/&quot;&gt;Tomcat Connectors&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/connectors-doc/&quot;&gt;mod_jk Documentation&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/native-doc/&quot;&gt;Tomcat Native&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;/docs/deployer-howto.html&quot;&gt;Deployer&lt;/a&gt;&lt;/li&gt;&#xa;                        &lt;/ul&gt;&#xa;                    &lt;/div&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;col20&quot;&gt;&#xa;                    &lt;div class=&quot;container&quot;&gt;&#xa;                        &lt;h4&gt;Get Involved&lt;/h4&gt;&#xa;                        &lt;ul&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/getinvolved.html&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/source.html&quot;&gt;Source Repositories&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/lists.html&quot;&gt;Mailing Lists&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://wiki.apache.org/tomcat/FrontPage&quot;&gt;Wiki&lt;/a&gt;&lt;/li&gt;&#xa;                        &lt;/ul&gt;&#xa;                    &lt;/div&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;col20&quot;&gt;&#xa;                    &lt;div class=&quot;container&quot;&gt;&#xa;                        &lt;h4&gt;Miscellaneous&lt;/h4&gt;&#xa;                        &lt;ul&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/legal.html&quot;&gt;Legal&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://www.apache.org/foundation/sponsorship.html&quot;&gt;Sponsorship&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://www.apache.org/foundation/thanks.html&quot;&gt;Thanks&lt;/a&gt;&lt;/li&gt;&#xa;                        &lt;/ul&gt;&#xa;                    &lt;/div&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;col20&quot;&gt;&#xa;                    &lt;div class=&quot;container&quot;&gt;&#xa;                        &lt;h4&gt;Apache Software Foundation&lt;/h4&gt;&#xa;                        &lt;ul&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/whoweare.html&quot;&gt;Who We Are&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/heritage.html&quot;&gt;Heritage&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://www.apache.org&quot;&gt;Apache Home&lt;/a&gt;&lt;/li&gt;&#xa;                            &lt;li&gt;&lt;a href=&quot;https://tomcat.apache.org/resources.html&quot;&gt;Resources&lt;/a&gt;&lt;/li&gt;&#xa;                        &lt;/ul&gt;&#xa;                    &lt;/div&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;br class=&quot;separator&quot; /&gt;&#xa;            &lt;/div&gt;&#xa;            &lt;p class=&quot;copyright&quot;&gt;Copyright &amp;copy;1999-2020 Apache Software Foundation.  All Rights Reserved&lt;/p&gt;&#xa;        &lt;/div&gt;&#xa;    &lt;/body&gt;&#xa;&#xa;&lt;/html&gt;&#xa;"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="http" product="Apache Tomcat" version="9.0.27" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat:9.0.27</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.209&#xa;  url                                   method&#xa;  http://10.11.1.209:8080/manager/html  HTTP: Basic&#xa;"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.209&#xa;    &#xa;    Path: http://10.11.1.209:8080/manager/html&#xa;    Line number: 6&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;            BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;font-size:12px;}&#xa;            H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}&#xa;            PRE, TT {border: 1px dotted #525D76}&#xa;            A {color : black;}A.name {color : black;}&#xa;            -&#45;&gt;&#xa;    &#xa;    Path: http://10.11.1.209:8080/docs/realm-howto.html&#xa;    Line number: 3&#xa;    Comment: &#xa;         // Enable strict mode&#xa;    &#xa;    Path: http://10.11.1.209:8080/docs/api/index.html&#xa;    Line number: 1&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;          Licensed to the Apache Software Foundation (ASF) under one or more&#xa;          contributor license agreements.  See the NOTICE file distributed with&#xa;          this work for additional information regarding copyright ownership.&#xa;          The ASF licenses this file to You under the Apache License, Version 2.0&#xa;          (the &quot;License&quot;); you may not use this file except in compliance with&#xa;          the License.  You may obtain a copy of the License at&#xa;        &#xa;              http://www.apache.org/licenses/LICENSE-2.0&#xa;        &#xa;          Unless required by applicable law or agreed to in writing, software&#xa;          distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xa;          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xa;          See the License for the specific language governing permissions and&#xa;          limitations under the License.&#xa;        -&#45;&gt;&#xa;    &#xa;    Path: http://10.11.1.209:8080/docs/realm-howto.html&#xa;    Line number: 7&#xa;    Comment: &#xa;         // Workaround for IE &lt;= 11&#xa;    &#xa;    Path: http://10.11.1.209:8080/tomcat.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;          Licensed to the Apache Software Foundation (ASF) under one or more&#xa;          contributor license agreements.  See the NOTICE file distributed with&#xa;          this work for additional information regarding copyright ownership.&#xa;          The ASF licenses this file to You under the Apache License, Version 2.0&#xa;          (the &quot;License&quot;); you may not use this file except in compliance with&#xa;          the License.  You may obtain a copy of the License at&#xa;        &#xa;              http://www.apache.org/licenses/LICENSE-2.0&#xa;        &#xa;          Unless required by applicable law or agreed to in writing, software&#xa;          distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xa;          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xa;          See the License for the specific language governing permissions and&#xa;          limitations under the License.&#xa;        */&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Fri, 04 Sep 2020 18:02:57 GMT; 0s from local time."><elem key="date">2020-09-04T18:02:57+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-default-accounts" output="&#xa;  [Apache Tomcat] at /manager/html/&#xa;    tomcat:s3cret&#xa;"><table key="Apache Tomcat">
+<elem key="cpe">cpe:/a:apache:tomcat</elem>
+<elem key="path">/manager/html/</elem>
+<table key="credentials">
+<table>
+<elem key="username">tomcat</elem>
+<elem key="password">s3cret</elem>
+</table>
+</table>
+</table>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /examples/: Sample scripts&#xa;  /manager/html/upload: Apache Tomcat (401 )&#xa;  /manager/html: Apache Tomcat (401 )&#xa;  /docs/: Potentially interesting folder&#xa;"/><script id="http-favicon" output="Apache Tomcat"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (2) http://10.11.1.209:8080/docs/realm-howto.html: &#xa;    (2) email: &#xa;      + j.jones@mycompany.com&#xa;      + f.bloggs@mycompany.com"><table key="(2) http://10.11.1.209:8080/docs/realm-howto.html">
+<table key="(2) email">
+<elem>+ j.jones@mycompany.com</elem>
+<elem>+ f.bloggs@mycompany.com</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html;charset=UTF-8&#xa;  Transfer-Encoding: chunked&#xa;  Date: Fri, 04 Sep 2020 18:02:52 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-slowloris-check" output="&#xa;  VULNERABLE:&#xa;  Slowloris DOS attack&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2007-6750&#xa;      Slowloris tries to keep many connections to the target web server open and hold&#xa;      them open as long as possible.  It accomplishes this by opening connections to&#xa;      the target web server and sending a partial request. By doing so, it starves&#xa;      the http server&apos;s resources causing Denial Of Service.&#xa;      &#xa;    Disclosure date: 2009-09-17&#xa;    References:&#xa;      http://ha.ckers.org/slowloris/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750&#xa;"><table key="CVE-2007-6750">
+<elem key="title">Slowloris DOS attack</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2007-6750</elem>
+</table>
+<table key="description">
+<elem>Slowloris tries to keep many connections to the target web server open and hold&#xa;them open as long as possible.  It accomplishes this by opening connections to&#xa;the target web server and sending a partial request. By doing so, it starves&#xa;the http server&apos;s resources causing Denial Of Service.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">17</elem>
+<elem key="year">2009</elem>
+<elem key="month">09</elem>
+</table>
+</table>
+<elem key="disclosure">2009-09-17</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>http://ha.ckers.org/slowloris/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750</elem>
+</table>
+</table>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Apache Tomcat/9.0.27"><elem key="title">Apache Tomcat/9.0.27</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/><script id="vulners" output="&#xa;  cpe:/a:apache:tomcat:9.0.27: &#xa;    &#x9;CVE-2020-1938&#x9;7.5&#x9;https://vulners.com/cve/CVE-2020-1938&#xa;    &#x9;CVE-2020-1938&#x9;7.5&#x9;https://vulners.com/cve/CVE-2020-1938&#xa;    &#x9;CVE-2020-8022&#x9;7.2&#x9;https://vulners.com/cve/CVE-2020-8022&#xa;    &#x9;CVE-2020-8022&#x9;7.2&#x9;https://vulners.com/cve/CVE-2020-8022&#xa;    &#x9;CVE-2020-1935&#x9;5.8&#x9;https://vulners.com/cve/CVE-2020-1935&#xa;    &#x9;CVE-2019-17563&#x9;5.1&#x9;https://vulners.com/cve/CVE-2019-17563&#xa;    &#x9;CVE-2019-17563&#x9;5.1&#x9;https://vulners.com/cve/CVE-2019-17563&#xa;    &#x9;CVE-2020-13935&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-13935&#xa;    &#x9;CVE-2020-13935&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-13935&#xa;    &#x9;CVE-2020-13934&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-13934&#xa;    &#x9;CVE-2020-13934&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-13934&#xa;    &#x9;CVE-2020-11996&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-11996&#xa;    &#x9;CVE-2020-11996&#x9;5.0&#x9;https://vulners.com/cve/CVE-2020-11996&#xa;    &#x9;CVE-2020-9484&#x9;4.4&#x9;https://vulners.com/cve/CVE-2020-9484&#xa;    &#x9;CVE-2020-9484&#x9;4.4&#x9;https://vulners.com/cve/CVE-2020-9484&#xa;    &#x9;CVE-2019-12418&#x9;4.4&#x9;https://vulners.com/cve/CVE-2019-12418&#xa;    &#x9;CVE-2019-12418&#x9;4.4&#x9;https://vulners.com/cve/CVE-2019-12418"><table key="cpe:/a:apache:tomcat:9.0.27">
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1938</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1938</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.2</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-8022</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">7.2</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-8022</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.8</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-1935</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.1</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-17563</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.1</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-17563</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-13935</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-13935</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-13934</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-13934</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-11996</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-11996</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.4</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-9484</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.4</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2020-9484</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.4</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-12418</elem>
+<elem key="is_exploit">false</elem>
+</table>
+<table>
+<elem key="cvss">4.4</elem>
+<elem key="type">cve</elem>
+<elem key="id">CVE-2019-12418</elem>
+<elem key="is_exploit">false</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="35749"/>
+<osmatch name="Oracle Solaris 11" accuracy="92" line="91774">
+<osclass type="general purpose" vendor="Oracle" osfamily="Solaris" osgen="11" accuracy="92"><cpe>cpe:/o:oracle:solaris:11</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 10" accuracy="89" line="99793">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="10" accuracy="89"><cpe>cpe:/o:sun:sunos:5.10</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 9 or Oracle Solaris 10" accuracy="88" line="100768">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="9" accuracy="88"><cpe>cpe:/o:sun:sunos:5.9</cpe></osclass>
+<osclass type="general purpose" vendor="Oracle" osfamily="Solaris" osgen="10" accuracy="88"><cpe>cpe:/o:oracle:solaris:10</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 11" accuracy="86" line="100030">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="11" accuracy="86"><cpe>cpe:/o:sun:sunos:5.11</cpe></osclass>
+</osmatch>
+<osmatch name="HP-UX B.11.31" accuracy="85" line="35966">
+<osclass type="general purpose" vendor="HP" osfamily="HP-UX" osgen="11.X" accuracy="85"><cpe>cpe:/o:hp:hp-ux:11.31</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/4%OT=22%CT=1%CU=35749%PV=Y%DS=2%DC=T%G=Y%TM=5F5281E0&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10C%TI=I%II=I%SS=S%TS=7)OPS(&#xa;OS:O1=ST11M54DNW2%O2=ST11M54DNW2%O3=NNT11M54DNW2%O4=ST11M54DNW2%O5=ST11M54D&#xa;OS:NW2%O6=ST11M54D)WIN(W1=FADF%W2=FADF%W3=FA38%W4=FA3B%W5=FA3B%W6=FFF7)ECN(&#xa;OS:R=Y%DF=Y%T=40%W=FA76%O=M54DNNSNW2%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS&#xa;OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0&#xa;OS:%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=FF%IPL=70%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK&#xa;OS:=G%RUD=G)IE(R=Y%DFI=Y%T=FF%CD=S)&#xa;"/>
+</os>
+<uptime seconds="6249" lastboot="Fri Sep  4 12:21:11 2020"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="D1CC73E3,240234AA,13B4F44B,B470FDEE,38251170,B1791E2"/>
+<ipidsequence class="Incremental" values="242F,2430,2431,2432,2433,2434"/>
+<tcptssequence class="100HZ" values="94E0C,94E16,94E20,94E2A,94E34,94E3E"/>
+<hostscript><script id="clock-skew" output="mean: -3s, deviation: 4s, median: -7s"><elem key="count">2</elem>
+<elem key="mean">-3</elem>
+<elem key="stddev">4</elem>
+<elem key="median">-7</elem>
+</script><script id="fcrdns" output="FAIL (No PTR record)"><table key="&lt;none&gt;">
+<elem key="status">fail</elem>
+<elem key="reason">No PTR record</elem>
+</table>
+</script><script id="ipidseq" output="Unknown"/><script id="path-mtu" output="PMTU == 1500"/><script id="qscan" output="&#xa;PORT  FAMILY  MEAN (us)  STDDEV   LOSS (%)&#xa;1     0       19624.90   2566.93  0.0%&#xa;22    0       22917.40   6562.78  0.0%&#xa;111   0       22397.50   7054.75  0.0%&#xa;515   0       19746.30   4578.09  0.0%&#xa;6787  0       21024.33   3802.50  10.0%&#xa;8009  0       22748.00   8946.06  0.0%&#xa;8080  0       19428.30   1798.52  0.0%&#xa;"/><script id="traceroute-geolocation" output="&#xa;  HOP  RTT    ADDRESS        GEOLOCATION&#xa;  1    23.95  192.168.119.1  - ,- &#xa;  2    24.66  10.11.1.209    - ,- &#xa;"><table>
+<elem key="hop">1</elem>
+<elem key="ip">192.168.119.1</elem>
+<elem key="rtt">23.95</elem>
+</table>
+<table>
+<elem key="hop">2</elem>
+<elem key="ip">10.11.1.209</elem>
+<elem key="rtt">24.66</elem>
+</table>
+</script></hostscript><trace port="110" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="23.95"/>
+<hop ttl="2" ipaddr="10.11.1.209" rtt="24.66"/>
+</trace>
+<times srtt="19398" rttvar="2744" to="100000"/>
+</host>
+<postscript><script id="creds-summary" output="&#xa;  10.11.1.209: &#xa;    8080/http: &#xa;      tomcat:s3cret - Valid credentials"><table key="10.11.1.209">
+<table key="8080/http">
+<table>
+<elem key="username">tomcat</elem>
+<elem key="password">s3cret</elem>
+<elem key="state">Valid credentials</elem>
+</table>
+</table>
+</table>
+</script><script id="reverse-index" output="&#xa;  22/tcp: 10.11.1.209&#xa;  111/tcp: 10.11.1.209&#xa;  515/tcp: 10.11.1.209&#xa;  6787/tcp: 10.11.1.209&#xa;  8009/tcp: 10.11.1.209&#xa;  8080/tcp: 10.11.1.209"><table key="22/tcp">
+<elem>10.11.1.209</elem>
+</table>
+<table key="111/tcp">
+<elem>10.11.1.209</elem>
+</table>
+<table key="515/tcp">
+<elem>10.11.1.209</elem>
+</table>
+<table key="6787/tcp">
+<elem>10.11.1.209</elem>
+</table>
+<table key="8009/tcp">
+<elem>10.11.1.209</elem>
+</table>
+<table key="8080/tcp">
+<elem>10.11.1.209</elem>
+</table>
+</script></postscript><runstats><finished time="1599242720" timestr="Fri Sep  4 14:05:20 2020" elapsed="2024.82" summary="Nmap done at Fri Sep  4 14:05:20 2020; 1 IP address (1 host up) scanned in 2024.82 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

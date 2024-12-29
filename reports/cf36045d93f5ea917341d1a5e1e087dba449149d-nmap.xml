@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1594627628" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Mon Jul 13 10:07:08 2020" args="nmap -p 1-65535 -T4 -A -v 172.31.1.9"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-07-13 10:07 CEST
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Initiating Ping Scan at 10:07
+Scanning 172.31.1.9 [4 ports]
+Completed Ping Scan at 10:07, 0.20s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 10:07
+Completed Parallel DNS resolution of 1 host. at 10:07, 0.06s elapsed
+Initiating SYN Stealth Scan at 10:07
+Scanning 172.31.1.9 [65535 ports]
+Discovered open port 22/tcp on 172.31.1.9
+Discovered open port 80/tcp on 172.31.1.9
+SYN Stealth Scan Timing: About 5.83% done; ETC: 10:16 (0:08:21 remaining)
+SYN Stealth Scan Timing: About 13.46% done; ETC: 10:14 (0:06:32 remaining)
+SYN Stealth Scan Timing: About 20.82% done; ETC: 10:14 (0:05:46 remaining)
+SYN Stealth Scan Timing: About 31.20% done; ETC: 10:13 (0:04:27 remaining)
+Discovered open port 6379/tcp on 172.31.1.9
+SYN Stealth Scan Timing: About 40.90% done; ETC: 10:13 (0:03:38 remaining)
+SYN Stealth Scan Timing: About 50.43% done; ETC: 10:13 (0:02:58 remaining)
+SYN Stealth Scan Timing: About 61.68% done; ETC: 10:12 (0:02:11 remaining)
+SYN Stealth Scan Timing: About 69.82% done; ETC: 10:12 (0:01:44 remaining)
+SYN Stealth Scan Timing: About 80.18% done; ETC: 10:12 (0:01:07 remaining)
+SYN Stealth Scan Timing: About 90.05% done; ETC: 10:12 (0:00:33 remaining)
+Completed SYN Stealth Scan at 10:12, 337.77s elapsed (65535 total ports)
+Initiating Service scan at 10:12
+Scanning 3 services on 172.31.1.9
+Completed Service scan at 10:12, 6.23s elapsed (3 services on 1 host)
+Initiating OS detection (try #1) against 172.31.1.9
+adjust_timeouts2: packet supposedly had rtt of -140825 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -140825 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -146823 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -146823 microseconds.  Ignoring time.
+Retrying OS detection (try #2) against 172.31.1.9
+Retrying OS detection (try #3) against 172.31.1.9
+adjust_timeouts2: packet supposedly had rtt of -142441 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -142441 microseconds.  Ignoring time.
+Retrying OS detection (try #4) against 172.31.1.9
+Retrying OS detection (try #5) against 172.31.1.9
+Initiating Traceroute at 10:13
+Completed Traceroute at 10:13, 0.11s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 10:13
+Completed Parallel DNS resolution of 2 hosts. at 10:13, 0.04s elapsed
+NSE: Script scanning 172.31.1.9.
+Initiating NSE at 10:13
+Completed NSE at 10:13, 3.82s elapsed
+Initiating NSE at 10:13
+Completed NSE at 10:13, 0.44s elapsed
+Initiating NSE at 10:13
+Completed NSE at 10:13, 0.00s elapsed
+Nmap scan report for 172.31.1.9
+Host is up (0.11s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 32:22:88:22:9b:d2:76:c9:8c:ee:8a:4d:47:63:e5:14 (RSA)
+|   256 d9:3f:c3:ee:a8:d4:36:c7:29:23:9f:e6:3d:dc:69:4b (ECDSA)
+|_  256 24:39:e3:a7:a7:f3:97:11:88:c7:c1:4b:25:f0:fc:c1 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Business Solutions
+6379/tcp open  redis   Redis key-value store 4.0.8
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=7/13%OT=22%CT=1%CU=35503%PV=Y%DS=2%DC=T%G=Y%TM=5F0C179
+OS:C%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10C%TI=Z%CI=Z%TS=A)OPS(O1=M
+OS:54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%
+OS:O6=M54EST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%
+OS:DF=Y%T=40%W=F507%O=M54ENNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=
+OS:0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF
+OS:=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=
+OS:%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%
+OS:IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 13.065 days (since Tue Jun 30 08:39:50 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 199/tcp)
+HOP RTT       ADDRESS
+1   108.14 ms 10.10.0.1
+2   108.27 ms 172.31.1.9
+
+NSE: Script Post-scanning.
+Initiating NSE at 10:13
+Completed NSE at 10:13, 0.00s elapsed
+Initiating NSE at 10:13
+Completed NSE at 10:13, 0.00s elapsed
+Initiating NSE at 10:13
+Completed NSE at 10:13, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 368.72 seconds
+           Raw packets sent: 73540 (3.248MB) | Rcvd: 98193 (9.443MB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="172.31.1.9"></address><hostnames></hostnames><ports><extraports count="65532" state="closed"></extraports><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="OpenSSH" name="ssh" extrainfo="Ubuntu Linux; protocol 2.0" version="7.6p1 Ubuntu 4ubuntu0.3" conf="10" method="probed"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="Apache httpd" name="http" extrainfo="(Ubuntu)" version="2.4.29" conf="10" method="probed"></service></port><port protocol="tcp" portid="6379"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="Redis key-value store" version="4.0.8" method="probed" conf="10" name="redis"></service></port></ports><os><portused state="open" portid="22" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="35503" proto="udp"></portused><osmatch line="62708" name="Linux 3.1" accuracy="94"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="94"></osclass></osmatch><osmatch line="64455" name="Linux 3.2" accuracy="94"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="94"></osclass></osmatch><osmatch line="61606" name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94"><osclass type="webcam" osfamily="embedded" vendor="AXIS" osgen="" accuracy="94"></osclass></osmatch><osmatch line="8344" name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93"><osclass type="WAP" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch line="63962" name="Linux 3.16" accuracy="93"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch line="55173" name="Linux 2.6.32" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="92"></osclass></osmatch><osmatch line="58074" name="Linux 2.6.39 - 3.2" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="92"></osclass></osmatch><osmatch line="62728" name="Linux 3.1 - 3.2" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="92"></osclass></osmatch><osmatch line="63278" name="Linux 3.11" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="92"></osclass></osmatch><osmatch line="65105" name="Linux 3.2 - 4.9" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="92"></osclass></osmatch></os><uptime lastboot="Tue Jun 30 08:39:50 2020" seconds="1128806"></uptime><tcpsequence index="257" values="B2999571,5D1EB594,3B1D6859,8935B8FB,1B917C63,E0F81682" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="43481CCE,43481D2E,43481D92,43481DF9,43481E5E,43481EC1" class="1000HZ"></tcptssequence><trace port="199" proto="tcp"><hop rtt="108.14" host="" ipaddr="10.10.0.1" ttl="1"></hop><hop rtt="108.27" host="" ipaddr="172.31.1.9" ttl="2"></hop></trace></host><runstats><finished timestr="Mon Jul 13 10:13:16 2020" time="1594627996"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

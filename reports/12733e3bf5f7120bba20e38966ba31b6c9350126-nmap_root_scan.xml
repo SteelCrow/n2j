@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 6.47 scan initiated Thu Feb  9 12:55:24 2017 as: nmap -T5 -&#45;host-timeout 3s -sn -oX - 192.168.168.* -->
+<nmaprun scanner="nmap" args="nmap -T5 -&#45;host-timeout 3s -sn -oX - 192.168.168.*" start="1486644924"
+         startstr="Thu Feb  9 12:55:24 2017" version="6.47" xmloutputversion="1.04">
+    <verbose level="0"/>
+    <debugging level="0"/>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.1" addrtype="ipv4"/>
+        <address addr="D4:CA:6D:34:DB:82" addrtype="mac" vendor="Routerboard.com"/>
+        <hostnames>
+            <hostname name="router" type="PTR"/>
+        </hostnames>
+        <times srtt="4532" rttvar="5000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.12" addrtype="ipv4"/>
+        <address addr="7C:DD:90:2A:A5:A3" addrtype="mac" vendor="Shenzhen Ogemray Technology Co."/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10762" rttvar="10762" to="53810"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.151" addrtype="ipv4"/>
+        <address addr="A4:5E:60:DE:3C:91" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="13138" rttvar="13138" to="65690"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.154" addrtype="ipv4"/>
+        <address addr="28:CF:E9:15:06:91" addrtype="mac" vendor="Apple"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10000" rttvar="10000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.165" addrtype="ipv4"/>
+        <address addr="00:14:A4:6B:8C:76" addrtype="mac" vendor="Hon Hai Precision Ind. Co."/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10000" rttvar="10000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.166" addrtype="ipv4"/>
+        <address addr="98:01:A7:8F:60:EF" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10000" rttvar="10000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.172" addrtype="ipv4"/>
+        <address addr="B8:27:EB:52:97:1A" addrtype="mac" vendor="Raspberry Pi Foundation"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="4795" rttvar="5000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.173" addrtype="ipv4"/>
+        <address addr="E0:C7:67:32:E6:83" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="5021" rttvar="5021" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.176" addrtype="ipv4"/>
+        <address addr="F4:0F:24:34:9C:90" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10000" rttvar="10000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.181" addrtype="ipv4"/>
+        <address addr="6C:72:E7:93:CB:26" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="1663" rttvar="5000" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.239" addrtype="ipv4"/>
+        <address addr="AC:37:43:4C:79:B8" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="8224" rttvar="8224" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.240" addrtype="ipv4"/>
+        <address addr="88:30:8A:F0:62:14" addrtype="mac" vendor="Murata Manufactuaring Co."/>
+        <hostnames>
+        </hostnames>
+        <times srtt="8358" rttvar="8358" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.246" addrtype="ipv4"/>
+        <address addr="20:C9:D0:87:DB:E5" addrtype="mac" vendor="Apple"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="9293" rttvar="9293" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.249" addrtype="ipv4"/>
+        <address addr="B8:E8:56:36:0A:64" addrtype="mac" vendor="Apple"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="9479" rttvar="9479" to="50000"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.250" addrtype="ipv4"/>
+        <address addr="D0:A6:37:EB:36:91" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10445" rttvar="10445" to="52225"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.251" addrtype="ipv4"/>
+        <address addr="28:CF:E9:15:79:83" addrtype="mac" vendor="Apple"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10278" rttvar="10278" to="51390"/>
+    </host>
+    <host>
+        <status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.168.252" addrtype="ipv4"/>
+        <address addr="78:F8:82:CC:34:C4" addrtype="mac"/>
+        <hostnames>
+        </hostnames>
+        <times srtt="10385" rttvar="10385" to="51925"/>
+    </host>
+    <host>
+        <status state="up" reason="localhost-response" reason_ttl="0"/>
+        <address addr="192.168.168.177" addrtype="ipv4"/>
+        <hostnames>
+        </hostnames>
+    </host>
+    <runstats>
+        <finished time="1486644964" timestr="Thu Feb  9 12:56:04 2017" elapsed="40.52"
+                  summary="Nmap done at Thu Feb  9 12:56:04 2017; 256 IP addresses (18 hosts up) scanned in 40.52 seconds"
+                  exit="success"/>
+        <hosts up="18" down="238" total="256"/>
+    </runstats>
+</nmaprun>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Tue Aug  2 14:49:23 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 49680 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/remote/results/10.10.10.180/scans/tcp49680/tcp_49680_rpc_nmap.txt -oX /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/remote/results/10.10.10.180/scans/tcp49680/xml/tcp_49680_rpc_nmap.xml 10.10.10.180 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 49680 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/remote/results/10.10.10.180/scans/tcp49680/tcp_49680_rpc_nmap.txt -oX /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/remote/results/10.10.10.180/scans/tcp49680/xml/tcp_49680_rpc_nmap.xml 10.10.10.180" start="1659466163" startstr="Tue Aug  2 14:49:23 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="49680"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1659466164"/>
+<taskend task="NSE" time="1659466164"/>
+<taskbegin task="NSE" time="1659466164"/>
+<taskend task="NSE" time="1659466164"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1659466164"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1659466164"/>
+<taskbegin task="SYN Stealth Scan" time="1659466164"/>
+<taskend task="SYN Stealth Scan" time="1659466164" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1659466164"/>
+<taskend task="Service scan" time="1659466219" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1659466219"/>
+<taskend task="NSE" time="1659466234"/>
+<taskbegin task="NSE" time="1659466234"/>
+<taskend task="NSE" time="1659466234"/>
+<host starttime="1659466164" endtime="1659466234"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.180" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="49680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="232920" rttvar="232920" to="1164600"/>
+</host>
+<taskbegin task="NSE" time="1659466234"/>
+<taskend task="NSE" time="1659466234"/>
+<taskbegin task="NSE" time="1659466234"/>
+<taskend task="NSE" time="1659466234"/>
+<runstats><finished time="1659466234" timestr="Tue Aug  2 14:50:34 2022" summary="Nmap done at Tue Aug  2 14:50:34 2022; 1 IP address (1 host up) scanned in 71.06 seconds" elapsed="71.06" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

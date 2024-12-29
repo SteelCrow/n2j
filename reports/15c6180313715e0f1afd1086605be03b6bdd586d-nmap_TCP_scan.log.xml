@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Fri Dec  8 09:22:12 2023 as: nmap -A -v -p22,25,80,110,119,4555 -oA HTB/SolidState/nmap/nmap_TCP_scan.log 10.10.10.51 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p22,25,80,110,119,4555 -oA HTB/SolidState/nmap/nmap_TCP_scan.log 10.10.10.51" start="1702045332" startstr="Fri Dec  8 09:22:12 2023" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="6" services="22,25,80,110,119,4555"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1702045333"/>
+<taskend task="NSE" time="1702045333"/>
+<taskbegin task="NSE" time="1702045333"/>
+<taskend task="NSE" time="1702045333"/>
+<taskbegin task="NSE" time="1702045333"/>
+<taskend task="NSE" time="1702045333"/>
+<taskbegin task="Ping Scan" time="1702045333"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.10.51" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1702045333" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1702045333"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1702045333"/>
+<taskbegin task="Connect Scan" time="1702045333"/>
+<taskend task="Connect Scan" time="1702045333" extrainfo="6 total ports"/>
+<taskbegin task="Service scan" time="1702045333"/>
+<taskend task="Service scan" time="1702045494" extrainfo="6 services on 1 host"/>
+<taskbegin task="NSE" time="1702045494"/>
+<taskend task="NSE" time="1702045516"/>
+<taskbegin task="NSE" time="1702045516"/>
+<taskend task="NSE" time="1702045599"/>
+<taskbegin task="NSE" time="1702045599"/>
+<taskend task="NSE" time="1702045599"/>
+<host starttime="1702045333" endtime="1702045599"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.10.51" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.10.10.51" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 77:00:84:f5:78:b9:c7:d3:54:cf:71:2e:0d:52:6d:8b (RSA)&#xa;  256 78:b8:3a:f6:60:19:06:91:f5:53:92:1d:3f:48:ed:53 (ECDSA)&#xa;  256 e4:45:e9:ed:07:4d:73:69:43:5a:12:70:9d:c4:af:76 (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCp5WdwlckuF4slNUO29xOk/Yl/cnXT/p6qwezI0ye+4iRSyor8lhyAEku/yz8KJXtA+ALhL7HwYbD3hDUxDkFw90V1Omdedbk7SxUVBPK2CiDpvXq1+r5fVw26WpTCdawGKkaOMYoSWvliBsbwMLJEUwVbZ/GZ1SUEswpYkyZeiSC1qk72L6CiZ9/5za4MTZw8Cq0akT7G+mX7Qgc+5eOEGcqZt3cBtWzKjHyOZJAEUtwXAHly29KtrPUddXEIF0qJUxKXArEDvsp7OkuQ0fktXXkZuyN/GRFeu3im7uQVuDgiXFKbEfmoQAsvLrR8YiKFUG6QBdI9awwmTkLFbS1Z</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">770084f578b9c7d354cf712e0d526d8b</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBISyhm1hXZNQl3cslogs5LKqgWEozfjs3S3aPy4k3riFb6UYu6Q1QsxIEOGBSPAWEkevVz1msTrRRyvHPiUQ+eE=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">78b83af660190691f553921d3f48ed53</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIMKbFbK3MJqjMh9oEw/2OVe0isA7e3ruHz5fhUP4cVgY</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">e445e9ed074d7369435a12709dc4af76</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="smtp" product="JAMES smtpd" version="2.3.2" hostname="solidstate" method="probed" conf="10"/><script id="smtp-commands" output="solidstate Hello 10.10.10.51 (10.10.14.21 [10.10.14.21])"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS HEAD GET POST"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-title" output="Home - Solid State Security"><elem key="title">Home - Solid State Security</elem>
+</script><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="pop3" product="JAMES pop3d" version="2.3.2" hostname="solidstate" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="119"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nntp" product="JAMES nntpd" extrainfo="posting ok" hostname="solidstate" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="4555"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rsip" servicefp="SF-Port4555-TCP:V=7.94SVN%I=7%D=12/8%Time=657326A0%P=x86_64-pc-linux-gnu%r(GenericLines,7C,&quot;JAMES\x20Remote\x20Administration\x20Tool\x202\.3\.2\nPlease\x20enter\x20your\x20login\x20and\x20password\nLogin\x20id:\nPassword:\nLogin\x20failed\x20for\x20\nLogin\x20id:\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    JAMES Remote Administration Tool 2.3.2&#xa;    Please enter your login and password&#xa;    Login id:&#xa;    Password:&#xa;    Login failed for &#xa;    Login id:"><elem key="GenericLines">&#xa;    JAMES Remote Administration Tool 2.3.2&#xa;    Please enter your login and password&#xa;    Login id:&#xa;    Password:&#xa;    Login failed for &#xa;    Login id:</elem>
+</script></port>
+</ports>
+<times srtt="120471" rttvar="22791" to="211635"/>
+</host>
+<taskbegin task="NSE" time="1702045599"/>
+<taskend task="NSE" time="1702045599"/>
+<taskbegin task="NSE" time="1702045599"/>
+<taskend task="NSE" time="1702045599"/>
+<taskbegin task="NSE" time="1702045599"/>
+<taskend task="NSE" time="1702045599"/>
+<runstats><finished time="1702045599" timestr="Fri Dec  8 09:26:39 2023" summary="Nmap done at Fri Dec  8 09:26:39 2023; 1 IP address (1 host up) scanned in 266.67 seconds" elapsed="266.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

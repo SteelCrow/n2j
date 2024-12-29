@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Thu Nov 28 12:00:34 2024 as: nmap -sC -sV -p- -iL ip.txt -oA Default-Version-Scan -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p- -iL ip.txt -oA Default-Version-Scan" start="1732813234" startstr="Thu Nov 28 12:00:34 2024" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.121.132" addrtype="ipv4"/>
+<address addr="00:0C:29:50:CB:77" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1732813234" endtime="1732814814"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.121.132" addrtype="ipv4"/>
+<address addr="00:0C:29:50:CB:77" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65502">
+<extrareasons reason="reset" count="65502" proto="tcp" ports="1-20,24-79,81-134,136-138,140-444,446-3049,3051-3388,3390-4567,4569-5799,5801-5899,5901-8018,8021,8023-8026,8029-8030,8033-8382,8384-8442,8445-17783,17785-45679,45681-47000,47002-48079,48081-49151,49155-49159,49162-49163,49166-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ftp" product="FileZilla ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x 1 ftp ftp              0 Jul 16  2020 aspnet_client&#xa;-rw-r-&#45;r-&#45; 1 ftp ftp            689 Jul 16  2020 iisstart.htm&#xa;-rw-r-&#45;r-&#45; 1 ftp ftp         184946 Jul 16  2020 welcome.png"/><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ssh" product="Bitvise WinSSHD" version="9.39" extrainfo="FlowSsh 9.39; protocol 2.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:bitvise:winsshd:9.39</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 35:ae:c3:da:83:5a:bc:25:cc:a6:6b:f4:48:4b:14:fc (RSA)&#xa;  384 40:3c:a1:e4:24:ba:1e:ce:c6:b1:c9:8c:9a:27:31:33 (ECDSA)"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">3072</elem>
+<elem key="fingerprint">35aec3da835abc25cca66bf4484b14fc</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDdzsdkKow1UvZl9PigyOLbLf2B9RhrI/gEpwgJ9ZP8X98jjYPCluP5xU5alu3eEJxb7SOFInjwtO2D834wUmeEKS7ZaOtVtsNfebt7RlHoEWtRNqeSJklADZvfAPwRowhfOGXg1OcIXTw0Yqs9LBwe8Zy3Zn+kDmxc2Czsgbe/EV93apaRrsS7SWoJPr1tjOjJsdiLEwDfNIJCP/KLTPYPm2qe1drJlzafw5bh7XRAWEQi/lKGtXJBAMnEsYXPLe16h5v8Rn9ePD4SfgTw9kP6Spgyi9Eh70ckpqWvtbBtUikAGfftfX9G6DZlIE7R+/so/R3DOdfHEFk3pKHan866hrdZ1ex0l02sRDUESbjwMb9YcPbkYUpq9fZvIVAliITvzTs/nMQQRuwNB8nnaeL6ke2OzOFiKQVC4x9RTni0IjIB7Iz2EGwu8xe3gLrW7bzihtQ7YoPPX9pTPurqUlGPqB4WCqk+5xBKFbA4xmLPyJEzvZL1eKG8BdQSDQ/C+Xc=</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp384</elem>
+<elem key="bits">384</elem>
+<elem key="fingerprint">403ca1e424ba1ecec6b1c98c9a273133</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAzODQAAAAIbmlzdHAzODQAAABhBNzRmI8AI/OXXem4aGzn5PBsIMKBcrVpLzonJrShxmn9dULuLtY0ICexsnUD1m6twk6zL9iKwVJ0wkG66BU0iZLwyDT0nSSipT3LU7SFAuR//+YAhnc8IYgEibWOgJd16g==</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="telnet" product="Microsoft Windows XP telnetd" ostype="Windows XP" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows_xp</cpe></service><script id="telnet-ntlm-info" output="&#xa;  Target_Name: KING-ARTHUR&#xa;  NetBIOS_Domain_Name: KING-ARTHUR&#xa;  NetBIOS_Computer_Name: KING-ARTHUR&#xa;  DNS_Domain_Name: king-arthur&#xa;  DNS_Computer_Name: king-arthur&#xa;  Product_Version: 6.1.7601"><elem key="Target_Name">KING-ARTHUR</elem>
+<elem key="NetBIOS_Domain_Name">KING-ARTHUR</elem>
+<elem key="NetBIOS_Computer_Name">KING-ARTHUR</elem>
+<elem key="DNS_Domain_Name">king-arthur</elem>
+<elem key="DNS_Computer_Name">king-arthur</elem>
+<elem key="Product_Version">6.1.7601</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="IIS7"><elem key="title">IIS7</elem>
+</script><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="p&#xd1;&#xea;&#xce;[U" product="Windows Server 2008 R2 Enterprise 7601 Service Pack 1 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3050"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="firebird" product="Firebird RDBMS" version="Protocol version 10" method="probed" conf="10"><cpe>cpe:/a:firebirdsql:firebird</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="2024-11-28T14:25:01+00:00; -3h01m10s from scanner time."><elem key="date">2024-11-28T14:25:01+00:00</elem>
+<elem key="delta">-10870.0</elem>
+</script><script id="ssl-cert" output="Subject: commonName=king-arthur&#xa;Not valid before: 2024-11-12T21:25:21&#xa;Not valid after:  2025-05-14T21:25:21"><table key="subject">
+<elem key="commonName">king-arthur</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">king-arthur</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B06FCCC871EB7F1280C1002D4FA62E38777AC6693335EF308F1D9064CE7A1935AB3D0816A5FCE84FC02A0D8C83A5AF16AD43B92322CB451CAA3BC5411261EBE1D52B3080D308985D4092F5E985F37C404715102BA77E0645E5BA2395D173FA86137506626310B5C57CD4DD72A103611028F5C16764739FD3F3A81F047772A54B461C4B26389F9479D0931AD3757AEA3080C834427B55DEC9EC34D480C78440CFB240F961580E0A59A36E229B7F062FBA1DDFB4A795109E354BBF0C9AF94E50B3E8FDD23717BF46EFA97B7E3ADFE20AA90E6FD5C233C50CBF15DA0E1F3F9D747EA2EAE309F3DB848D6336F6385CA84580014528F2F0B02C6042E293F230F04027</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2024-11-12T21:25:21</elem>
+<elem key="notAfter">2025-05-14T21:25:21</elem>
+</table>
+<elem key="md5">969b0ba733b8df1edbce1b80c361e903</elem>
+<elem key="sha1">b9f34ac53b4169c3092cec75f2d4d5f48c97d038</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2jCCAcKgAwIBAgIQYzTfqKOwL7hLzjCiEV/ZrzANBgkqhkiG9w0BAQUFADAW&#xa;MRQwEgYDVQQDEwtraW5nLWFydGh1cjAeFw0yNDExMTIyMTI1MjFaFw0yNTA1MTQy&#xa;MTI1MjFaMBYxFDASBgNVBAMTC2tpbmctYXJ0aHVyMIIBIjANBgkqhkiG9w0BAQEF&#xa;AAOCAQ8AMIIBCgKCAQEAsG/MyHHrfxKAwQAtT6YuOHd6xmkzNe8wjx2QZM56GTWr&#xa;PQgWpfzoT8AqDYyDpa8WrUO5IyLLRRyqO8VBEmHr4dUrMIDTCJhdQJL16YXzfEBH&#xa;FRArp34GReW6I5XRc/qGE3UGYmMQtcV81N1yoQNhECj1wWdkc5/T86gfBHdypUtG&#xa;HEsmOJ+UedCTGtN1euowgMg0QntV3snsNNSAx4RAz7JA+WFYDgpZo24im38GL7od&#xa;37SnlRCeNUu/DJr5TlCz6P3SNxe/Ru+pe3463+IKqQ5v1cIzxQy/FdoOHz+ddH6i&#xa;6uMJ89uEjWM29jhcqEWAAUUo8vCwLGBC4pPyMPBAJwIDAQABoyQwIjATBgNVHSUE&#xa;DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBACAo&#xa;o0MCooMWYZ1BnE/JLShvF9Ti74+4C3fGa/voDp1Xd/J0JG5C5RzlsonR6ux3O8HM&#xa;jhDq6uaaBd/3cID35cA8mDgj6fIqG39ukKFPY7XVVK0cGLxRvvnKH/yU5aXlWFnU&#xa;nvDTWJVlFanUffLh61iBvPPqwrvmfU8gsuzaIuB9tXzbuDDgcceFZOjvbGXKSF+6&#xa;OA6bf20gNzDDgwusZ/E6gAXMHQlog4ZpeK4VRNYo+EnW7pYXqUl6nJohpZG1cCH9&#xa;fBIR7wwpTEWSfyOayTMI0pOeQ2c2xaQ7JKsy67utRWUocSB/2ohBfzUVHVPdSXc4&#xa;LLdE39+llC+whyyytIc=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="4568"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="java-rmi" product="Java RMI" method="probed" conf="10"/><script id="rmi-dumpregistry" output="&#xa;  LicenseService&#xa;    org.springframework.remoting.rmi.RmiInvocationWrapper_Stub&#xa;    @WIN-SKTTA14M4TM!192.168.1.62!127.0.0.1:45680&#xa;    extends&#xa;      java.rmi.server.RemoteStub&#xa;      extends&#xa;        java.rmi.server.RemoteObject&#xa;"/></port>
+<port protocol="tcp" portid="5800"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="vnc-http" product="RealVNC" version="4.0" extrainfo="resolution: 400x250; VNC TCP port: 5900" method="probed" conf="10"><cpe>cpe:/a:realvnc:realvnc:4.0</cpe></service><script id="http-server-header" output="RealVNC/4.0"><elem>RealVNC/4.0</elem>
+</script><script id="http-title" output="VNC viewer for Java"><elem key="title">&#xd;&#xa;VNC viewer for Java&#xd;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="vnc" product="VNC" extrainfo="protocol 3.8" method="probed" conf="10"/><script id="vnc-info" output="&#xa;  Protocol version: 3.8&#xa;  Security types: &#xa;    VNC Authentication (2)"><elem key="Protocol version">3.8</elem>
+<table key="Security types">
+<table>
+<elem key="type">2</elem>
+<elem key="name">VNC Authentication</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8019"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="qbdb" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-title" output="Site doesn&apos;t have a title (text/html;charset=UTF-8)."></script><script id="http-methods" output="&#xa;  Potentially risky methods: PUT DELETE"><table key="Potentially risky methods">
+<elem>PUT</elem>
+<elem>DELETE</elem>
+</table>
+</script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="8022"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: PUT DELETE"><table key="Potentially risky methods">
+<elem>PUT</elem>
+<elem>DELETE</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html;charset=UTF-8)."></script><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="8027"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="papachi-p2p-srv" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8028"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="postgresql" product="PostgreSQL DB" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql</cpe></service></port>
+<port protocol="tcp" portid="8031"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="unknown" tunnel="ssl" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8032"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="desktop-central" product="ManageEngine Desktop Central DesktopCentralServer" devicetype="remote management" method="probed" conf="10"><cpe>cpe:/a:zohocorp:manageengine_desktop_central</cpe></service></port>
+<port protocol="tcp" portid="8383"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: PUT DELETE"><table key="Potentially risky methods">
+<elem>PUT</elem>
+<elem>DELETE</elem>
+</table>
+</script><script id="http-title" output="400 Bad Request"><elem key="title">400 Bad Request</elem>
+</script></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="https-alt" tunnel="ssl" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8444"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="desktop-central" product="ManageEngine Desktop Central DesktopCentralServer" devicetype="remote management" method="probed" conf="10"><cpe>cpe:/a:zohocorp:manageengine_desktop_central</cpe></service></port>
+<port protocol="tcp" portid="17784"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="unknown" tunnel="ssl" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=fsmweb/organizationName=Solarwind/stateOrProvinceName=Texas/countryName=US&#xa;Not valid before: 2013-08-15T13:32:01&#xa;Not valid after:  2063-08-15T13:32:01"><table key="subject">
+<elem key="commonName">fsmweb</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName">Austin</elem>
+<elem key="organizationName">Solarwind</elem>
+<elem key="organizationalUnitName">FSM</elem>
+<elem key="stateOrProvinceName">Texas</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">fsmweb</elem>
+<elem key="countryName">US</elem>
+<elem key="localityName">Austin</elem>
+<elem key="organizationName">Solarwind</elem>
+<elem key="organizationalUnitName">FSM</elem>
+<elem key="stateOrProvinceName">Texas</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E90621389FD8F7415BEB826C205F7D924C145EE8BED29D2FE98ED14CF6E0C22DAFD2EAAAA74E93700D85BC6DF3F7CDF1B7ADD972259C57673E4D197FBA9C3D8118275FE00C7B4C3FA4B1625F51C2DA131E99A8466440C8CAD21BB08CED124D696502A7284700F1F089614F1AAC9649E7BCBF53478FAD52FE354BD40FC21645321A78847DDB9127082DE50350B6E5511E7B56BF81F34233F3D9AF4606BB053400C35BDB3613E1629D94142E805FBC376C85898A5A31840E8AEF98200AC949EE9B3A23A65CBC3CD94880900D0287FBB356ECAE276A0E61954CADA1E5B3C002466AD4B8C1CC6B11A123C9663C6522F86B86D348E2A200935B56966666286313CDC3</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2013-08-15T13:32:01</elem>
+<elem key="notAfter">2063-08-15T13:32:01</elem>
+</table>
+<elem key="md5">02c6f5151671d06ec7b582a7af519653</elem>
+<elem key="sha1">5cba4de631af8d7564491f0da95ff21ca5456805</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDQDCCAiigAwIBAgIEUgzYUTANBgkqhkiG9w0BAQUFADBhMQswCQYDVQQGEwJV&#xa;UzEOMAwGA1UECBMFVGV4YXMxDzANBgNVBAcTBkF1c3RpbjESMBAGA1UEChMJU29s&#xa;YXJ3aW5kMQwwCgYDVQQLEwNGU00xDzANBgNVBAMTBmZzbXdlYjAgFw0xMzA4MTUx&#xa;MzMyMDFaGA8yMDYzMDgxNTEzMzIwMVowYTELMAkGA1UEBhMCVVMxDjAMBgNVBAgT&#xa;BVRleGFzMQ8wDQYDVQQHEwZBdXN0aW4xEjAQBgNVBAoTCVNvbGFyd2luZDEMMAoG&#xa;A1UECxMDRlNNMQ8wDQYDVQQDEwZmc213ZWIwggEiMA0GCSqGSIb3DQEBAQUAA4IB&#xa;DwAwggEKAoIBAQDpBiE4n9j3QVvrgmwgX32STBRe6L7SnS/pjtFM9uDCLa/S6qqn&#xa;TpNwDYW8bfP3zfG3rdlyJZxXZz5NGX+6nD2BGCdf4Ax7TD+ksWJfUcLaEx6ZqEZk&#xa;QMjK0huwjO0STWllAqcoRwDx8IlhTxqslknnvL9TR4+tUv41S9QPwhZFMhp4hH3b&#xa;kScILeUDULblUR57Vr+B80Iz89mvRga7BTQAw1vbNhPhYp2UFC6AX7w3bIWJilox&#xa;hA6K75ggCslJ7ps6I6ZcvDzZSICQDQKH+7NW7K4nag5hlUytoeWzwAJGatS4wcxr&#xa;EaEjyWY8ZSL4a4bTSOKiAJNbVpZmZihjE83DAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;ggEBAOe7jarD/1PqQtYc4svkXGqmAEapRKJdbYA5bco6i7xddAH+23A2kht6XwQt&#xa;lXG6rch+lz5F5459AjSttNsKX4JxtkOwR6O/eqz88UwHytl7pMCAC92wQK/y8sro&#xa;vLT7I2PukQ8pcHpv5IfxX2tLz7sUxnKKJhZPy4CNdNRLBBGTqBCFps3HNEN+BAuM&#xa;3QQho2ETwARuj1RWnhfhdoQN+34drnokSyoDPCh1AME9XNgk7R08XwVTZbSfMbY1&#xa;6r2TDVeDihsOG0eZBKYPnHlpEYsDCfm5zlByweEv0o//SDN0TmxwvELG+pLCKdmb&#xa;JuZMXJac9jlpMU66yxJTehvnDes=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2024-11-28T14:25:01+00:00; -3h01m10s from scanner time."><elem key="date">2024-11-28T14:25:01+00:00</elem>
+<elem key="delta">-10870.0</elem>
+</script></port>
+<port protocol="tcp" portid="45680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="unknown" tunnel="ssl" method="table" conf="3"/></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="48080"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Jetty" version="6.1.x" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:6.1.x</cpe></service><script id="http-title" output=" SolarWinds FSM Change Advisor&#xa;Requested resource was http://192.168.121.132:48080/fsm/login.jsp"><elem key="title"> SolarWinds FSM Change Advisor</elem>
+<elem key="redirect_url">http://192.168.121.132:48080/fsm/login.jsp</elem>
+</script><script id="http-cookie-flags" output="&#xa;  /: &#xa;    JSESSIONID: &#xa;      httponly flag not set"><table key="/">
+<table key="JSESSIONID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="http-server-header" output="Jetty(6.1.x)"><elem>Jetty(6.1.x)</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49160"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49161"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49164"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49165"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb2-security-mode" output="&#xa;  2:1:0: &#xa;    Message signing enabled but not required"><table key="2:1:0">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="nbstat" output="NetBIOS name: KING-ARTHUR, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:0c:29:50:cb:77 (VMware)"/><script id="smb2-time" output="&#xa;  date: 2024-11-28T14:24:26&#xa;  start_date: 2024-11-28T13:33:10"><elem key="date">2024-11-28T14:24:26</elem>
+<elem key="start_date">2024-11-28T13:33:10</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2008 R2 Enterprise 7601 Service Pack 1 (Windows Server 2008 R2 Enterprise 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_server_2008::sp1&#xa;  Computer name: king-arthur&#xa;  NetBIOS computer name: KING-ARTHUR\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2024-11-28T22:24:23+08:00&#xa;"><elem key="os">Windows Server 2008 R2 Enterprise 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows Server 2008 R2 Enterprise 6.1</elem>
+<elem key="server">KING-ARTHUR\x00</elem>
+<elem key="date">2024-11-28T22:24:23+08:00</elem>
+<elem key="fqdn">king-arthur</elem>
+<elem key="domain_dns">king-arthur</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_server_2008::sp1</elem>
+</script><script id="clock-skew" output="mean: -4h21m12s, deviation: 3h15m57s, median: -3h01m14s"><elem key="median">-10874</elem>
+<elem key="count">6</elem>
+<elem key="stddev">11757</elem>
+<elem key="mean">-15672</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script></hostscript><times srtt="250" rttvar="51" to="100000"/>
+</host>
+<runstats><finished time="1732814814" timestr="Thu Nov 28 12:26:54 2024" summary="Nmap done at Thu Nov 28 12:26:54 2024; 1 IP address (1 host up) scanned in 1580.13 seconds" elapsed="1580.13" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

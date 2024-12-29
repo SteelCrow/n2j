@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Apr  7 17:09:46 2020 as: nmap -Pn -sV -sC -p 80,135,3306, -oA /home/user/.shatter/control/net/nmap-10.10.10.167-versions 10.10.10.167 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sV -sC -p 80,135,3306, -oA /home/user/.shatter/control/net/nmap-10.10.10.167-versions 10.10.10.167" start="1586272186" startstr="Tue Apr  7 17:09:46 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="3" services="80,135,3306"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1586272186" endtime="1586272202"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.167" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Fidelity"><elem key="title">Fidelity</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mysql" servicefp="SF-Port3306-TCP:V=7.80%I=7%D=4/7%Time=5E8C97BF%P=x86_64-pc-linux-gnu%r(NULL,4B,&quot;G\0\0\x01\xffj\x04Host\x20&apos;10\.10\.14\.151&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;)%r(NotesRPC,4B,&quot;G\0\0\x01\xffj\x04Host\x20&apos;10\.10\.14\.151&apos;\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  NULL, NotesRPC: &#xa;    Host &apos;10.10.14.151&apos; is not allowed to connect to this MariaDB server"><elem key="NULL, NotesRPC">&#xa;    Host &apos;10.10.14.151&apos; is not allowed to connect to this MariaDB server</elem>
+</script></port>
+</ports>
+<times srtt="102263" rttvar="57589" to="332619"/>
+</host>
+<runstats><finished time="1586272202" timestr="Tue Apr  7 17:10:02 2020" elapsed="16.38" summary="Nmap done at Tue Apr  7 17:10:02 2020; 1 IP address (1 host up) scanned in 16.38 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

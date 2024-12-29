@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Sep  4 12:16:31 2020 as: nmap -&#45;script smb-vuln-regsvc-dos -p445 -oA nmap_smb_vuln_regsvc_dos__10.11.1.146 10.11.1.146 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script smb-vuln-regsvc-dos -p445 -oA nmap_smb_vuln_regsvc_dos__10.11.1.146 10.11.1.146" start="1599236191" startstr="Fri Sep  4 12:16:31 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1599236191" endtime="1599236193"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.11.1.146" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="smb-vuln-regsvc-dos" output="&#xa;  VULNERABLE:&#xa;  Service regsvc in Microsoft Windows systems vulnerable to denial of service&#xa;    State: VULNERABLE&#xa;      The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference&#xa;      pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes&#xa;      while working on smb-enum-sessions.&#xa;          &#xa;"><table key="NMAP-1">
+<elem key="title">Service regsvc in Microsoft Windows systems vulnerable to denial of service</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference&#xa;pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes&#xa;while working on smb-enum-sessions.&#xa;    </elem>
+</table>
+</table>
+</script></hostscript><times srtt="20467" rttvar="15972" to="100000"/>
+</host>
+<runstats><finished time="1599236193" timestr="Fri Sep  4 12:16:33 2020" elapsed="2.20" summary="Nmap done at Fri Sep  4 12:16:33 2020; 1 IP address (1 host up) scanned in 2.20 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

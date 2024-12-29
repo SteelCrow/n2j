@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Apr  5 14:22:47 2021 as: nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/HTB/HTB-writeups/Fortresses/Jet/assets/results/10.13.37.10/scans/tcp_53_dns_nmap.txt -oX /home/HTB/HTB-writeups/Fortresses/Jet/assets/results/10.13.37.10/scans/xml/tcp_53_dns_nmap.xml 10.13.37.10 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/HTB/HTB-writeups/Fortresses/Jet/assets/results/10.13.37.10/scans/tcp_53_dns_nmap.txt -oX /home/HTB/HTB-writeups/Fortresses/Jet/assets/results/10.13.37.10/scans/xml/tcp_53_dns_nmap.xml 10.13.37.10" start="1617612767" startstr="Mon Apr  5 14:22:47 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="53"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1617612767"/>
+<taskend task="NSE" time="1617612767"/>
+<taskbegin task="NSE" time="1617612767"/>
+<taskend task="NSE" time="1617612767"/>
+<taskbegin task="NSE" time="1617612767"/>
+<taskend task="NSE" time="1617612767"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1617612767"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1617612775"/>
+<taskbegin task="SYN Stealth Scan" time="1617612775"/>
+<taskend task="SYN Stealth Scan" time="1617612777" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1617612777"/>
+<taskend task="Service scan" time="1617612784" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1617612784"/>
+<taskend task="NSE" time="1617612799"/>
+<taskbegin task="NSE" time="1617612799"/>
+<taskend task="NSE" time="1617612799"/>
+<taskbegin task="NSE" time="1617612799"/>
+<taskend task="NSE" time="1617612799"/>
+<host starttime="1617612775" endtime="1617612799"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.13.37.10" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="domain" product="ISC BIND" version="9.10.3-P4" extrainfo="Ubuntu Linux" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.10.3-p4</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="dns-nsec-enum" output="Can&apos;t determine domain for host 10.13.37.10; use dns-nsec-enum.domains script arg."/><script id="dns-nsec3-enum" output="Can&apos;t determine domain for host 10.13.37.10; use dns-nsec3-enum.domains script arg."/><script id="dns-nsid" output="&#xa;  bind.version: 9.10.3-P4-Ubuntu"><elem key="bind.version">9.10.3-P4-Ubuntu</elem>
+</script></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;10.13.37.10&quot;; use dns-brute.domain script argument."/></hostscript><times srtt="1384203" rttvar="1291721" to="6551087"/>
+</host>
+<taskbegin task="NSE" time="1617612799"/>
+<taskend task="NSE" time="1617612799"/>
+<taskbegin task="NSE" time="1617612799"/>
+<taskend task="NSE" time="1617612799"/>
+<taskbegin task="NSE" time="1617612799"/>
+<taskend task="NSE" time="1617612799"/>
+<runstats><finished time="1617612799" timestr="Mon Apr  5 14:23:19 2021" summary="Nmap done at Mon Apr  5 14:23:19 2021; 1 IP address (1 host up) scanned in 32.91 seconds" elapsed="32.91" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

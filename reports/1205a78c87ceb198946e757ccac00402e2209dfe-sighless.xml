@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Sep  9 12:01:28 2024 as: nmap -vvv -p 21,22,80 -sCV -oA enum/sighless 10.10.11.32 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 21,22,80 -sCV -oA enum/sighless 10.10.11.32" start="1725863488" startstr="Mon Sep  9 12:01:28 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="21-22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1725863488"/>
+<taskend task="NSE" time="1725863488"/>
+<taskbegin task="NSE" time="1725863488"/>
+<taskend task="NSE" time="1725863488"/>
+<taskbegin task="NSE" time="1725863488"/>
+<taskend task="NSE" time="1725863488"/>
+<taskbegin task="Ping Scan" time="1725863488"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.32" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1725863488" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1725863488"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1725863488"/>
+<taskbegin task="SYN Stealth Scan" time="1725863488"/>
+<taskend task="SYN Stealth Scan" time="1725863488" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1725863488"/>
+<taskend task="Service scan" time="1725863517" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1725863517"/>
+<taskend task="NSE" time="1725863528"/>
+<taskbegin task="NSE" time="1725863528"/>
+<taskend task="NSE" time="1725863556"/>
+<taskbegin task="NSE" time="1725863556"/>
+<taskend task="NSE" time="1725863556"/>
+<host starttime="1725863488" endtime="1725863556"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.11.32" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" servicefp="SF-Port21-TCP:V=7.94SVN%I=7%D=9/9%Time=66DE964B%P=x86_64-pc-linux-gnu%r(GenericLines,A0,&quot;220\x20ProFTPD\x20Server\x20\(sightless\.htb\x20FTP\x20Server\)\x20\[::ffff:10\.10\.11\.32\]\r\n500\x20Invalid\x20command:\x20try\x20being\x20more\x20creative\r\n500\x20Invalid\x20command:\x20try\x20being\x20more\x20creative\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GenericLines: &#xa;    220 ProFTPD Server (sightless.htb FTP Server) [::ffff:10.10.11.32]&#xa;    Invalid command: try being more creative&#xa;    Invalid command: try being more creative"><elem key="GenericLines">&#xa;    220 ProFTPD Server (sightless.htb FTP Server) [::ffff:10.10.11.32]&#xa;    Invalid command: try being more creative&#xa;    Invalid command: try being more creative</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 c9:6e:3b:8f:c6:03:29:05:e5:a0:ca:00:90:c9:5c:52 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGoivagBalUNqQKPAE2WFpkFMj+vKwO9D3RiUUxsnkBNKXp5ql1R+kvjG89Iknc24EDKuRWDzEivKXYrZJE9fxg=&#xa;  256 9b:de:3a:27:77:3b:1b:e1:19:5f:16:11:be:70:e0:56 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA4BBc5R8qY5gFPDOqODeLBteW5rxF+qR5j36q9mO+bu"><table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGoivagBalUNqQKPAE2WFpkFMj+vKwO9D3RiUUxsnkBNKXp5ql1R+kvjG89Iknc24EDKuRWDzEivKXYrZJE9fxg=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">c96e3b8fc6032905e5a0ca0090c95c52</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIA4BBc5R8qY5gFPDOqODeLBteW5rxF+qR5j36q9mO+bu</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">9bde3a27773b1be1195f1611be70e056</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-title" output="Did not follow redirect to http://sightless.htb/"><elem key="redirect_url">http://sightless.htb/</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="51427" rttvar="22088" to="139779"/>
+</host>
+<taskbegin task="NSE" time="1725863556"/>
+<taskend task="NSE" time="1725863556"/>
+<taskbegin task="NSE" time="1725863556"/>
+<taskend task="NSE" time="1725863556"/>
+<taskbegin task="NSE" time="1725863556"/>
+<taskend task="NSE" time="1725863556"/>
+<runstats><finished time="1725863556" timestr="Mon Sep  9 12:02:36 2024" summary="Nmap done at Mon Sep  9 12:02:36 2024; 1 IP address (1 host up) scanned in 68.56 seconds" elapsed="68.56" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

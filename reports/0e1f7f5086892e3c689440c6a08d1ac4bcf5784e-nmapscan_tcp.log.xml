@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Thu Apr  6 16:57:08 2023 as: nmap -A -v -p22,8080 -oA Inject/nmapscan_tcp.log 10.10.11.204 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p22,8080 -oA Inject/nmapscan_tcp.log 10.10.11.204" start="1680814628" startstr="Thu Apr  6 16:57:08 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,8080"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1680814628"/>
+<taskend task="NSE" time="1680814628"/>
+<taskbegin task="NSE" time="1680814628"/>
+<taskend task="NSE" time="1680814628"/>
+<taskbegin task="NSE" time="1680814628"/>
+<taskend task="NSE" time="1680814628"/>
+<taskbegin task="Ping Scan" time="1680814628"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.204" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1680814629" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1680814629"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1680814629"/>
+<taskbegin task="Connect Scan" time="1680814629"/>
+<taskend task="Connect Scan" time="1680814629" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1680814629"/>
+<taskend task="Service scan" time="1680814635" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1680814635"/>
+<taskend task="NSE" time="1680814637"/>
+<taskbegin task="NSE" time="1680814637"/>
+<taskend task="NSE" time="1680814637"/>
+<taskbegin task="NSE" time="1680814637"/>
+<taskend task="NSE" time="1680814637"/>
+<host starttime="1680814629" endtime="1680814637"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.11.204" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.10.11.204" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.5" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 caf10c515a596277f0a80c5c7c8ddaf8 (RSA)&#xa;  256 d51c81c97b076b1cc1b429254b52219f (ECDSA)&#xa;  256 db1d8ceb9472b0d3ed44b96c93a7f91d (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDKZNtFBY2xMX8oDH/EtIMngGHpVX5fyuJLp9ig7NIC9XooaPtK60FoxOLcRr4iccW/9L2GWpp6kT777UzcKtYoijOCtctNClc6tG1hvohEAyXeNunG7GN+Lftc8eb4C6DooZY7oSeO++PgK5oRi3/tg+FSFSi6UZCsjci1NRj/0ywqzl/ytMzq5YoGfzRzIN3HYdFF8RHoW8qs8vcPsEMsbdsy1aGRbslKA2l1qmejyU9cukyGkFjYZsyVj1hEPn9V/uVafdgzNOvopQlg/yozTzN+LZ2rJO7/CCK3cjchnnPZZfeck85k5sw1G5uVGq38qcusfIfCnZlsn2FZzP2BXo5VEoO2IIRudCgJWTzb8urJ6JAWc1h0r6cUlxGdOvSSQQO6Yz1MhN9omUD9r4A5ag4cbI09c1KOnjzIM8hAWlwUDOKlaohgPtSbnZoGuyyHV/oyZu+/1w4HJWJy6urA43u1PFTonOyMkzJZihWNnkHhqrjeVsHTywFPUmTODb8=</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">3072</elem>
+<elem key="fingerprint">caf10c515a596277f0a80c5c7c8ddaf8</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIUJSpBOORoHb6HHQkePUztvh85c2F5k5zMDp+hjFhD8VRC2uKJni1FLYkxVPc/yY3Km7Sg1GzTyoGUxvy+EIsg=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">d51c81c97b076b1cc1b429254b52219f</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAICZzUvDL0INOklR7AH+iFw+uX+nkJtcw7V+1AsMO9P7p</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">db1d8ceb9472b0d3ed44b96c93a7f91d</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nagios-nsca" product="Nagios NSCA" method="probed" conf="10"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Home"><elem key="title">Home</elem>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/></port>
+</ports>
+<times srtt="37477" rttvar="21981" to="125401"/>
+</host>
+<taskbegin task="NSE" time="1680814637"/>
+<taskend task="NSE" time="1680814637"/>
+<taskbegin task="NSE" time="1680814637"/>
+<taskend task="NSE" time="1680814637"/>
+<taskbegin task="NSE" time="1680814637"/>
+<taskend task="NSE" time="1680814637"/>
+<runstats><finished time="1680814637" timestr="Thu Apr  6 16:57:17 2023" summary="Nmap done at Thu Apr  6 16:57:17 2023; 1 IP address (1 host up) scanned in 9.09 seconds" elapsed="9.09" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

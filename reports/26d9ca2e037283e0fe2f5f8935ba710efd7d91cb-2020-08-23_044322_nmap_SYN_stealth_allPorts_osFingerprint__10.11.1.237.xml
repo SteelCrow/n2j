@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Aug 23 04:43:23 2020 as: nmap -sS -p- -O -oA 2020-08-23_044322_nmap_SYN_stealth_allPorts_osFingerprint__10.11.1.237 10.11.1.237 -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -O -oA 2020-08-23_044322_nmap_SYN_stealth_allPorts_osFingerprint__10.11.1.237 10.11.1.237" start="1598172203" startstr="Sun Aug 23 04:43:23 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1598172203" endtime="1598172259"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.11.1.237" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65528">
+<extrareasons reason="resets" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="27017"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mongod" method="table" conf="3"/></port>
+<port protocol="tcp" portid="28017"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mongod" method="table" conf="3"/></port>
+<port protocol="tcp" portid="33242"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="42725"/>
+<osmatch name="Linux 3.2 - 3.8" accuracy="95" line="65033">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8" accuracy="95" line="65968">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.8</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="95" line="104321">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="95"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1 - 3.2" accuracy="94" line="62747">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 2.6.39" accuracy="93" line="56230">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="92" line="65474">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Grandstream GXV3275 video phone" accuracy="91" line="31732">
+<osclass type="VoIP phone" vendor="Grandstream" osfamily="embedded" accuracy="91"><cpe>cpe:/h:grandstream:gxv3275</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54126">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="91" line="58036">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.0 or 3.5" accuracy="91" line="62561">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.0</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/23%OT=22%CT=1%CU=42725%PV=Y%DS=2%DC=I%G=Y%TM=5F422C6&#xa;OS:3%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10E%TI=Z%II=I%TS=8)OPS(O1=M&#xa;OS:54DST11NW3%O2=M54DST11NW3%O3=M54DNNT11NW3%O4=M54DST11NW3%O5=M54DST11NW3%&#xa;OS:O6=M54DST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)ECN(R=Y%&#xa;OS:DF=Y%T=40%W=3908%O=M54DNNSNW3%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=&#xa;OS:0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;OS:T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%&#xa;OS:RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="17248821" lastboot="Wed Feb  5 12:23:58 2020"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="E5E9F597,CB2B9194,8A506A5,82E0C925,D0BBFAB,6E3D0FC9"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFFD3CC,FFFFD3E4,FFFFD3FD,FFFFD416,FFFFD42F,FFFFD449"/>
+<times srtt="22324" rttvar="7087" to="100000"/>
+</host>
+<runstats><finished time="1598172259" timestr="Sun Aug 23 04:44:19 2020" elapsed="56.16" summary="Nmap done at Sun Aug 23 04:44:19 2020; 1 IP address (1 host up) scanned in 56.16 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Sep  4 16:17:46 2020 as: nmap -sS -p- -O -oA 2020-09-04_161745_nmap_SYN_stealth_allPorts_osFingerprint__10.11.1.115 10.11.1.115 -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -O -oA 2020-09-04_161745_nmap_SYN_stealth_allPorts_osFingerprint__10.11.1.115 10.11.1.115" start="1599250666" startstr="Fri Sep  4 16:17:46 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="SYN Stealth Scan" time="1599250844" percent="41.95" remaining="247" etc="1599251090"/>
+<taskprogress task="SYN Stealth Scan" time="1599250898" percent="48.44" remaining="247" etc="1599251145"/>
+<taskprogress task="SYN Stealth Scan" time="1599251196" percent="90.52" remaining="56" etc="1599251252"/>
+<host starttime="1599250666" endtime="1599251303"><status state="up" reason="timestamp-reply" reason_ttl="63"/>
+<address addr="10.11.1.115" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65524">
+<extrareasons reason="resets" count="65524"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" method="table" conf="3"/></port>
+<port protocol="tcp" portid="199"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smux" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="32768"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="filenet-tms" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41696"/>
+<osmatch name="AVM FRITZ!Box FON WLAN 7170 WAP" accuracy="95" line="8806">
+<osclass type="WAP" vendor="AVM" osfamily="embedded" accuracy="95"><cpe>cpe:/h:avm:fritz%21box_fon_wlan_7170</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.4.21 (embedded)" accuracy="95" line="45992">
+<osclass type="specialized" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.4.21</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.15 - 2.6.26 (likely embedded)" accuracy="95" line="47879">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.29 (Gentoo)" accuracy="95" line="53498">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.29</cpe></osclass>
+</osmatch>
+<osmatch name="Dell Integrated Remote Access Controller (iDRAC)" accuracy="94" line="21804">
+<osclass type="remote management" vendor="Dell" osfamily="embedded" accuracy="94"/>
+</osmatch>
+<osmatch name="Dell Remote Access Controller 5/I (DRAC 5/I)" accuracy="94" line="22143">
+<osclass type="remote management" vendor="Dell" osfamily="embedded" accuracy="94"><cpe>cpe:/h:dell:remote_access_card:5</cpe></osclass>
+</osmatch>
+<osmatch name="Extreme Networks ExtremeXOS 12.5.4" accuracy="94" line="25018">
+<osclass type="switch" vendor="Extreme Networks" osfamily="ExtremeXOS" osgen="12.X" accuracy="94"><cpe>cpe:/o:extremenetworks:extremexos:12.5.4</cpe></osclass>
+</osmatch>
+<osmatch name="Extreme Networks ExtremeXOS 15.3" accuracy="94" line="25114">
+<osclass type="switch" vendor="Extreme Networks" osfamily="ExtremeXOS" osgen="15.X" accuracy="94"><cpe>cpe:/o:extremenetworks:extremexos:15.3</cpe></osclass>
+</osmatch>
+<osmatch name="HP 4200 PSA (Print Server Appliance) model J4117A" accuracy="94" line="32215">
+<osclass type="print server" vendor="HP" osfamily="embedded" accuracy="94"/>
+</osmatch>
+<osmatch name="Linux 2.4.20" accuracy="94" line="45134">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/4%OT=21%CT=1%CU=41696%PV=Y%DS=2%DC=I%G=Y%TM=5F52A367&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(SP=C0%GCD=1%ISR=D4%TI=Z%II=I%TS=7)OPS(O1=M54D&#xa;OS:ST11NW0%O2=M54DST11NW0%O3=M54DNNT11NW0%O4=M54DST11NW0%O5=M54DST11NW0%O6=&#xa;OS:M54DST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=&#xa;OS:Y%T=40%W=16D0%O=M54DNNSNW0%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q&#xa;OS:=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(&#xa;OS:R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD&#xa;OS:=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="869" lastboot="Fri Sep  4 16:13:54 2020"/>
+<distance value="2"/>
+<tcpsequence index="192" difficulty="Good luck!" values="4BF1BF68,4CA2752E,4BF31935,4C68714C,4BD411A9,4C5D83E1"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="15349,15354,1535D,15367,15371,1537B"/>
+<times srtt="30438" rttvar="16024" to="100000"/>
+</host>
+<runstats><finished time="1599251303" timestr="Fri Sep  4 16:28:23 2020" elapsed="637.52" summary="Nmap done at Fri Sep  4 16:28:23 2020; 1 IP address (1 host up) scanned in 637.52 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

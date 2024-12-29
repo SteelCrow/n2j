@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Feb 14 15:36:47 2020 as: nmap -sV -p 22,902 -oX test.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -sV -p 22,902 -oX test.xml 127.0.0.1" start="1581712607" startstr="Fri Feb 14 15:36:47 2020" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,902"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1581712607" endtime="1581712607"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="902"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="vmware-auth" product="VMware Authentication Daemon" version="1.10" extrainfo="Uses VNC, SOAP" tunnel="ssl" method="probed" conf="10"/></port>
+</ports>
+<times srtt="82" rttvar="2827" to="100000"/>
+</host>
+<runstats><finished time="1581712607" timestr="Fri Feb 14 15:36:47 2020" elapsed="0.39" summary="Nmap done at Fri Feb 14 15:36:47 2020; 1 IP address (1 host up) scanned in 0.39 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

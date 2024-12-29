@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sun Nov  5 15:47:40 2023 as: nmap -oX scan_bddaraz.xml -oG scan_bddaraz.txt -p 1-65535 -A -sV -sC -&#45;script=default,vuln,discovery,exploit,external,vulners,auth,vulscan daraz.com.bd -->
+<nmaprun scanner="nmap" args="nmap -oX scan_bddaraz.xml -oG scan_bddaraz.txt -p 1-65535 -A -sV -sC -&#45;script=default,vuln,discovery,exploit,external,vulners,auth,vulscan daraz.com.bd" start="1699177660" startstr="Sun Nov  5 15:47:40 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="hostmap-robtex" output="*TEMPORARILY DISABLED* due to changes in Robtex&apos;s API. See https://www.robtex.com/api/"/><script id="http-robtex-shared-ns" output="*TEMPORARILY DISABLED* due to changes in Robtex&apos;s API. See https://www.robtex.com/api/"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="47.246.165.217" addrtype="ipv4"/>
+<hostnames>
+<hostname name="daraz.com.bd" type="user"/>
+</hostnames>
+</hosthint>
+<taskprogress task="Connect Scan" time="1699177679" percent="2.35" remaining="333" etc="1699178011"/>
+<taskprogress task="NSE" time="1699179488" percent="99.91" remaining="2" etc="1699179489"/>
+<taskprogress task="NSE" time="1699179754" percent="99.91" remaining="2" etc="1699179756"/>
+<host starttime="1699177671" endtime="1699180126"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="47.246.165.217" addrtype="ipv4"/>
+<hostnames>
+<hostname name="daraz.com.bd" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="1-79,81-442,444-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Tengine httpd" version="Aserver" method="probed" conf="10"><cpe>cpe:/a:alibaba:tengine:aserver</cpe></service><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-vuln-cve2013-7091" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: https://www.daraz.com.bd/&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">https://www.daraz.com.bd/</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-date" output="Sun, 05 Nov 2023 09:52:00 GMT; +16s from local time."><elem key="date">2023-11-05T09:52:00+00:00</elem>
+<elem key="delta">16.0</elem>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-passwd" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    Header: Strict-Transport-Security: max-age=31536000&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-store"><table key="Strict_Transport_Security">
+<elem>Header: Strict-Transport-Security: max-age=31536000</elem>
+</table>
+<table key="Cache_Control">
+<elem>Header: Cache-Control: no-store</elem>
+</table>
+</script><script id="http-title" output="Did not follow redirect to https://daraz.com.bd/"><elem key="redirect_url">https://daraz.com.bd/</elem>
+</script><script id="vulscan" output="VulDB - https://vuldb.com:&#xa;No findings&#xa;&#xa;MITRE CVE - https://cve.mitre.org:&#xa;No findings&#xa;&#xa;SecurityFocus - https://www.securityfocus.com/bid/:&#xa;No findings&#xa;&#xa;IBM X-Force - https://exchange.xforce.ibmcloud.com:&#xa;No findings&#xa;&#xa;Exploit-DB - https://www.exploit-db.com:&#xa;No findings&#xa;&#xa;OpenVAS (Nessus) - http://www.openvas.org:&#xa;No findings&#xa;&#xa;SecurityTracker - https://www.securitytracker.com:&#xa;No findings&#xa;&#xa;OSVDB - http://www.osvdb.org:&#xa;No findings&#xa;&#xa;"/><script id="http-chrono" output="Request times for /; avg: 637.46ms; min: 291.87ms; max: 1196.93ms"/><script id="http-headers" output="&#xa;  Date: Sun, 05 Nov 2023 09:52:02 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 357&#xa;  Connection: close&#xa;  Location: https://daraz.com.bd/&#xa;  Server: Tengine/Aserver&#xa;  EagleEye-TraceId: 2102f5dc16991779227238100ee9ea&#xa;  Timing-Allow-Origin: *&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-vhosts" output="&#xa;128 names had status 404"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="http-server-header" output="Tengine/Aserver"><elem>Tengine/Aserver</elem>
+</script><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Tengine httpd" version="Aserver" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:alibaba:tengine:aserver</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="http-passwd" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-date" output="Sun, 05 Nov 2023 09:51:39 GMT; +16s from local time."><elem key="date">2023-11-05T09:51:39+00:00</elem>
+<elem key="delta">16.0</elem>
+</script><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-enum" output="&#xa;  /web-console/ServerInfo.jsp: JBoss Console&#xa;  /web-console/Invoker: JBoss Console&#xa;  /jmx-console/: JBoss Console&#xa;"/><script id="http-headers" output="&#xa;  Date: Sun, 05 Nov 2023 09:52:08 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 278&#xa;  Connection: close&#xa;  Location: https://www.daraz.com.bd/&#xa;  Server: Tengine/Aserver&#xa;  EagleEye-TraceId: 21010ca016991779281307156e3c28&#xa;  Strict-Transport-Security: max-age=31536000&#xa;  Timing-Allow-Origin: *&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-traceroute" output="&#xa;  content-length&#xa;    Hop #1: 357&#xa;    Hop #2: 357&#xa;    Hop #3: 278&#xa;  location&#xa;    Hop #1: https://daraz.com.bd/&#xa;    Hop #2: https://daraz.com.bd/&#xa;    Hop #3: https://www.daraz.com.bd/&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Redirected To: https://www.daraz.com.bd/&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<elem key="Redirected To">https://www.daraz.com.bd/</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="ssl-cert" output="Subject: commonName=*.daraz.com/organizationName=Alibaba (China) Technology Co., Ltd./stateOrProvinceName=ZheJiang/countryName=CN&#xa;Subject Alternative Name: DNS:*.daraz.com, DNS:*.alimebot.daraz.com, DNS:*.alimebot.daraz.com.bd, DNS:*.alimebot.daraz.com.np, DNS:*.alimebot.daraz.lk, DNS:*.alimebot.daraz.pk, DNS:*.alimebot.shop.com.mm, DNS:*.daraz.com.bd, DNS:*.daraz.com.np, DNS:*.daraz.lk, DNS:*.daraz.pk, DNS:*.education.daraz.com.bd, DNS:*.education.daraz.com.np, DNS:*.education.daraz.lk, DNS:*.education.daraz.pk, DNS:*.education.shop.com.mm, DNS:*.gsearch.daraz.com, DNS:*.gsearch.daraz.com.bd, DNS:*.gsearch.daraz.com.np, DNS:*.gsearch.daraz.lk, DNS:*.gsearch.daraz.pk, DNS:*.gsearch.shop.com.mm, DNS:*.payment.daraz.com, DNS:*.sellercener.daraz.lk, DNS:*.sellercenter-staging.daraz.com.bd, DNS:*.sellercenter-staging.daraz.com.np, DNS:*.sellercenter-staging.daraz.lk, DNS:*.sellercenter-staging.daraz.pk, DNS:*.sellercenter-staging.shop.com.mm, DNS:*.sellercenter.daraz.com.bd, DNS:*.sellercenter.daraz.com.np, DNS:*.sellercenter.daraz.lk, DNS:*.sellercenter.daraz.pk, DNS:*.sellercenter.shop.com.mm, DNS:*.shop.com.mm, DNS:*.test.daraz.com, DNS:*.ut.daraz.com, DNS:*.x-space.daraz.com, DNS:daraz.com.bd, DNS:daraz.com.np, DNS:daraz.lk, DNS:daraz.pk, DNS:shop.com.mm, DNS:www.university.daraz.com.bd, DNS:www.university.daraz.com.np, DNS:www.university.daraz.lk, DNS:www.university.daraz.pk, DNS:www.university.shop.com.mm, DNS:daraz.com&#xa;Not valid before: 2023-03-07T03:07:03&#xa;Not valid after:  2024-04-07T02:56:02"><table key="subject">
+<elem key="commonName">*.daraz.com</elem>
+<elem key="countryName">CN</elem>
+<elem key="localityName">HangZhou</elem>
+<elem key="organizationName">Alibaba (China) Technology Co., Ltd.</elem>
+<elem key="stateOrProvinceName">ZheJiang</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">GlobalSign Organization Validation CA - SHA256 - G3</elem>
+<elem key="countryName">BE</elem>
+<elem key="organizationName">GlobalSign nv-sa</elem>
+</table>
+<table key="pubkey">
+<elem key="type">ec</elem>
+<elem key="bits">256</elem>
+<table key="ecdhparams">
+<table key="curve_params">
+<elem key="ec_curve_type">namedcurve</elem>
+<elem key="curve">prime256v1</elem>
+</table>
+</table>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:http://secure.globalsign.com/cacert/gsorganizationvalsha2g3.crt&#xa;OCSP - URI:http://ocsp2.globalsign.com/gsorganizationvalsha2g3</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 1.3.6.1.4.1.4146.1.20&#xa;  CPS: https://www.globalsign.com/repository/&#xa;Policy: 2.23.140.1.2.2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://crl.globalsign.com/gsorganizationvalsha2g3.crl</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.daraz.com, DNS:*.alimebot.daraz.com, DNS:*.alimebot.daraz.com.bd, DNS:*.alimebot.daraz.com.np, DNS:*.alimebot.daraz.lk, DNS:*.alimebot.daraz.pk, DNS:*.alimebot.shop.com.mm, DNS:*.daraz.com.bd, DNS:*.daraz.com.np, DNS:*.daraz.lk, DNS:*.daraz.pk, DNS:*.education.daraz.com.bd, DNS:*.education.daraz.com.np, DNS:*.education.daraz.lk, DNS:*.education.daraz.pk, DNS:*.education.shop.com.mm, DNS:*.gsearch.daraz.com, DNS:*.gsearch.daraz.com.bd, DNS:*.gsearch.daraz.com.np, DNS:*.gsearch.daraz.lk, DNS:*.gsearch.daraz.pk, DNS:*.gsearch.shop.com.mm, DNS:*.payment.daraz.com, DNS:*.sellercener.daraz.lk, DNS:*.sellercenter-staging.daraz.com.bd, DNS:*.sellercenter-staging.daraz.com.np, DNS:*.sellercenter-staging.daraz.lk, DNS:*.sellercenter-staging.daraz.pk, DNS:*.sellercenter-staging.shop.com.mm, DNS:*.sellercenter.daraz.com.bd, DNS:*.sellercenter.daraz.com.np, DNS:*.sellercenter.daraz.lk, DNS:*.sellercenter.daraz.pk, DNS:*.sellercenter.shop.com.mm, DNS:*.shop.com.mm, DNS:*.test.daraz.com, DNS:*.ut.daraz.com, DNS:*.x-space.daraz.com, DNS:daraz.com.bd, DNS:daraz.com.np, DNS:daraz.lk, DNS:daraz.pk, DNS:shop.com.mm, DNS:www.university.daraz.com.bd, DNS:www.university.daraz.com.np, DNS:www.university.daraz.lk, DNS:www.university.daraz.pk, DNS:www.university.shop.com.mm, DNS:daraz.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication, TLS Web Client Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">68:86:B8:7D:7A:D9:6D:49:6B:87:2F:18:8B:15:34:6C:D7:B4:7A:0E</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">0B:62:32:A9:08:61:C7:1A:B1:2D:53:C2:CE:98:DD:39:25:56:E7:44</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 73:D9:9E:89:1B:4C:96:78:A0:20:7D:47:9D:E6:B2:C6:&#xa;                1C:D0:51:5E:71:19:2A:8C:6B:80:10:7A:C1:77:72:B5&#xa;    Timestamp : Mar  7 03:07:10.519 2023 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:9F:7F:51:1C:9E:A1:C3:A6:1A:AF:34:&#xa;                8E:F9:6A:C6:E2:E3:CA:07:3F:7D:FF:3C:4B:F7:1A:79:&#xa;                78:D6:60:64:AB:02:21:00:EA:3A:E3:E3:D9:4D:F7:6A:&#xa;                EF:9F:B1:2F:5E:A5:C6:9A:B3:42:5A:4B:52:A0:77:25:&#xa;                83:34:D7:B8:C3:A1:08:24&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:&#xa;                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B&#xa;    Timestamp : Mar  7 03:07:10.455 2023 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:21:00:EC:E5:78:F1:01:0D:BD:9B:D6:70:77:&#xa;                E6:5C:27:B1:E8:EF:4A:91:9A:E2:AE:05:82:3D:85:25:&#xa;                62:B0:12:84:68:02:20:4F:3A:0A:9E:21:6D:95:3F:0F:&#xa;                71:3B:0B:24:89:A0:C7:04:0B:31:A6:96:08:3D:29:A1:&#xa;                12:15:E4:B4:AB:C8:2D&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:&#xa;                1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73&#xa;    Timestamp : Mar  7 03:07:10.203 2023 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:3F:69:61:9F:46:1B:DB:10:A7:F2:2D:F5:&#xa;                01:5C:25:3C:49:79:EC:41:B4:C4:12:D0:8E:41:DC:A8:&#xa;                9D:56:7B:42:02:21:00:FD:89:37:A9:74:0C:44:FA:CB:&#xa;                AE:30:66:EC:AD:22:3F:4C:CA:CF:2F:AE:31:A4:6C:B0:&#xa;                E5:33:34:8B:23:D4:75</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2023-03-07T03:07:03</elem>
+<elem key="notAfter">2024-04-07T02:56:02</elem>
+</table>
+<elem key="md5">bc805b46e845289ae8cc07a821af66b3</elem>
+<elem key="sha1">058bb8238caf601e40bcaddb6a277e75feeae10c</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIKNTCCCR2gAwIBAgIMeCCwOgex82CF4fIaMA0GCSqGSIb3DQEBCwUAMGYxCzAJ&#xa;BgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMTwwOgYDVQQDEzNH&#xa;bG9iYWxTaWduIE9yZ2FuaXphdGlvbiBWYWxpZGF0aW9uIENBIC0gU0hBMjU2IC0g&#xa;RzMwHhcNMjMwMzA3MDMwNzAzWhcNMjQwNDA3MDI1NjAyWjB4MQswCQYDVQQGEwJD&#xa;TjERMA8GA1UECBMIWmhlSmlhbmcxETAPBgNVBAcTCEhhbmdaaG91MS0wKwYDVQQK&#xa;EyRBbGliYWJhIChDaGluYSkgVGVjaG5vbG9neSBDby4sIEx0ZC4xFDASBgNVBAMM&#xa;CyouZGFyYXouY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEGJk9OsUyQMH8&#xa;PaSEfSNMtn37JNhCWSFtA6ucl4jzJbp0oZMCerflVmlTw++HGOHEKhxf+daKr7RM&#xa;Im2vkn+qPqOCB5owggeWMA4GA1UdDwEB/wQEAwIHgDCBngYIKwYBBQUHAQEEgZEw&#xa;gY4wSwYIKwYBBQUHMAKGP2h0dHA6Ly9zZWN1cmUuZ2xvYmFsc2lnbi5jb20vY2Fj&#xa;ZXJ0L2dzb3JnYW5pemF0aW9udmFsc2hhMmczLmNydDA/BggrBgEFBQcwAYYzaHR0&#xa;cDovL29jc3AyLmdsb2JhbHNpZ24uY29tL2dzb3JnYW5pemF0aW9udmFsc2hhMmcz&#xa;MFYGA1UdIARPME0wQQYJKwYBBAGgMgEUMDQwMgYIKwYBBQUHAgEWJmh0dHBzOi8v&#xa;d3d3Lmdsb2JhbHNpZ24uY29tL3JlcG9zaXRvcnkvMAgGBmeBDAECAjAJBgNVHRME&#xa;AjAAMEYGA1UdHwQ/MD0wO6A5oDeGNWh0dHA6Ly9jcmwuZ2xvYmFsc2lnbi5jb20v&#xa;Z3Nvcmdhbml6YXRpb252YWxzaGEyZzMuY3JsMIIEVAYDVR0RBIIESzCCBEeCCyou&#xa;ZGFyYXouY29tghQqLmFsaW1lYm90LmRhcmF6LmNvbYIXKi5hbGltZWJvdC5kYXJh&#xa;ei5jb20uYmSCFyouYWxpbWVib3QuZGFyYXouY29tLm5wghMqLmFsaW1lYm90LmRh&#xa;cmF6LmxrghMqLmFsaW1lYm90LmRhcmF6LnBrghYqLmFsaW1lYm90LnNob3AuY29t&#xa;Lm1tgg4qLmRhcmF6LmNvbS5iZIIOKi5kYXJhei5jb20ubnCCCiouZGFyYXoubGuC&#xa;CiouZGFyYXoucGuCGCouZWR1Y2F0aW9uLmRhcmF6LmNvbS5iZIIYKi5lZHVjYXRp&#xa;b24uZGFyYXouY29tLm5wghQqLmVkdWNhdGlvbi5kYXJhei5sa4IUKi5lZHVjYXRp&#xa;b24uZGFyYXoucGuCFyouZWR1Y2F0aW9uLnNob3AuY29tLm1tghMqLmdzZWFyY2gu&#xa;ZGFyYXouY29tghYqLmdzZWFyY2guZGFyYXouY29tLmJkghYqLmdzZWFyY2guZGFy&#xa;YXouY29tLm5wghIqLmdzZWFyY2guZGFyYXoubGuCEiouZ3NlYXJjaC5kYXJhei5w&#xa;a4IVKi5nc2VhcmNoLnNob3AuY29tLm1tghMqLnBheW1lbnQuZGFyYXouY29tghYq&#xa;LnNlbGxlcmNlbmVyLmRhcmF6LmxrgiMqLnNlbGxlcmNlbnRlci1zdGFnaW5nLmRh&#xa;cmF6LmNvbS5iZIIjKi5zZWxsZXJjZW50ZXItc3RhZ2luZy5kYXJhei5jb20ubnCC&#xa;Hyouc2VsbGVyY2VudGVyLXN0YWdpbmcuZGFyYXoubGuCHyouc2VsbGVyY2VudGVy&#xa;LXN0YWdpbmcuZGFyYXoucGuCIiouc2VsbGVyY2VudGVyLXN0YWdpbmcuc2hvcC5j&#xa;b20ubW2CGyouc2VsbGVyY2VudGVyLmRhcmF6LmNvbS5iZIIbKi5zZWxsZXJjZW50&#xa;ZXIuZGFyYXouY29tLm5wghcqLnNlbGxlcmNlbnRlci5kYXJhei5sa4IXKi5zZWxs&#xa;ZXJjZW50ZXIuZGFyYXoucGuCGiouc2VsbGVyY2VudGVyLnNob3AuY29tLm1tgg0q&#xa;LnNob3AuY29tLm1tghAqLnRlc3QuZGFyYXouY29tgg4qLnV0LmRhcmF6LmNvbYIT&#xa;Ki54LXNwYWNlLmRhcmF6LmNvbYIMZGFyYXouY29tLmJkggxkYXJhei5jb20ubnCC&#xa;CGRhcmF6LmxrgghkYXJhei5wa4ILc2hvcC5jb20ubW2CG3d3dy51bml2ZXJzaXR5&#xa;LmRhcmF6LmNvbS5iZIIbd3d3LnVuaXZlcnNpdHkuZGFyYXouY29tLm5wghd3d3cu&#xa;dW5pdmVyc2l0eS5kYXJhei5sa4IXd3d3LnVuaXZlcnNpdHkuZGFyYXoucGuCGnd3&#xa;dy51bml2ZXJzaXR5LnNob3AuY29tLm1tgglkYXJhei5jb20wHQYDVR0lBBYwFAYI&#xa;KwYBBQUHAwEGCCsGAQUFBwMCMB8GA1UdIwQYMBaAFGiGuH162W1Ja4cvGIsVNGzX&#xa;tHoOMB0GA1UdDgQWBBQLYjKpCGHHGrEtU8LOmN05JVbnRDCCAX8GCisGAQQB1nkC&#xa;BAIEggFvBIIBawFpAHcAc9meiRtMlnigIH1HneayxhzQUV5xGSqMa4AQesF3crUA&#xa;AAGGugmBNwAABAMASDBGAiEAn39RHJ6hw6YarzSO+WrG4uPKBz99/zxL9xp5eNZg&#xa;ZKsCIQDqOuPj2U33au+fsS9epcaas0JaS1KgdyWDNNe4w6EIJAB2AO7N0GTV2xrO&#xa;xVy3nbTNE6Iyh0Z8vOzew1FIWUZxH7WbAAABhroJgPcAAAQDAEcwRQIhAOzlePEB&#xa;Db2b1nB35lwnsejvSpGa4q4Fgj2FJWKwEoRoAiBPOgqeIW2VPw9xOwskiaDHBAsx&#xa;ppYIPSmhEhXktKvILQB2AEiw42vapkc0D+VqAvqdMOscUgHLVt0sgdm7v6s52IRz&#xa;AAABhroJf/sAAAQDAEcwRQIgP2lhn0Yb2xCn8i31AVwlPEl57EG0xBLQjkHcqJ1W&#xa;e0ICIQD9iTepdAxE+suuMGbsrSI/TMrPL64xpGyw5TM0iyPUdTANBgkqhkiG9w0B&#xa;AQsFAAOCAQEAjNPa5AqPlJnEUonV1e/xdkTROe9UadM1P9BKGZOgZrs7sea8DUSe&#xa;Qp5UpTsmdRmkqCQuew6r025I53A1JblHooTBDZQ37GuXs97paTVePJDOhoqjRRju&#xa;RLJ16CJv77jNjlRAskIPzLLyIBm8mHHFv+s+ARLn7TKTDmccOfZwFpLuLimNvOCE&#xa;aNRbnCBm95Kx49NW+nYxJUB/DQK1hFye1q9KS//01kiB8TYxDiubpaD86Ahh19cx&#xa;MJ+EYGOnjgWi4ny4au3T502ARsmxysrKHBnk0YBxoiuyCedhe6EXzbiYJSNztd3R&#xa;yoBe6uiNXgnYK2nmJatIivmpsejTYahJhQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;daraz.com.bd:443/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-title" output="Did not follow redirect to https://www.daraz.com.bd/"><elem key="redirect_url">https://www.daraz.com.bd/</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="vulscan" output="VulDB - https://vuldb.com:&#xa;No findings&#xa;&#xa;MITRE CVE - https://cve.mitre.org:&#xa;No findings&#xa;&#xa;SecurityFocus - https://www.securityfocus.com/bid/:&#xa;No findings&#xa;&#xa;IBM X-Force - https://exchange.xforce.ibmcloud.com:&#xa;No findings&#xa;&#xa;Exploit-DB - https://www.exploit-db.com:&#xa;No findings&#xa;&#xa;OpenVAS (Nessus) - http://www.openvas.org:&#xa;No findings&#xa;&#xa;SecurityTracker - https://www.securitytracker.com:&#xa;No findings&#xa;&#xa;OSVDB - http://www.osvdb.org:&#xa;No findings&#xa;&#xa;"/><script id="http-server-header" output="Tengine/Aserver"><elem>Tengine/Aserver</elem>
+</script><script id="http-vhosts" output="&#xa;main.com.bd : 301 -&gt; https://main.com.bd/&#xa;linux.com.bd : 301 -&gt; https://linux.com.bd/&#xa;eshop.com.bd : 301 -&gt; https://eshop.com.bd/&#xa;125 names had status 404"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-vuln-cve2013-7091" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    Header: Strict-Transport-Security: max-age=31536000&#xa;  Cache_Control: &#xa;    Header: Cache-Control: no-store"><table key="Strict_Transport_Security">
+<elem>Header: Strict-Transport-Security: max-age=31536000</elem>
+</table>
+<table key="Cache_Control">
+<elem>Header: Cache-Control: no-store</elem>
+</table>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-chrono" output="Request times for /; avg: 1431.87ms; min: 410.69ms; max: 3826.21ms"/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-vuln-cve2010-0738" output="&#xa;  /jmx-console/: Authentication was not required&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 15s, deviation: 0s, median: 15s"><elem key="mean">15</elem>
+<elem key="count">2</elem>
+<elem key="stddev">0</elem>
+<elem key="median">15</elem>
+</script><script id="dns-brute" output="&#xa;  DNS Brute-force hostnames: &#xa;    alpha.com.bd - 103.174.153.181&#xa;    web.com.bd - 192.196.156.107&#xa;    en.com.bd - 198.38.83.196&#xa;    erp.com.bd - 192.144.82.171&#xa;    eshop.com.bd - 85.187.128.57&#xa;    host.com.bd - 64.188.2.223&#xa;    cdn.com.bd - 103.125.254.5&#xa;    ftp.com.bd - 198.54.120.245&#xa;    internet.com.bd - 103.148.15.15&#xa;    internet.com.bd - 2001:df2:b780:2:c0de:103:148:1515&#xa;    help.com.bd - 66.96.147.144&#xa;    database.com.bd - 108.167.156.121&#xa;    home.com.bd - 92.222.49.156&#xa;    oracle.com.bd - 156.151.59.19&#xa;    dev.com.bd - 104.21.33.189&#xa;    dev.com.bd - 172.67.148.62&#xa;    dev.com.bd - 2606:4700:3035::6815:21bd&#xa;    dev.com.bd - 2606:4700:3035::ac43:943e&#xa;    pbx.com.bd - 104.21.84.62&#xa;    pbx.com.bd - 172.67.187.167&#xa;    pbx.com.bd - 2606:4700:3035::6815:543e&#xa;    pbx.com.bd - 2606:4700:3035::ac43:bba7&#xa;    manage.com.bd - 162.243.15.252&#xa;    mirror.com.bd - 68.65.122.50&#xa;    smtp.com.bd - 103.129.45.230&#xa;    ssh.com.bd - 173.236.33.146&#xa;    ssl.com.bd - 192.185.103.141"><table key="DNS Brute-force hostnames">
+<table>
+<elem key="address">103.174.153.181</elem>
+<elem key="hostname">alpha.com.bd</elem>
+</table>
+<table>
+<elem key="address">192.196.156.107</elem>
+<elem key="hostname">web.com.bd</elem>
+</table>
+<table>
+<elem key="address">198.38.83.196</elem>
+<elem key="hostname">en.com.bd</elem>
+</table>
+<table>
+<elem key="address">192.144.82.171</elem>
+<elem key="hostname">erp.com.bd</elem>
+</table>
+<table>
+<elem key="address">85.187.128.57</elem>
+<elem key="hostname">eshop.com.bd</elem>
+</table>
+<table>
+<elem key="address">64.188.2.223</elem>
+<elem key="hostname">host.com.bd</elem>
+</table>
+<table>
+<elem key="address">103.125.254.5</elem>
+<elem key="hostname">cdn.com.bd</elem>
+</table>
+<table>
+<elem key="address">198.54.120.245</elem>
+<elem key="hostname">ftp.com.bd</elem>
+</table>
+<table>
+<elem key="address">103.148.15.15</elem>
+<elem key="hostname">internet.com.bd</elem>
+</table>
+<table>
+<elem key="address">2001:df2:b780:2:c0de:103:148:1515</elem>
+<elem key="hostname">internet.com.bd</elem>
+</table>
+<table>
+<elem key="address">66.96.147.144</elem>
+<elem key="hostname">help.com.bd</elem>
+</table>
+<table>
+<elem key="address">108.167.156.121</elem>
+<elem key="hostname">database.com.bd</elem>
+</table>
+<table>
+<elem key="address">92.222.49.156</elem>
+<elem key="hostname">home.com.bd</elem>
+</table>
+<table>
+<elem key="address">156.151.59.19</elem>
+<elem key="hostname">oracle.com.bd</elem>
+</table>
+<table>
+<elem key="address">104.21.33.189</elem>
+<elem key="hostname">dev.com.bd</elem>
+</table>
+<table>
+<elem key="address">172.67.148.62</elem>
+<elem key="hostname">dev.com.bd</elem>
+</table>
+<table>
+<elem key="address">2606:4700:3035::6815:21bd</elem>
+<elem key="hostname">dev.com.bd</elem>
+</table>
+<table>
+<elem key="address">2606:4700:3035::ac43:943e</elem>
+<elem key="hostname">dev.com.bd</elem>
+</table>
+<table>
+<elem key="address">104.21.84.62</elem>
+<elem key="hostname">pbx.com.bd</elem>
+</table>
+<table>
+<elem key="address">172.67.187.167</elem>
+<elem key="hostname">pbx.com.bd</elem>
+</table>
+<table>
+<elem key="address">2606:4700:3035::6815:543e</elem>
+<elem key="hostname">pbx.com.bd</elem>
+</table>
+<table>
+<elem key="address">2606:4700:3035::ac43:bba7</elem>
+<elem key="hostname">pbx.com.bd</elem>
+</table>
+<table>
+<elem key="address">162.243.15.252</elem>
+<elem key="hostname">manage.com.bd</elem>
+</table>
+<table>
+<elem key="address">68.65.122.50</elem>
+<elem key="hostname">mirror.com.bd</elem>
+</table>
+<table>
+<elem key="address">103.129.45.230</elem>
+<elem key="hostname">smtp.com.bd</elem>
+</table>
+<table>
+<elem key="address">173.236.33.146</elem>
+<elem key="hostname">ssh.com.bd</elem>
+</table>
+<table>
+<elem key="address">192.185.103.141</elem>
+<elem key="hostname">ssl.com.bd</elem>
+</table>
+</table>
+</script><script id="fcrdns" output="FAIL (No PTR record)"><table key="&lt;none&gt;">
+<elem key="status">fail</elem>
+<elem key="reason">No PTR record</elem>
+</table>
+</script><script id="resolveall" output="&#xa;  Host &apos;daraz.com.bd&apos; also resolves to:&#xa;    47.246.167.36&#xa;    47.246.165.193&#xa;    47.246.167.33&#xa;  Use the &apos;newtargets&apos; script-arg to add the results as targets&#xa;  Use the -&#45;resolve-all option to scan all resolved addresses without using this script.&#xa;"><elem key="newtargets">0</elem>
+<table key="addresses">
+<elem>47.246.167.36</elem>
+<elem>47.246.165.193</elem>
+<elem>47.246.167.33</elem>
+</table>
+</script><script id="asn-query" output="No Answers"/><script id="ip-geolocation-geoplugin" output="coordinates: 37.751, -97.822&#xa;location: , United States"><elem key="latitude">37.751</elem>
+<elem key="longitude">-97.822</elem>
+<elem key="city">nil</elem>
+<elem key="region"></elem>
+<elem key="country">United States</elem>
+</script><script id="whois-ip" output="Record found at whois.arin.net&#xa;netrange: 47.235.0.0 - 47.246.255.255&#xa;netname: AL-3&#xa;orgname: Alibaba Cloud LLC&#xa;orgid: AL-3&#xa;country: US stateprov: CA"/><script id="dns-blacklist" output="&#xa;  ATTACK&#xa;    all.bl.blocklist.de - FAIL&#xa;  SPAM&#xa;    l2.apews.org - FAIL&#xa;    all.spamrats.com - FAIL&#xa;"/></hostscript><times srtt="81431" rttvar="10649" to="124027"/>
+</host>
+<postscript><script id="ip-geolocation-map-google" output=""><elem>Script argument problem</elem>
+<elem>Need to specify an API key, get one at https://developers.google.com/maps/documentation/static-maps/.</elem>
+</script><script id="ip-geolocation-map-bing" output=""><elem>Script argument problem</elem>
+<elem>Need to specify an API key, get one at https://www.bingmapsportal.com/.</elem>
+</script></postscript><runstats><finished time="1699180126" timestr="Sun Nov  5 16:28:46 2023" summary="Nmap done at Sun Nov  5 16:28:46 2023; 1 IP address (1 host up) scanned in 2466.19 seconds" elapsed="2466.19" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

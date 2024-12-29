@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!-- nmap 3.27 scan initiated Tue Jul  1 14:48:03 2003 as: nmap -v -v -v -oX test.xml -O -sTUR -p 1-1023 localhost -->
+<nmaprun scanner="nmap" args="nmap -v -v -v -oX test.xml -O -sTUR -p 1-1023 localhost" start="1057088883" version="3.27" xmloutputversion="1.0">
+<scaninfo type="connect" protocol="tcp" numservices="1023" services="1-1023" />
+<scaninfo type="udp" protocol="udp" numservices="1023" services="1-1023" />
+<verbose level="3" />
+<debugging level="0" />
+<host><status state="up" />
+<address addr="127.0.0.2" addrtype="ipv4" />
+<hostnames><hostname name="LocalHost 2" type="PTR" /></hostnames>
+<addport state="open" portid="22" protocol="tcp" owner=""/>
+<addport state="open" portid="80" protocol="tcp" owner=""/>
+<ports><extraports state="closed" count="2044" />
+<port protocol="tcp" portid="22"><state state="open" /><service name="ssh" method="table" conf="3"  />
+</port>
+<port protocol="tcp" portid="80"><state state="open" /><service name="http" method="table" conf="3"  />
+</port>
+</ports>
+<os><osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="8" accuracy="100"/>
+<osmatch name="Sun Solaris 8 early access beta through actual release" accuracy="100" />
+</os>
+<uptime seconds="1838659" lastboot="Wed Jun 11 09:13:35 2003" />
+<tcpsequence index="9999999" class="truly random" difficulty="Good luck!" values="4B1CC657,99519A3F,9F934F86,74DAA2B1,9A935F26,EC151FED" />
+<ipidsequence class="Incremental" values="FF62,FF63,FF64,FF65,FF66,FF67"/>
+<tcptssequence class="100HZ" values="AF591DD,AF591E9,AF591F5,AF59201,AF5920D,AF59219"/>
+</host>
+<host><status state="up" />
+<address addr="127.0.0.1" addrtype="ipv4" />
+<hostnames><hostname name="localhost.localdomain" type="PTR" /></hostnames>
+<addport state="open" portid="22" protocol="tcp" owner=""/>
+<addport state="open" portid="25" protocol="tcp" owner=""/>
+<addport state="open" portid="443" protocol="tcp" owner=""/>
+<addport state="open" portid="631" protocol="tcp" owner=""/>
+<addport state="open" portid="111" protocol="tcp" owner=""/>
+<addport state="open" portid="80" protocol="tcp" owner=""/>
+<addport state="open" portid="937" protocol="udp" owner=""/>
+<addport state="open" portid="111" protocol="udp" owner=""/>
+<ports><extraports state="closed" count="2038" />
+<port protocol="tcp" portid="22"><state state="open" /><service name="ssh" method="table" conf="3"  />
+</port>
+<port protocol="tcp" portid="25"><state state="open" /><service name="smtp" method="table" conf="3"  />
+</port>
+<port protocol="tcp" portid="80"><state state="open" /><service name="http" method="table" conf="3"  />
+</port>
+<port protocol="tcp" portid="111"><state state="open" /><service name="rpcbind" proto="rpc" rpcnum="100000" lowver="2" highver="2" method="detection" conf="5" />
+</port>
+<port protocol="udp" portid="111"><state state="open" /><service name="rpcbind" proto="rpc" rpcnum="100000" lowver="2" highver="2" method="detection" conf="5" />
+</port>
+<port protocol="tcp" portid="443"><state state="open" /><service name="https" method="table" conf="3"  />
+</port>
+<port protocol="tcp" portid="631"><state state="open" /><service name="ipp" method="table" conf="3"  />
+</port>
+<port protocol="udp" portid="937"><state state="open" /></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22" />
+<portused state="closed" proto="tcp" portid="1" />
+<osclass type="general purpose" vendor='Linux' osfamily='Linux' osgen='2.4.x' accuracy="100"/>
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="8" accuracy="100"/>
+<osmatch name="Linux Kernel 2.4.0 - 2.5.20" accuracy="100" />
+</os>
+<uptime seconds="1973" lastboot="Tue Jul  1 14:15:27 2003" />
+<tcpsequence index="4336320" class="random positive increments" difficulty="Good luck!" values="B742FEAF,B673A3F0,B6B42D41,B6C710A1,B6F23FC4,B72FA3A8" />
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="30299,302A5,302B1,302BD,302C9,302D5"/>
+</host>
+<host><status state="down" />
+<address addr="127.0.0.3" addrtype="ipv4" />
+</host>
+<runstats><finished time="1057088900" /><hosts up="1" down="0" total="1" />
+<!-- Nmap run completed at Tue Jul  1 14:48:20 2003; 1 IP address (1 host up) scanned in 16.970 seconds -->
+</runstats></nmaprun>

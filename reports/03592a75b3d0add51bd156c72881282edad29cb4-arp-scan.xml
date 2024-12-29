@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 6.49BETA4 scan initiated Tue May  3 20:57:52 2016 as: nmap -p22,3306 -oX arp-scan.xml 10.202.208.1 10.202.208.2 10.202.208.4 10.202.208.5 10.202.208.7 10.202.208.9 10.202.208.11 10.202.208.18 10.202.208.21 10.202.208.22 10.202.208.23 10.202.208.24 10.202.208.102 10.202.208.1 -->
+<nmaprun scanner="nmap" args="nmap -p22,3306 -oX arp-scan.xml 10.202.208.1 10.202.208.2 10.202.208.4 10.202.208.5 10.202.208.7 10.202.208.9 10.202.208.11 10.202.208.18 10.202.208.21 10.202.208.22 10.202.208.23 10.202.208.24 10.202.208.102 10.202.208.1" start="1462323472" startstr="Tue May  3 20:57:52 2016" version="6.49BETA4" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,3306"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1462323472" endtime="1462323485"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.1" addrtype="ipv4"/>
+<address addr="10:BF:48:D3:93:B8" addrtype="mac" vendor="Asustek Computer"/>
+<hostnames>
+<hostname name="router.asus.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="46635" rttvar="255434" to="1068371"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.2" addrtype="ipv4"/>
+<address addr="00:21:9B:9F:A8:80" addrtype="mac" vendor="Dell"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="filtered" reason="host-prohibited" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179211" rttvar="305742" to="1402179"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.4" addrtype="ipv4"/>
+<address addr="26:74:35:43:2E:2A" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179324" rttvar="305968" to="1403196"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.5" addrtype="ipv4"/>
+<address addr="2E:9F:36:F4:6D:5B" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179329" rttvar="305978" to="1403241"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.7" addrtype="ipv4"/>
+<address addr="4E:F6:A5:FE:96:E2" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="filtered" reason="host-prohibited" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179214" rttvar="305748" to="1402206"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.9" addrtype="ipv4"/>
+<address addr="BA:A9:C8:79:14:BD" addrtype="mac"/>
+<hostnames>
+<hostname name="xoa" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179360" rttvar="306022" to="1403448"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.11" addrtype="ipv4"/>
+<address addr="4A:37:AF:1A:E4:E7" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="128"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="128"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179322" rttvar="305969" to="1403198"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.18" addrtype="ipv4"/>
+<address addr="00:18:19:4D:81:80" addrtype="mac" vendor="Cisco Systems"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="255"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="255"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179364" rttvar="306028" to="1403476"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.21" addrtype="ipv4"/>
+<address addr="DA:73:CE:00:75:97" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="128"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="128"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179327" rttvar="305975" to="1403227"/>
+</host>
+<host starttime="1462323472" endtime="1462323488"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.22" addrtype="ipv4"/>
+<address addr="22:16:22:BD:49:89" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="128"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="128"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="179327" rttvar="305975" to="1403227"/>
+</host>
+<host starttime="1462323472" endtime="1462323486"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.23" addrtype="ipv4"/>
+<address addr="3E:F3:A8:5E:A0:CD" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="10000" rttvar="10000" to="100000"/>
+</host>
+<host starttime="1462323472" endtime="1462323485"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.24" addrtype="ipv4"/>
+<address addr="8A:DA:47:34:5A:0F" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="128"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="128"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="47398" rttvar="255209" to="1068234"/>
+</host>
+<host starttime="1462323472" endtime="1462323485"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.202.208.102" addrtype="ipv4"/>
+<address addr="82:E4:FC:92:DA:33" addrtype="mac"/>
+<hostnames>
+<hostname name="debian" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+</ports>
+<times srtt="47199" rttvar="255316" to="1068463"/>
+</host>
+<runstats><finished time="1462323488" timestr="Tue May  3 20:58:08 2016" elapsed="16.12" summary="Nmap done at Tue May  3 20:58:08 2016; 14 IP addresses (13 hosts up) scanned in 16.12 seconds" exit="success"/><hosts up="13" down="1" total="14"/>
+</runstats>
+</nmaprun>

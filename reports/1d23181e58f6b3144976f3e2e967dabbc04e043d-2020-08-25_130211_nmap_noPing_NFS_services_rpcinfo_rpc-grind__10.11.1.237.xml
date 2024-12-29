@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Aug 25 13:02:11 2020 as: nmap -Pn -sV -p 111 -&#45;script=rpcinfo,rpc-grind -oA 2020-08-25_130211_nmap_noPing_NFS_services_rpcinfo_rpc-grind__10.11.1.237 10.11.1.237 -->
+<nmaprun scanner="nmap" args="nmap -Pn -sV -p 111 -&#45;script=rpcinfo,rpc-grind -oA 2020-08-25_130211_nmap_noPing_NFS_services_rpcinfo_rpc-grind__10.11.1.237 10.11.1.237" start="1598374931" startstr="Tue Aug 25 13:02:11 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1598374931" endtime="1598374938"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.237" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100024  1          33242/tcp   status&#xa;  100024  1          36278/tcp6  status&#xa;  100024  1          40221/udp6  status&#xa;  100024  1          47805/udp   status&#xa;"><table key="100000">
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="local">
+<elem key="owner">superuser</elem>
+<elem key="addr">/var/run/rpcbind.sock</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+<table key="100024">
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="port">36278</elem>
+<elem key="owner">105</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="port">33242</elem>
+<elem key="owner">105</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="port">40221</elem>
+<elem key="owner">105</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="port">47805</elem>
+<elem key="owner">105</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="19468" rttvar="19468" to="100000"/>
+</host>
+<runstats><finished time="1598374938" timestr="Tue Aug 25 13:02:18 2020" elapsed="6.75" summary="Nmap done at Tue Aug 25 13:02:18 2020; 1 IP address (1 host up) scanned in 6.75 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

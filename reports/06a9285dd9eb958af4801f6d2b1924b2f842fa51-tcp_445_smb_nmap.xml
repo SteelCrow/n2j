@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Aug 22 22:53:34 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/tcp445/xml/tcp_445_smb_nmap.xml 10.11.1.222 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/tcp445/xml/tcp_445_smb_nmap.xml 10.11.1.222" start="1661223214" startstr="Mon Aug 22 22:53:34 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661223214"/>
+<taskend task="NSE" time="1661223214"/>
+<taskbegin task="NSE" time="1661223214"/>
+<taskend task="NSE" time="1661223214"/>
+<taskbegin task="NSE" time="1661223214"/>
+<taskend task="NSE" time="1661223214"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661223215"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661223215"/>
+<taskbegin task="SYN Stealth Scan" time="1661223215"/>
+<taskend task="SYN Stealth Scan" time="1661223215" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661223215"/>
+<taskend task="Service scan" time="1661223231" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661223231"/>
+<taskprogress task="NSE" time="1661223262" percent="94.29" remaining="2" etc="1661223264"/>
+<taskend task="NSE" time="1661223274"/>
+<taskbegin task="NSE" time="1661223274"/>
+<taskend task="NSE" time="1661223276"/>
+<taskbegin task="NSE" time="1661223276"/>
+<taskend task="NSE" time="1661223276"/>
+<host starttime="1661223215" endtime="1661223276"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.222" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-print-text" output="false">false</script><script id="smb2-capabilities" output="&#xa;  2.0.2: &#xa;    Distributed File System&#xa;  2.1: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.0: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.0.2: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.1.1: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.0.2">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.1">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.0">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.0.2">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.1.1">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-08-23T02:54:04&#xa;  start_date: N/A"><elem key="date">2022-08-23T02:54:04</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb-vuln-ms10-061" output="Could not negotiate a connection:SMB: Failed to receive bytes: ERROR">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    2.0.2&#xa;    2.1&#xa;    3.0&#xa;    3.0.2&#xa;    3.1.1"><table key="dialects">
+<elem>2.0.2</elem>
+<elem>2.1</elem>
+<elem>3.0</elem>
+<elem>3.0.2</elem>
+<elem>3.1.1</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR"/><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script></hostscript><times srtt="152805" rttvar="152805" to="764025"/>
+</host>
+<taskbegin task="NSE" time="1661223276"/>
+<taskend task="NSE" time="1661223276"/>
+<taskbegin task="NSE" time="1661223276"/>
+<taskend task="NSE" time="1661223276"/>
+<taskbegin task="NSE" time="1661223276"/>
+<taskend task="NSE" time="1661223276"/>
+<runstats><finished time="1661223276" timestr="Mon Aug 22 22:54:36 2022" summary="Nmap done at Mon Aug 22 22:54:36 2022; 1 IP address (1 host up) scanned in 61.77 seconds" elapsed="61.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

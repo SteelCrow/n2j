@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Aug  5 12:19:46 2024 as: nmap -Pn -&#45;disable-arp-ping -p22,80 -sC -sV -oA scan 10.10.11.23 -->
+<nmaprun scanner="nmap" args="nmap -Pn -&#45;disable-arp-ping -p22,80 -sC -sV -oA scan 10.10.11.23" start="1722853186" startstr="Mon Aug  5 12:19:46 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1722853187" endtime="1722853196"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.11.23" addrtype="ipv4"/>
+<hostnames>
+<hostname name="permx.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 e2:5c:5d:8c:47:3e:d8:72:f7:b4:80:03:49:86:6d:ef (ECDSA)&#xa;  256 1f:41:02:8e:6b:17:18:9c:a0:ac:54:23:e9:71:30:17 (ED25519)"><table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAyYzjPGuVga97Y5vl5BajgMpjiGqUWp23U2DO9Kij5AhK3lyZFq/rroiDu7zYpMTCkFAk0fICBScfnuLHi6NOI=</elem>
+<elem key="fingerprint">e25c5d8c473ed872f7b4800349866def</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIP8A41tX6hHpQeDLNhKf2QuBM7kqwhIBXGZ4jiOsbYCI</elem>
+<elem key="fingerprint">1f41028e6b17189ca0ac5423e9713017</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.52" hostname="127.0.0.1" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.52</cpe></service><script id="http-title" output="eLEARNING"><elem key="title">eLEARNING</elem>
+</script><script id="http-server-header" output="Apache/2.4.52 (Ubuntu)"><elem>Apache/2.4.52 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="56612" rttvar="42474" to="226508"/>
+</host>
+<runstats><finished time="1722853196" timestr="Mon Aug  5 12:19:56 2024" summary="Nmap done at Mon Aug  5 12:19:56 2024; 1 IP address (1 host up) scanned in 9.92 seconds" elapsed="9.92" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

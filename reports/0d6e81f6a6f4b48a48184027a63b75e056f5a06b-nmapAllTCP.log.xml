@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Thu Apr  4 15:09:35 2024 as: nmap -A -v -p22,80 -oA internal/nmap/nmapAllTCP.log 10.10.82.168 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p22,80 -oA internal/nmap/nmapAllTCP.log 10.10.82.168" start="1712257775" startstr="Thu Apr  4 15:09:35 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1712257776"/>
+<taskend task="NSE" time="1712257776"/>
+<taskbegin task="NSE" time="1712257776"/>
+<taskend task="NSE" time="1712257776"/>
+<taskbegin task="NSE" time="1712257776"/>
+<taskend task="NSE" time="1712257776"/>
+<taskbegin task="Ping Scan" time="1712257776"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.82.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1712257776" extrainfo="1 total hosts"/>
+<taskbegin task="Connect Scan" time="1712257776"/>
+<taskend task="Connect Scan" time="1712257776" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1712257776"/>
+<taskend task="Service scan" time="1712257782" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1712257782"/>
+<taskend task="NSE" time="1712257784"/>
+<taskbegin task="NSE" time="1712257784"/>
+<taskend task="NSE" time="1712257784"/>
+<taskbegin task="NSE" time="1712257784"/>
+<taskend task="NSE" time="1712257784"/>
+<host starttime="1712257776" endtime="1712257784"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.82.168" addrtype="ipv4"/>
+<hostnames>
+<hostname name="internal.thm" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 6e:fa:ef:be:f6:5f:98:b9:59:7b:f7:8e:b9:c5:62:1e (RSA)&#xa;  256 ed:64:ed:33:e5:c9:30:58:ba:23:04:0d:14:eb:30:e9 (ECDSA)&#xa;  256 b0:7f:7f:7b:52:62:62:2a:60:d4:3d:36:fa:89:ee:ff (ED25519)"><table>
+<elem key="fingerprint">6efaefbef65f98b9597bf78eb9c5621e</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCzpZTvmUlaHPpKH8X2SHMndoS+GsVlbhABHJt4TN/nKUSYeFEHbNzutQnj+DrUEwNMauqaWCY7vNeYguQUXLx4LM5ukMEC8IuJo0rcuKNmlyYrgBlFws3q2956v8urY7/McCFf5IsItQxurCDyfyU/erO7fO02n2iT5k7Bw2UWf8FPvM9/jahisbkA9/FQKou3mbaSANb5nSrPc7p9FbqKs1vGpFopdUTI2dl4OQ3TkQWNXpvaFl0j1ilRynu5zLr6FetD5WWZXAuCNHNmcRo/aPdoX9JXaPKGCcVywqMM/Qy+gSiiIKvmavX6rYlnRFWEp25EifIPuHQ0s8hSXqx5</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">ed64ed33e5c93058ba23040d14eb30e9</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMFOI/P6nqicmk78vSNs4l+vk2+BQ0mBxB1KlJJPCYueaUExTH4Cxkqkpo/zJfZ77MHHDL5nnzTW+TO6e4mDMEw=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">b07f7f7b5262622a60d43d36fa89eeff</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIMlxubXGh//FE3OqdyitiEwfA2nNdCtdgLfDQxFHPyY0</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
+</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="43738" rttvar="25072" to="144026"/>
+</host>
+<taskbegin task="NSE" time="1712257784"/>
+<taskend task="NSE" time="1712257784"/>
+<taskbegin task="NSE" time="1712257784"/>
+<taskend task="NSE" time="1712257784"/>
+<taskbegin task="NSE" time="1712257784"/>
+<taskend task="NSE" time="1712257784"/>
+<runstats><finished time="1712257784" timestr="Thu Apr  4 15:09:44 2024" summary="Nmap done at Thu Apr  4 15:09:44 2024; 1 IP address (1 host up) scanned in 8.63 seconds" elapsed="8.63" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

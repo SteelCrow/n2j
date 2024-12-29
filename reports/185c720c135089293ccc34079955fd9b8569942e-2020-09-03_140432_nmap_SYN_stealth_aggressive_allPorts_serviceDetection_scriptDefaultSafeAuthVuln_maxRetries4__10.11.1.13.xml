@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Sep  3 14:07:03 2020 as: nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-09-03_140432_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.13 10.11.1.13 -->
+<nmaprun scanner="nmap" args="nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-09-03_140432_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.13 10.11.1.13" start="1599156423" startstr="Thu Sep  3 14:07:03 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-dhcp-discover" output="&#xa;  Response 1 of 1: &#xa;    IP Offered: 192.168.0.21&#xa;    Server Identifier: 192.168.0.1&#xa;    Subnet Mask: 255.255.255.0&#xa;    Router: 192.168.0.1&#xa;    Domain Name Server: 75.75.75.75, 75.75.76.76"><table key="Response 1 of 1">
+<elem key="IP Offered">192.168.0.21</elem>
+<elem key="Server Identifier">192.168.0.1</elem>
+<elem key="Subnet Mask">255.255.255.0</elem>
+<elem key="Router">192.168.0.1</elem>
+<table key="Domain Name Server">
+<elem>75.75.75.75</elem>
+<elem>75.75.76.76</elem>
+</table>
+</table>
+</script><script id="broadcast-igmp-discovery" output="&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.2&#xa;    Description: All Routers on this Subnet&#xa;  192.168.0.27&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.251&#xa;    Description: mDNS (rfc6762)&#xa;  192.168.0.27&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  192.168.0.254&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  Use the newtargets script-arg to add the results as targets&#xa;"/><script id="broadcast-listener" output="&#xa;  ether&#xa;      EIGRP Hello&#xa;        &#xa;  udp&#xa;      DHCP&#xa;        srv ip       cli ip        mask           gw           dns                       vendor&#xa;        192.168.0.1  192.168.0.21  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.21  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.23  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.23  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;"/><script id="broadcast-netbios-master-browser" output="&#xa;ip  server  domain&#xa;"/><script id="broadcast-upnp-info" output="&#xa;  239.255.255.250&#xa;      Server: Linux 2.6 DLNADOC/1.50 UPnP/1.0 ReadyDLNA/1.1.0&#xa;      Location: http://192.168.0.254:8200/rootDesc.xml&#xa;"/><script id="eap-info" output="please specify an interface with -e"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><host starttime="1599156464" endtime="1599157141"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.11.1.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65517">
+<extrareasons reason="resets" count="65517"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;04-07-19  10:25PM       &lt;DIR&gt;          aspnet_client&#xa;04-07-19  07:14PM                99710 iis-85.png&#xa;04-07-19  07:14PM                  701 iisstart.htm"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-sql-s" product="Microsoft SQL Server 2012" version="11.00.2100.00; RTM" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2012:gold</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="ms-sql-config" output="&#xa;  [10.11.1.13:1433]&#xa;    ERROR: No login credentials&#xa;"/><script id="ms-sql-dump-hashes" output="&#xa;[10.11.1.13:1433]&#xa;  ERROR: No login credentials&#xa;"/><script id="ms-sql-hasdbaccess" output="&#xa;  [10.11.1.13:1433]&#xa;    ERROR: No login credentials.&#xa;"/><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: DISCO&#xa;  NetBIOS_Domain_Name: DISCO&#xa;  NetBIOS_Computer_Name: DISCO&#xa;  DNS_Domain_Name: disco&#xa;  DNS_Computer_Name: disco&#xa;  Product_Version: 6.3.9600"><elem key="Target_Name">DISCO</elem>
+<elem key="NetBIOS_Domain_Name">DISCO</elem>
+<elem key="NetBIOS_Computer_Name">DISCO</elem>
+<elem key="DNS_Domain_Name">disco</elem>
+<elem key="DNS_Computer_Name">disco</elem>
+<elem key="Product_Version">6.3.9600</elem>
+</script><script id="ms-sql-query" output="&#xa;  (Use -&#45;script-args=ms-sql-query.query=&apos;&lt;QUERY&gt;&apos; to change query.)&#xa;  [10.11.1.13:1433]&#xa;    ERROR: No login credentials&#xa;"/><script id="ms-sql-tables" output="&#xa;  [10.11.1.13:1433]&#xa;    ERROR: No login credentials.&#xa;"/><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Not valid before: 2020-07-08T07:34:57&#xa;Not valid after:  2050-07-08T07:34:57"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">userdata: 0x55c755b78da8</elem>
+<elem key="exponent">userdata: 0x55c755b78d68</elem>
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-07-08T07:34:57</elem>
+<elem key="notAfter">2050-07-08T07:34:57</elem>
+</table>
+<elem key="md5">58d9847dacecfc49de22f0fab00c802c</elem>
+<elem key="sha1">7438eb4cda7d7f19daaf4be7a665262bb8a932a5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIB+zCCAWSgAwIBAgIQbID9ZDB8woRMdqU9//l6oTANBgkqhkiG9w0BAQUFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjAwNzA4MDczNDU3WhgPMjA1MDA3MDgwNzM0NTdaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuuPXq+eIe3FZ&#xa;A25rDTw2iWyLKScAgy+qbmQIbvr7g2gZk82jD6+ooDD/orvbQOl4c2BIc16fL19f&#xa;UUM/3qOU5TjxGLB5NKUgLsSX8YJJKvkAachnvGWhrV/6pJdf9FCRlTE8ryraZNPH&#xa;OP4lZFOMoEP9nfwAmUKYQR+If8A7+bkCAwEAATANBgkqhkiG9w0BAQUFAAOBgQAA&#xa;fmObWzttbiTW+SbwR4uRTDrTyPdIZz70tjGjI0VA0ekvWG0s+PUIDerVi04hKEB1&#xa;BTPvk78JXXi2t/jHsDw+j8Q/yXb6uqYpKSEv6KGaX4/TvfzP61q5CJU/81PwSw/K&#xa;CxPR5v1Faj3YP1cBLOGaOyAKpo/ZEbHyb4owFHOrYA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2020-09-03T18:18:56+00:00; 0s from scanner time."><elem key="date">2020-09-03T18:18:56+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: VULNERABLE&#xa;    IDs:  BID:70574  CVE:CVE-2014-3566&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    References:&#xa;      https://www.securityfocus.com/bid/70574&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>BID:70574</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">10</elem>
+<elem key="year">2014</elem>
+<elem key="day">14</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table key="refs">
+<elem>https://www.securityfocus.com/bid/70574</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+</table>
+</table>
+</script><script id="sslv2-drown" output="&#xa;"></script><script id="tls-ticketbleed" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="rdp-enum-encryption" output="&#xa;  Security layer&#xa;    CredSSP (NLA): SUCCESS&#xa;    CredSSP with Early User Auth: SUCCESS&#xa;    Native RDP: SUCCESS&#xa;    RDSTLS: SUCCESS&#xa;    SSL: SUCCESS&#xa;  RDP Encryption level: Client Compatible&#xa;    40-bit RC4: SUCCESS&#xa;    56-bit RC4: SUCCESS&#xa;    128-bit RC4: SUCCESS&#xa;    FIPS 140-1: SUCCESS&#xa;  RDP Protocol Version:  RDP 5.x, 6.x, 7.x, or 8.x server&#xa;"/><script id="rdp-ntlm-info" output="&#xa;  Target_Name: DISCO&#xa;  NetBIOS_Domain_Name: DISCO&#xa;  NetBIOS_Computer_Name: DISCO&#xa;  DNS_Domain_Name: disco&#xa;  DNS_Computer_Name: disco&#xa;  Product_Version: 6.3.9600&#xa;  System_Time: 2020-09-03T18:09:42+00:00"><elem key="Target_Name">DISCO</elem>
+<elem key="NetBIOS_Domain_Name">DISCO</elem>
+<elem key="NetBIOS_Computer_Name">DISCO</elem>
+<elem key="DNS_Domain_Name">disco</elem>
+<elem key="DNS_Computer_Name">disco</elem>
+<elem key="Product_Version">6.3.9600</elem>
+<elem key="System_Time">2020-09-03T18:09:42+00:00</elem>
+</script><script id="rdp-vuln-ms12-020" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-cert" output="Subject: commonName=disco&#xa;Not valid before: 2020-07-07T07:14:45&#xa;Not valid after:  2021-01-06T07:14:45"><table key="subject">
+<elem key="commonName">disco</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">disco</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">userdata: 0x55c754e9b078</elem>
+<elem key="exponent">userdata: 0x55c754e9afa8</elem>
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-07-07T07:14:45</elem>
+<elem key="notAfter">2021-01-06T07:14:45</elem>
+</table>
+<elem key="md5">342020657a790b2da9883ff13000c298</elem>
+<elem key="sha1">23c3078cb9896fe3adb0736a898978ae0ecc76af</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQYC49+zXLjq1NjfRLdaWNhjANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVkaXNjbzAeFw0yMDA3MDcwNzE0NDVaFw0yMTAxMDYwNzE0NDVa&#xa;MBAxDjAMBgNVBAMTBWRpc2NvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEA71FifznXV8tVzDgIoDvp8VVQHmbAHqvdRtI68fufNIuPLm2kTpLB1WPHodCj&#xa;gYvpp/stjSXDym+4BDRBnwxqQI4kjdJUfsov+tqqspql7m3twTOkC6aL7zTSEnAQ&#xa;Y1NoywOBvSUU+eP1FHawIMJYt2CqDBgUxE8se/TvIsLQASFwhnOifSOLG+MPeAYE&#xa;OeuUeAFTnHyGU5wxMFCexxUU80vrpI0UrSh8DEsEsmV0epSNAxwHyll6fQkfVqA5&#xa;7Yx7MLPpZrYjNXpS1Nbt+R2AjbuDa+5hD5StiQ7YF8Wzn0yFqFQcN2BmXuN/GmCJ&#xa;8Jx2jwTpbEae60MXazkcDaNrZwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBACJk1ewgliEJNRXK1tdV&#xa;Y8Lh+2btW1O8KwcPg0WWeebzVgOLduWjmTiDaqYDIgl2cpvxbI8djhmlBwJdrezj&#xa;WWwq5y4990VbCr2SrwJLpl7qIrxxVRW2KlovRbXmICDvpsWOHQA9cFm1PbnP1v/C&#xa;JSIIOAKE5YTm4flmocOP2LfDWly8rtzXyjxDs0z8dzG+vcRp/PObY0Urv+xjo4dR&#xa;f7VJoi2Ilo6TG3Z7g4yKW5kN+nG7fwsJYLJIx7i+jASo8CHFITU1K3k6t9m5iqSA&#xa;MK3Fn5Ly8/B307MDHnyYPa5hC5xD56X7Dtuy0WumgeMmsegSzp3FvzMMDnIj9+U1&#xa;d8c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: RFC2409/Oakley Group 2&#xa;            Modulus Length: 1024&#xa;            Generator Length: 1024&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-36">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: RFC2409/Oakley Group 2&#xa;      Modulus Length: 1024&#xa;      Generator Length: 1024&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="4167"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.13&#xa;    &#xa;    Path: http://10.11.1.13:4167/&#xa;    Line number: 7&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Thu, 03 Sep 2020 18:09:58 GMT; -1s from local time."><elem key="date">2020-09-03T18:09:58+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Length: 701&#xa;  Content-Type: text/html&#xa;  Last-Modified: Sun, 07 Apr 2019 19:14:49 GMT&#xa;  Accept-Ranges: bytes&#xa;  ETag: &quot;e7cc02b76edd41:0&quot;&#xa;  Server: Microsoft-IIS/8.5&#xa;  X-Powered-By: ASP.NET&#xa;  Date: Thu, 03 Sep 2020 18:09:57 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-IIS/8.5"><elem>Microsoft-IIS/8.5</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/><script id="unusual-port" output="http unexpected on port tcp/4167"/></port>
+<port protocol="tcp" portid="5800"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http-proxy" product="sslstrip" method="probed" conf="10"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-slowloris-check" output="&#xa;  VULNERABLE:&#xa;  Slowloris DOS attack&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2007-6750&#xa;      Slowloris tries to keep many connections to the target web server open and hold&#xa;      them open as long as possible.  It accomplishes this by opening connections to&#xa;      the target web server and sending a partial request. By doing so, it starves&#xa;      the http server&apos;s resources causing Denial Of Service.&#xa;      &#xa;    Disclosure date: 2009-09-17&#xa;    References:&#xa;      http://ha.ckers.org/slowloris/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750&#xa;"><table key="CVE-2007-6750">
+<elem key="title">Slowloris DOS attack</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2007-6750</elem>
+</table>
+<table key="description">
+<elem>Slowloris tries to keep many connections to the target web server open and hold&#xa;them open as long as possible.  It accomplishes this by opening connections to&#xa;the target web server and sending a partial request. By doing so, it starves&#xa;the http server&apos;s resources causing Denial Of Service.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">09</elem>
+<elem key="year">2009</elem>
+<elem key="day">17</elem>
+</table>
+</table>
+<elem key="disclosure">2009-09-17</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>http://ha.ckers.org/slowloris/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750</elem>
+</table>
+</table>
+</script><script id="http-title" output="TightVNC desktop [disco]"><elem key="title">TightVNC desktop [disco]</elem>
+</script><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="unusual-port" output="http-proxy unexpected on port tcp/5800"/></port>
+<port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="vnc" product="VNC" extrainfo="protocol 3.8" method="probed" conf="10"/><script id="banner" output="RFB 003.008"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="rsa-vuln-roca" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-ccs-injection" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-cert" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-date" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-dh-params" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-heartbleed" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssl-poodle" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2-drown" output="ERROR: Script execution failed (use -d to debug)"/><script id="tls-alpn" output="ERROR: Script execution failed (use -d to debug)"/><script id="tls-nextprotoneg" output="ERROR: Script execution failed (use -d to debug)"/><script id="tls-ticketbleed" output="ERROR: Script execution failed (use -d to debug)"/><script id="vnc-info" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Thu, 03 Sep 2020 18:09:40 GMT; -1s from local time."><elem key="date">2020-09-03T18:09:40+00:00</elem>
+<elem key="delta">-1.0</elem>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html; charset=us-ascii&#xa;  Server: Microsoft-HTTPAPI/2.0&#xa;  Date: Thu, 03 Sep 2020 18:10:19 GMT&#xa;  Connection: close&#xa;  Content-Length: 315&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-slowloris-check" output="&#xa;  VULNERABLE:&#xa;  Slowloris DOS attack&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2007-6750&#xa;      Slowloris tries to keep many connections to the target web server open and hold&#xa;      them open as long as possible.  It accomplishes this by opening connections to&#xa;      the target web server and sending a partial request. By doing so, it starves&#xa;      the http server&apos;s resources causing Denial Of Service.&#xa;      &#xa;    Disclosure date: 2009-09-17&#xa;    References:&#xa;      http://ha.ckers.org/slowloris/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750&#xa;"><table key="CVE-2007-6750">
+<elem key="title">Slowloris DOS attack</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2007-6750</elem>
+</table>
+<table key="description">
+<elem>Slowloris tries to keep many connections to the target web server open and hold&#xa;them open as long as possible.  It accomplishes this by opening connections to&#xa;the target web server and sending a partial request. By doing so, it starves&#xa;the http server&apos;s resources causing Denial Of Service.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">09</elem>
+<elem key="year">2009</elem>
+<elem key="day">17</elem>
+</table>
+</table>
+<elem key="disclosure">2009-09-17</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>http://ha.ckers.org/slowloris/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750</elem>
+</table>
+</table>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 404&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">404</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/><script id="unusual-port" output="http unexpected on port tcp/5985"/></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Thu, 03 Sep 2020 18:09:42 GMT; 0s from local time."><elem key="date">2020-09-03T18:09:42+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html; charset=us-ascii&#xa;  Server: Microsoft-HTTPAPI/2.0&#xa;  Date: Thu, 03 Sep 2020 18:10:17 GMT&#xa;  Connection: close&#xa;  Content-Length: 315&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 404&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">404</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/><script id="unusual-port" output="http unexpected on port tcp/47001"/></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="49155"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="49156"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="49157"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="49158"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="34208"/>
+<osmatch name="Microsoft Windows Server 2012" accuracy="95" line="75072">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="95"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="95" line="75205">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="95"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="95" line="75603">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="95"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional" accuracy="92" line="76506">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="92"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="91" line="73917">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="91" line="74136">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2016" accuracy="91" line="75728">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="91" line="75992">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1" accuracy="91" line="77277">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008::sp2</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7" accuracy="91" line="79575">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="91"><cpe>cpe:/o:microsoft:windows_vista::-</cpe><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/3%OT=21%CT=1%CU=34208%PV=Y%DS=2%DC=T%G=Y%TM=5F513395&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10E%TI=I%II=I%SS=S%TS=7)OPS(&#xa;OS:O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8S&#xa;OS:T11%O6=M54DST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(&#xa;OS:R=Y%DF=Y%T=80%W=2000%O=M54DNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS&#xa;OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0&#xa;OS:%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUC&#xa;OS:K=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="1056" lastboot="Thu Sep  3 14:01:25 2020"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="64D29F43,E486A756,1340796,58ADC5AF,CA2C763D,74838AD3"/>
+<ipidsequence class="Incremental" values="5636,5637,5638,5639,563A,563B"/>
+<tcptssequence class="100HZ" values="C051,C05B,C065,C06E,C078,C082"/>
+<hostscript><script id="fcrdns" output="FAIL (No PTR record)"><table key="&lt;none&gt;">
+<elem key="status">fail</elem>
+<elem key="reason">No PTR record</elem>
+</table>
+</script><script id="ipidseq" output="Unknown"/><script id="ms-sql-info" output="&#xa;  10.11.1.13:1433: &#xa;    Version: &#xa;      name: Microsoft SQL Server 2012 RTM&#xa;      number: 11.00.2100.00&#xa;      Product: Microsoft SQL Server 2012&#xa;      Service pack level: RTM&#xa;      Post-SP patches applied: false&#xa;    TCP port: 1433"><table key="10.11.1.13:1433">
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2012 RTM</elem>
+<elem key="number">11.00.2100.00</elem>
+<elem key="Product">Microsoft SQL Server 2012</elem>
+<elem key="Service pack level">RTM</elem>
+<elem key="Post-SP patches applied">false</elem>
+</table>
+<elem key="TCP port">1433</elem>
+</table>
+</script><script id="msrpc-enum" output="No accounts left to try">false</script><script id="path-mtu" output="PMTU == 1500"/><script id="qscan" output="&#xa;PORT  FAMILY  MEAN (us)  STDDEV    LOSS (%)&#xa;1     0       21818.60   4911.33   0.0%&#xa;21    0       20212.30   2578.63   0.0%&#xa;135   0       20330.50   2102.68   0.0%&#xa;139   0       26376.40   12916.38  0.0%&#xa;445   0       22734.80   7206.82   0.0%&#xa;1433  0       23042.40   9819.99   0.0%&#xa;3389  0       19497.50   2671.00   0.0%&#xa;4167  0       20627.50   3861.07   0.0%&#xa;5800  0       24072.60   10624.27  0.0%&#xa;"/><script id="samba-vuln-cve-2012-1182" output="No accounts left to try">false</script><script id="smb-enum-users" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: No accounts left to try"/><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="No accounts left to try">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-09-03T18:09:53&#xa;  start_date: 2020-07-08T07:34:55"><elem key="date">2020-09-03T18:09:53</elem>
+<elem key="start_date">2020-07-08T07:34:55</elem>
+</script><script id="traceroute-geolocation" output="&#xa;  HOP  RTT    ADDRESS        GEOLOCATION&#xa;  1    20.89  192.168.119.1  - ,- &#xa;  2    21.20  10.11.1.13     - ,- &#xa;"><table>
+<elem key="rtt">20.89</elem>
+<elem key="hop">1</elem>
+<elem key="ip">192.168.119.1</elem>
+</table>
+<table>
+<elem key="rtt">21.20</elem>
+<elem key="hop">2</elem>
+<elem key="ip">10.11.1.13</elem>
+</table>
+</script></hostscript><trace port="8888" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="20.89"/>
+<hop ttl="2" ipaddr="10.11.1.13" rtt="21.20"/>
+</trace>
+<times srtt="20617" rttvar="2505" to="100000"/>
+</host>
+<postscript><script id="reverse-index" output="&#xa;  21/tcp: 10.11.1.13&#xa;  135/tcp: 10.11.1.13&#xa;  139/tcp: 10.11.1.13&#xa;  445/tcp: 10.11.1.13&#xa;  1433/tcp: 10.11.1.13&#xa;  3389/tcp: 10.11.1.13&#xa;  4167/tcp: 10.11.1.13&#xa;  5800/tcp: 10.11.1.13&#xa;  5900/tcp: 10.11.1.13&#xa;  5985/tcp: 10.11.1.13&#xa;  47001/tcp: 10.11.1.13&#xa;  49152/tcp: 10.11.1.13&#xa;  49153/tcp: 10.11.1.13&#xa;  49154/tcp: 10.11.1.13&#xa;  49155/tcp: 10.11.1.13&#xa;  49156/tcp: 10.11.1.13&#xa;  49157/tcp: 10.11.1.13&#xa;  49158/tcp: 10.11.1.13"><table key="21/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="135/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="139/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="445/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="1433/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="3389/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="4167/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="5800/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="5900/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="5985/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="47001/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49152/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49153/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49154/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49155/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49156/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49157/tcp">
+<elem>10.11.1.13</elem>
+</table>
+<table key="49158/tcp">
+<elem>10.11.1.13</elem>
+</table>
+</script></postscript><runstats><finished time="1599157141" timestr="Thu Sep  3 14:19:01 2020" elapsed="717.51" summary="Nmap done at Thu Sep  3 14:19:01 2020; 1 IP address (1 host up) scanned in 717.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

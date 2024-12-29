@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Aug 23 04:48:08 2020 as: nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-08-23_044322_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.237 10.11.1.237 -->
+<nmaprun scanner="nmap" args="nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-08-23_044322_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.237 10.11.1.237" start="1598172488" startstr="Sun Aug 23 04:48:08 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-dhcp-discover" output="&#xa;  Response 1 of 1: &#xa;    IP Offered: 192.168.0.25&#xa;    Server Identifier: 192.168.0.1&#xa;    Subnet Mask: 255.255.255.0&#xa;    Router: 192.168.0.1&#xa;    Domain Name Server: 75.75.75.75, 75.75.76.76"><table key="Response 1 of 1">
+<elem key="IP Offered">192.168.0.25</elem>
+<elem key="Server Identifier">192.168.0.1</elem>
+<elem key="Subnet Mask">255.255.255.0</elem>
+<elem key="Router">192.168.0.1</elem>
+<table key="Domain Name Server">
+<elem>75.75.75.75</elem>
+<elem>75.75.76.76</elem>
+</table>
+</table>
+</script><script id="broadcast-igmp-discovery" output="&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.2&#xa;    Description: All Routers on this Subnet&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.22&#xa;    Description: IGMP&#xa;  192.168.0.20&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.251&#xa;    Description: mDNS (rfc6762)&#xa;  192.168.0.31&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.251&#xa;    Description: mDNS (rfc6762)&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  192.168.0.254&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  Use the newtargets script-arg to add the results as targets&#xa;"/><script id="broadcast-listener" output="&#xa;  ether&#xa;  udp&#xa;      DHCP&#xa;        srv ip       cli ip        mask           gw           dns                       vendor&#xa;        192.168.0.1  192.168.0.25  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.25  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.21  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.21  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;"/><script id="broadcast-netbios-master-browser" output="&#xa;ip  server  domain&#xa;"/><script id="broadcast-upnp-info" output="&#xa;  239.255.255.250&#xa;      Server: Linux 2.6 DLNADOC/1.50 UPnP/1.0 ReadyDLNA/1.1.0&#xa;      Location: http://192.168.0.254:8200/rootDesc.xml&#xa;"/><script id="eap-info" output="please specify an interface with -e"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><host starttime="1598172528" endtime="1598172883"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.11.1.237" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65528">
+<extrareasons reason="resets" count="65528"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="6.0p1 Debian 4" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.0p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="banner" output="SSH-2.0-OpenSSH_6.0p1 Debian-4"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="ssh-auth-methods" output="&#xa;  Supported authentication methods: &#xa;    publickey&#xa;    password"><table key="Supported authentication methods">
+<elem>publickey</elem>
+<elem>password</elem>
+</table>
+</script><script id="ssh-hostkey" output="&#xa;  1024 fc:89:ba:50:c2:ea:2d:ab:b9:19:f1:f9:0a:b4:c0:5a (DSA)&#xa;  2048 de:2d:b8:bd:43:8a:c3:28:2b:d3:22:84:d0:6c:e0:9d (RSA)&#xa;  256 a5:58:4d:9d:e8:61:de:55:83:e2:71:6b:5d:ad:83:e2 (ECDSA)"><table>
+<elem key="bits">1024</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAL1caLXdHfBy4Fe2lmGzfvhGBtQ6GY1qaRwk5cYueFYbxp/Ml34zd9qh1TkJlS5npOGOYe5JOYtkEjasFVaH6606wQk4tv7IBB+C6F0/2TANe8FtecMhe7oMS8eLLPvxyLGzqGDmqU5fnVxvRF1DhmNqwKTxpAyicoMUES5EEnEpAAAAFQDphaJ68CKGLRzysPVUsdBQPbIroQAAAIB83eXGXESwUkiNlHCv7x2BZjzFSzu1VUMrz1Iu3AJXchFiDbI3hZu7OH7SUXjEW7Z74gCVjq7yc19lWOqC/68wwCnxJ/MnAd1oQl6oLHq7eKcT6CNuSdrTrgbff4RmKh9v2yfId7r9IFOaiyNnlZMMwZ8YVLlYiGbinyPQ9UHmeAAAAIEAjc8mRkKEeTjpJy1k2wbwQJNb1PMlbtjaRypW/UXbJTs6FSFHhWA89/YuV9Hz5mRGar290jIUvtsL6GL0f6Dtq34KoGpGmkm66MLZGrMTujfIRBBa8KE8t5cJXVYoRG4mFCxMfLmIWx84Gop2fHPt0eKBdEERFMZvk0mVKFTUxWM=</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">fc89ba50c2ea2dabb919f1f90ab4c05a</elem>
+</table>
+<table>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDUjqJVHzbY+P21ajq32xg0yozBp4wy5TU6lyigsgb8bMzcwdNV8GkSUatdHNb3Ay5MlK4HWIZfzlKA4Zra0iXUW+tu4byo6GHoV0hfaEMJki89mkZ1Eype89Gj+cIfp11HlKHJqCUaSDveuuUMaYCfQv+RkWm+2m4H27XrS1vuJe7q8L1r9anFJ7fF1Bwi2xD6AbMXXXFg0TIIMzfzmI2EZGB5XAIUqI3kNq7i/+Sd28UGqVWXtLIRiyOFYW2Htd//BYB9muNV4baVVgKM5IRpXnJoi6o4twMUAPdY34iFOVvTr8ndifoFaqNxYM9TUzFdmJOGuo01P78ca+IYjR0T</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">de2db8bd438ac3282bd32284d06ce09d</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIDrJaQuMQjLB2z8zoF3HaePoDAza/n0UERp9v5j+LYe77iPp+w21y47q7C6fFlXu7tBc7db9nMyfdealHnQxRg=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">a5584d9de861de5583e2716b5dad83e2</elem>
+</table>
+</script><script id="ssh-publickey-acceptance" output="&#xa;  Accepted Public Keys: No public keys accepted"><elem key="Accepted Public Keys">No public keys accepted</elem>
+</script><script id="ssh2-enum-algos" output="&#xa;  kex_algorithms: (7)&#xa;  server_host_key_algorithms: (3)&#xa;  encryption_algorithms: (13)&#xa;  mac_algorithms: (11)&#xa;  compression_algorithms: (2)"><table key="kex_algorithms">
+<elem>ecdh-sha2-nistp256</elem>
+<elem>ecdh-sha2-nistp384</elem>
+<elem>ecdh-sha2-nistp521</elem>
+<elem>diffie-hellman-group-exchange-sha256</elem>
+<elem>diffie-hellman-group-exchange-sha1</elem>
+<elem>diffie-hellman-group14-sha1</elem>
+<elem>diffie-hellman-group1-sha1</elem>
+</table>
+<table key="server_host_key_algorithms">
+<elem>ssh-rsa</elem>
+<elem>ssh-dss</elem>
+<elem>ecdsa-sha2-nistp256</elem>
+</table>
+<table key="encryption_algorithms">
+<elem>aes128-ctr</elem>
+<elem>aes192-ctr</elem>
+<elem>aes256-ctr</elem>
+<elem>arcfour256</elem>
+<elem>arcfour128</elem>
+<elem>aes128-cbc</elem>
+<elem>3des-cbc</elem>
+<elem>blowfish-cbc</elem>
+<elem>cast128-cbc</elem>
+<elem>aes192-cbc</elem>
+<elem>aes256-cbc</elem>
+<elem>arcfour</elem>
+<elem>rijndael-cbc@lysator.liu.se</elem>
+</table>
+<table key="mac_algorithms">
+<elem>hmac-md5</elem>
+<elem>hmac-sha1</elem>
+<elem>umac-64@openssh.com</elem>
+<elem>hmac-sha2-256</elem>
+<elem>hmac-sha2-256-96</elem>
+<elem>hmac-sha2-512</elem>
+<elem>hmac-sha2-512-96</elem>
+<elem>hmac-ripemd160</elem>
+<elem>hmac-ripemd160@openssh.com</elem>
+<elem>hmac-sha1-96</elem>
+<elem>hmac-md5-96</elem>
+</table>
+<table key="compression_algorithms">
+<elem>none</elem>
+<elem>zlib@openssh.com</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-apache-negotiation" output="mod_negotiation enabled."/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sun, 23 Aug 2020 08:50:09 GMT; +6s from local time."><elem key="date">2020-08-23T08:50:09+00:00</elem>
+<elem key="delta">6.0</elem>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /manual/: Potentially interesting folder&#xa;  /webdav/: Potentially interesting folder (401 Authorization Required)&#xa;"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Sun, 23 Aug 2020 08:50:04 GMT&#xa;  Server: Apache/2.2.22 (Debian)&#xa;  Last-Modified: Thu, 26 Dec 2013 16:53:24 GMT&#xa;  ETag: &quot;20bcc-53-4ee72d0dd5504&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 83&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache/2.2.22 (Debian)"><elem>Apache/2.2.22 (Debian)</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-xssed" output="No previously reported XSS vuln."/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100024  1          33242/tcp   status&#xa;  100024  1          36278/tcp6  status&#xa;  100024  1          40221/udp6  status&#xa;  100024  1          47805/udp   status&#xa;"><table key="100024">
+<table key="tcp">
+<elem key="port">33242</elem>
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">105</elem>
+</table>
+<table key="udp6">
+<elem key="port">40221</elem>
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">105</elem>
+</table>
+<table key="udp">
+<elem key="port">47805</elem>
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">105</elem>
+</table>
+<table key="tcp6">
+<elem key="port">36278</elem>
+<elem key="addr">::</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="owner">105</elem>
+</table>
+</table>
+<table key="100000">
+<table key="udp">
+<elem key="port">111</elem>
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp6">
+<elem key="port">111</elem>
+<elem key="addr">::</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp">
+<elem key="port">111</elem>
+<elem key="addr">0.0.0.0</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+</table>
+<table key="udp6">
+<elem key="port">111</elem>
+<elem key="addr">::</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+</table>
+<table key="local">
+<elem key="addr">/var/run/rpcbind.sock</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="owner">superuser</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" tunnel="ssl" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-slowloris-check" output="&#xa;  VULNERABLE:&#xa;  Slowloris DOS attack&#xa;    State: LIKELY VULNERABLE&#xa;    IDs:  CVE:CVE-2007-6750&#xa;      Slowloris tries to keep many connections to the target web server open and hold&#xa;      them open as long as possible.  It accomplishes this by opening connections to&#xa;      the target web server and sending a partial request. By doing so, it starves&#xa;      the http server&apos;s resources causing Denial Of Service.&#xa;      &#xa;    Disclosure date: 2009-09-17&#xa;    References:&#xa;      http://ha.ckers.org/slowloris/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750&#xa;"><table key="CVE-2007-6750">
+<elem key="title">Slowloris DOS attack</elem>
+<elem key="state">LIKELY VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2007-6750</elem>
+</table>
+<table key="description">
+<elem>Slowloris tries to keep many connections to the target web server open and hold&#xa;them open as long as possible.  It accomplishes this by opening connections to&#xa;the target web server and sending a partial request. By doing so, it starves&#xa;the http server&apos;s resources causing Denial Of Service.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">17</elem>
+<elem key="month">09</elem>
+<elem key="year">2009</elem>
+</table>
+</table>
+<elem key="disclosure">2009-09-17</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>http://ha.ckers.org/slowloris/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750</elem>
+</table>
+</table>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-useragent-tester" output="&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-xssed" output="No previously reported XSS vuln."/><script id="ssl-ccs-injection" output="&#xa;  VULNERABLE:&#xa;  SSL/TLS MITM vulnerability (CCS Injection)&#xa;    State: VULNERABLE&#xa;    Risk factor: High&#xa;      OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h&#xa;      does not properly restrict processing of ChangeCipherSpec messages,&#xa;      which allows man-in-the-middle attackers to trigger use of a zero&#xa;      length master key in certain OpenSSL-to-OpenSSL communications, and&#xa;      consequently hijack sessions or obtain sensitive information, via&#xa;      a crafted TLS handshake, aka the &quot;CCS Injection&quot; vulnerability.&#xa;          &#xa;    References:&#xa;      http://www.cvedetails.com/cve/2014-0224&#xa;      http://www.openssl.org/news/secadv_20140605.txt&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224&#xa;"><table key="NMAP-16">
+<elem key="title">SSL/TLS MITM vulnerability (CCS Injection)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h&#xa;does not properly restrict processing of ChangeCipherSpec messages,&#xa;which allows man-in-the-middle attackers to trigger use of a zero&#xa;length master key in certain OpenSSL-to-OpenSSL communications, and&#xa;consequently hijack sessions or obtain sensitive information, via&#xa;a crafted TLS handshake, aka the &quot;CCS Injection&quot; vulnerability.&#xa;    </elem>
+</table>
+<table key="refs">
+<elem>http://www.cvedetails.com/cve/2014-0224</elem>
+<elem>http://www.openssl.org/news/secadv_20140605.txt</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224</elem>
+</table>
+</table>
+</script><script id="ssl-date" output="2020-08-23T08:53:49+00:00; +5s from scanner time."><elem key="delta">5.0</elem>
+<elem key="date">2020-08-23T08:53:49+00:00</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: mod_ssl 2.2.x/1024-bit MODP group with safe prime modulus&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-18">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: mod_ssl 2.2.x/1024-bit MODP group with safe prime modulus&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-heartbleed" output="&#xa;  VULNERABLE:&#xa;  The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.&#xa;    State: VULNERABLE&#xa;    Risk factor: High&#xa;      OpenSSL versions 1.0.1 and 1.0.2-beta releases (including 1.0.1f and 1.0.2-beta1) of OpenSSL are affected by the Heartbleed bug. The bug allows for reading memory of systems protected by the vulnerable OpenSSL versions and could allow for disclosure of otherwise encrypted confidential information as well as the encryption keys themselves.&#xa;          &#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160&#xa;      http://cvedetails.com/cve/2014-0160/&#xa;      http://www.openssl.org/news/secadv_20140407.txt &#xa;"><table key="NMAP-15">
+<elem key="title">The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>OpenSSL versions 1.0.1 and 1.0.2-beta releases (including 1.0.1f and 1.0.2-beta1) of OpenSSL are affected by the Heartbleed bug. The bug allows for reading memory of systems protected by the vulnerable OpenSSL versions and could allow for disclosure of otherwise encrypted confidential information as well as the encryption keys themselves.&#xa;    </elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160</elem>
+<elem>http://cvedetails.com/cve/2014-0160/</elem>
+<elem>http://www.openssl.org/news/secadv_20140407.txt </elem>
+</table>
+</table>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2014-3566  BID:70574&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA&#xa;    References:&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://www.securityfocus.com/bid/70574&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2014-3566</elem>
+<elem>BID:70574</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="month">10</elem>
+<elem key="year">2014</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table key="refs">
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://www.securityfocus.com/bid/70574</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+</table>
+</table>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="27017"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mongod" method="table" conf="3"/></port>
+<port protocol="tcp" portid="28017"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mongod" method="table" conf="3"/></port>
+<port protocol="tcp" portid="33242"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="38646"/>
+<osmatch name="Linux 3.2 - 3.8" accuracy="95" line="65033">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8" accuracy="95" line="65968">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.8</cpe></osclass>
+</osmatch>
+<osmatch name="WatchGuard Fireware 11.8" accuracy="95" line="104321">
+<osclass type="firewall" vendor="WatchGuard" osfamily="Fireware" osgen="11.X" accuracy="95"><cpe>cpe:/o:watchguard:fireware:11.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1 - 3.2" accuracy="94" line="62747">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="93" line="65474">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 2.6.39" accuracy="93" line="56230">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.0 - 3.2" accuracy="92" line="62475">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.0" accuracy="92" line="56293">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Grandstream GXV3275 video phone" accuracy="91" line="31732">
+<osclass type="VoIP phone" vendor="Grandstream" osfamily="embedded" accuracy="91"><cpe>cpe:/h:grandstream:gxv3275</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="91" line="54126">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/23%OT=22%CT=1%CU=38646%PV=Y%DS=2%DC=T%G=Y%TM=5F422ED&#xa;OS:3%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10C%TI=Z%II=I%TS=8)OPS(O1=M&#xa;OS:54DST11NW3%O2=M54DST11NW3%O3=M54DNNT11NW3%O4=M54DST11NW3%O5=M54DST11NW3%&#xa;OS:O6=M54DST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)ECN(R=Y%&#xa;OS:DF=Y%T=40%W=3908%O=M54DNNSNW3%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=&#xa;OS:0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;OS:T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%&#xa;OS:RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="586" lastboot="Sun Aug 23 04:44:57 2020"/>
+<distance value="2"/>
+<tcpsequence index="256" difficulty="Good luck!" values="50E82CD1,BAA1CA22,FB918373,1D05BBD2,699DF000,15E34B3C"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="11CC1,11CD7,11CF0,11D0A,11D23,11D3C"/>
+<hostscript><script id="clock-skew" output="mean: 5s, deviation: 0s, median: 4s"><elem key="stddev">0</elem>
+<elem key="median">4</elem>
+<elem key="count">2</elem>
+<elem key="mean">5</elem>
+</script><script id="fcrdns" output="FAIL (No PTR record)"><table key="&lt;none&gt;">
+<elem key="status">fail</elem>
+<elem key="reason">No PTR record</elem>
+</table>
+</script><script id="firewalk" output="&#xa;HOP  HOST           PROTOCOL  BLOCKED PORTS&#xa;1    192.168.119.1  tcp       27017,28017&#xa;"/><script id="ipidseq" output="All zeros"/><script id="path-mtu" output="PMTU == 1500"/><script id="qscan" output="&#xa;PORT   FAMILY  MEAN (us)  STDDEV    LOSS (%)&#xa;1      0       16204.30   1882.86   0.0%&#xa;22     0       25574.40   20301.59  0.0%&#xa;80     0       18906.10   9189.29   0.0%&#xa;111    0       17644.60   3331.96   0.0%&#xa;443    0       17536.56   3201.76   10.0%&#xa;33242  0       18685.90   6849.92   0.0%&#xa;"/><script id="traceroute-geolocation" output="&#xa;  HOP  RTT    ADDRESS        GEOLOCATION&#xa;  1    19.47  192.168.119.1  - ,- &#xa;  2    19.79  10.11.1.237    - ,- &#xa;"><table>
+<elem key="ip">192.168.119.1</elem>
+<elem key="rtt">19.47</elem>
+<elem key="hop">1</elem>
+</table>
+<table>
+<elem key="ip">10.11.1.237</elem>
+<elem key="rtt">19.79</elem>
+<elem key="hop">2</elem>
+</table>
+</script></hostscript><trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="19.47"/>
+<hop ttl="2" ipaddr="10.11.1.237" rtt="19.79"/>
+</trace>
+<times srtt="20122" rttvar="2431" to="100000"/>
+</host>
+<postscript><script id="reverse-index" output="&#xa;  22/tcp: 10.11.1.237&#xa;  80/tcp: 10.11.1.237&#xa;  111/tcp: 10.11.1.237&#xa;  443/tcp: 10.11.1.237&#xa;  33242/tcp: 10.11.1.237"><table key="22/tcp">
+<elem>10.11.1.237</elem>
+</table>
+<table key="80/tcp">
+<elem>10.11.1.237</elem>
+</table>
+<table key="111/tcp">
+<elem>10.11.1.237</elem>
+</table>
+<table key="443/tcp">
+<elem>10.11.1.237</elem>
+</table>
+<table key="33242/tcp">
+<elem>10.11.1.237</elem>
+</table>
+</script></postscript><runstats><finished time="1598172883" timestr="Sun Aug 23 04:54:43 2020" elapsed="396.17" summary="Nmap done at Sun Aug 23 04:54:43 2020; 1 IP address (1 host up) scanned in 396.17 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Jul 22 16:20:07 2024 as: nmap -Pn -&#45;disable-arp-ping -p21,80,135,139,443,445,3389,8000,8009,8080 -sC -sV -oA scan 10.129.3.80 -->
+<nmaprun scanner="nmap" args="nmap -Pn -&#45;disable-arp-ping -p21,80,135,139,443,445,3389,8000,8009,8080 -sC -sV -oA scan 10.129.3.80" start="1721658007" startstr="Mon Jul 22 16:20:07 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="10" services="21,80,135,139,443,445,3389,8000,8009,8080"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1721658007" endtime="1721658044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.3.80" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.129.3.80" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;09-01-21  08:07AM       &lt;DIR&gt;          website_backup"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="Freight Logistics, Inc"><elem key="title">Freight Logistics, Inc</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2024-07-22T14:20:42+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2024-07-22T14:20:42+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=APPS-SKILLS1&#xa;Not valid before: 2024-07-21T14:15:55&#xa;Not valid after:  2025-01-20T14:15:55"><table key="subject">
+<elem key="commonName">APPS-SKILLS1</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">APPS-SKILLS1</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BDC0099DDDE42767910BFA3727613B7CD2846404D5D73396C39594D77E648FF35D95737C92E7901B4C1D95913ED4BC5C2F71080C4B980E4680A67F837B77B44B5088DC686D9B0F7470E2249BD720C7FC627A4A3754C11AC50E7527AECA8278745425F84B6F28AC87FACBF2BEC3DD74DF0BB513ADC4C217F640D998B2013C8D696D46AB86E394D1FA7F660C4BA0DDBA01E49CC6DF826C8A56B029E2E2E9E6236CA30957764F73ADF6C7485A35688956610CFA78D6799322B2ABEFD2839BD4CF38F5FA53EA4BEC170D4277740B99A3657462EA67DFCD2E72E13022B15DD891EC31814AD78560AC9FD6781881D559DD7788226AB012CD267CA1AE745C01951F5EED</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2024-07-21T14:15:55</elem>
+<elem key="notAfter">2025-01-20T14:15:55</elem>
+</table>
+<elem key="md5">357712b36c3e09af62b0fafabcfc8886</elem>
+<elem key="sha1">7e6c450e926e5a0bf31313abdc2fa8e4703a8fed</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC3DCCAcSgAwIBAgIQP6w8NRZZ6ZZPJEb4DhIeZTANBgkqhkiG9w0BAQsFADAX&#xa;MRUwEwYDVQQDEwxBUFBTLVNLSUxMUzEwHhcNMjQwNzIxMTQxNTU1WhcNMjUwMTIw&#xa;MTQxNTU1WjAXMRUwEwYDVQQDEwxBUFBTLVNLSUxMUzEwggEiMA0GCSqGSIb3DQEB&#xa;AQUAA4IBDwAwggEKAoIBAQC9wAmd3eQnZ5EL+jcnYTt80oRkBNXXM5bDlZTXfmSP&#xa;812Vc3yS55AbTB2VkT7UvFwvcQgMS5gORoCmf4N7d7RLUIjcaG2bD3Rw4iSb1yDH&#xa;/GJ6SjdUwRrFDnUnrsqCeHRUJfhLbyish/rL8r7D3XTfC7UTrcTCF/ZA2ZiyATyN&#xa;aW1Gq4bjlNH6f2YMS6DdugHknMbfgmyKVrAp4uLp5iNsowlXdk9zrfbHSFo1aIlW&#xa;YQz6eNZ5kyKyq+/Sg5vUzzj1+lPqS+wXDUJ3dAuZo2V0Yupn380ucuEwIrFd2JHs&#xa;MYFK14VgrJ/WeBiB1Vndd4giarASzSZ8oa50XAGVH17tAgMBAAGjJDAiMBMGA1Ud&#xa;JQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsFAAOCAQEA&#xa;Az8deaRzFMJ9UKZxwFydkICr8WKGB4DwJ0mblnI+AQJAqB3h5A/mMsQmbJrTXVm1&#xa;psEvxvIaW9ADRnwYP9mm0WKyESzwTeYX2U7NArP7Zc38qmIwkWJfnWLBTcGXB1zM&#xa;1TC/AcMhi4TgwHbZGqu8PVmGZqhT6eJScoksRuM/Rq3jo+pJdeTKOYhl3xq0xeT9&#xa;W+3TL7HiuARdbr7gRHHlqDOJvDW78+1VSoyUehbJvf2z45bofwuyRdR68/NnG3lo&#xa;HQgK4i4DnqZMPMMPhkNSxWSCjcRMQZ9NCe2HXf70tP6GFCH5f7kic4Okcd74/uRs&#xa;kgrJLjonzGkUMMnD8DhZ3Q==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: APPS-SKILLS1&#xa;  NetBIOS_Domain_Name: APPS-SKILLS1&#xa;  NetBIOS_Computer_Name: APPS-SKILLS1&#xa;  DNS_Domain_Name: APPS-SKILLS1&#xa;  DNS_Computer_Name: APPS-SKILLS1&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2024-07-22T14:20:32+00:00"><elem key="Target_Name">APPS-SKILLS1</elem>
+<elem key="NetBIOS_Domain_Name">APPS-SKILLS1</elem>
+<elem key="NetBIOS_Computer_Name">APPS-SKILLS1</elem>
+<elem key="DNS_Domain_Name">APPS-SKILLS1</elem>
+<elem key="DNS_Computer_Name">APPS-SKILLS1</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2024-07-22T14:20:32+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Jetty" version="9.4.42.v20210604" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:9.4.42.v20210604</cpe></service><script id="http-server-header" output="Jetty(9.4.42.v20210604)"><elem>Jetty(9.4.42.v20210604)</elem>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-title" output="Site doesn&apos;t have a title (text/html;charset=utf-8)."></script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/><script id="ajp-methods" output="Failed to get a valid response for the OPTION request"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-favicon" output="Apache Tomcat"/><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+</script><script id="http-title" output="Apache Tomcat/9.0.0.M1"><elem key="title">Apache Tomcat/9.0.0.M1</elem>
+</script></port>
+</ports>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled but not required"><table key="3:1:1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2024-07-22T14:20:35&#xa;  start_date: N/A"><elem key="date">2024-07-22T14:20:35</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="458486" rttvar="205855" to="1281906"/>
+</host>
+<runstats><finished time="1721658044" timestr="Mon Jul 22 16:20:44 2024" summary="Nmap done at Mon Jul 22 16:20:44 2024; 1 IP address (1 host up) scanned in 37.21 seconds" elapsed="37.21" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

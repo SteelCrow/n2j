@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Thu Sep 19 11:10:56 2024 as: nmap -sC -p 80,443 -oA script_Scan 192.168.100.61 -->
+<nmaprun scanner="nmap" args="nmap -sC -p 80,443 -oA script_Scan 192.168.100.61" start="1726724456" startstr="Thu Sep 19 11:10:56 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="80,443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.100.61" addrtype="ipv4"/>
+<address addr="08:00:27:0B:77:64" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1726724456" endtime="1726724461"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.100.61" addrtype="ipv4"/>
+<address addr="08:00:27:0B:77:64" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+<hostname name="linux" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/><script id="ssl-cert" output="Subject: commonName=www.example.com&#xa;Not valid before: 2015-09-16T10:45:03&#xa;Not valid after:  2025-09-13T10:45:03"><table key="subject">
+<elem key="commonName">www.example.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">www.example.com</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">D9711BFDFC7BC0F2FE6C7067305BA1817AE2DBB59FC736CEC58EC3C1455346B3405C6FED13CA706C2DB002E474032435C592EC9F77D3119A99D0993DDA116388617DEB0B22C859C69CA4E8DA180649ADC7E19FC2BACB87A994CAFB329E8DBD18096A6167DF7F35D1A226DD0ED1939FD35E32A5E86D54D3293691D011ACA4E4B9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2015-09-16T10:45:03</elem>
+<elem key="notAfter">2025-09-13T10:45:03</elem>
+</table>
+<elem key="md5">3c163b1987c342ad6634c1c9d0aafb97</elem>
+<elem key="sha1">ef0c5fa5931a09a5687ca2c280c4c79207cef71b</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBqzCCARQCCQCgSfELirADCzANBgkqhkiG9w0BAQUFADAaMRgwFgYDVQQDDA93&#xa;d3cuZXhhbXBsZS5jb20wHhcNMTUwOTE2MTA0NTAzWhcNMjUwOTEzMTA0NTAzWjAa&#xa;MRgwFgYDVQQDDA93d3cuZXhhbXBsZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0A&#xa;MIGJAoGBANlxG/38e8Dy/mxwZzBboYF64tu1n8c2zsWOw8FFU0azQFxv7RPKcGwt&#xa;sALkdAMkNcWS7J930xGamdCZPdoRY4hhfesLIshZxpyk6NoYBkmtx+GfwrrLh6mU&#xa;yvsyno29GAlqYWfffzXRoibdDtGTn9NeMqXobVTTKTaR0BGspOS5AgMBAAEwDQYJ&#xa;KoZIhvcNAQEFBQADgYEASfG0dH3x4/XaN6IWwaKo8XeRStjYTy/uBJEBUERlP17X&#xa;1TooZOYbvgFAqK8DPOl7EkzASVeu0mS5orfptWjOZ/UWVZujSNj7uu7QR4vbNERx&#xa;ncZrydr7FklpkIN5Bj8SYc94JI9GsrHip4mpbystXkxncoOVESjRBES/iatbkl0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+</ports>
+<times srtt="594" rttvar="2866" to="100000"/>
+</host>
+<runstats><finished time="1726724461" timestr="Thu Sep 19 11:11:01 2024" summary="Nmap done at Thu Sep 19 11:11:01 2024; 1 IP address (1 host up) scanned in 5.50 seconds" elapsed="5.50" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

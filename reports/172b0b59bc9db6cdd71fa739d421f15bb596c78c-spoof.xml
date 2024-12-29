@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Mar 19 15:25:25 2022 as: nmap -p 21-25,80-443,27017,8080,9000 -S 192.168.80.2 -D 192.168.0.2,192.168.0.10,192.168.0.100,127.0.0.10,127.0.1.100,ME -e eth0 -O -oX /tmp/jl_Ga2iWa 127.0.0.1 localhost 192.168.80.1-255 scanme.nmap.org -->
+<nmaprun scanner="nmap" args="nmap -p 21-25,80-443,27017,8080,9000 -S 192.168.80.2 -D 192.168.0.2,192.168.0.10,192.168.0.100,127.0.0.10,127.0.1.100,ME -e eth0 -O -oX /tmp/jl_Ga2iWa 127.0.0.1 localhost 192.168.80.1-255 scanme.nmap.org" start="1647703525" startstr="Sat Mar 19 15:25:25 2022" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="372" services="21-25,80-443,8080,9000,27017"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1647703531" endtime="1647703620"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.80.1" addrtype="ipv4"/>
+<address addr="02:42:19:AF:BD:9D" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="368">
+<extrareasons reason="resets" count="368"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="cslistener" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="21"/>
+<portused state="closed" proto="udp" portid="39903"/>
+<osmatch name="Linux 2.6.32" accuracy="96" line="55173">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="96" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="96" line="56381">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4 - 3.10" accuracy="95" line="65366">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="95" line="62708">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="95" line="64455">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.2-5644" accuracy="94" line="101159">
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="94"><cpe>cpe:/a:synology:diskstation_manager:5.2</cpe></osclass>
+</osmatch>
+<osmatch name="Netgear RAIDiator 4.2.28" accuracy="94" line="88023">
+<osclass type="storage-misc" vendor="Netgear" osfamily="RAIDiator" osgen="4.X" accuracy="94"><cpe>cpe:/o:netgear:raidiator:4.2.28</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 2.6.35" accuracy="94" line="56153">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=3/19%OT=22%CT=21%CU=39903%PV=Y%DS=1%DC=D%G=Y%M=024219%&#xa;OS:TM=6235F644%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10A%TI=Z%CI=Z%TS=&#xa;OS:A)SEQ(SP=101%GCD=1%ISR=107%TI=Z%TS=A)SEQ(SP=101%GCD=1%ISR=107%TI=Z%CI=Z%&#xa;OS:II=I%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=NNT11%O5=&#xa;OS:M5B4ST11NW7%O6=M5B4ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=1FC%W5=FE88%W6=FE&#xa;OS:88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=&#xa;OS:O%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=FE88%S=O%A=O%F=AS%O=M5B4ST11NW7&#xa;OS:%RD=0%Q=)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T4(R=N)T5(R=&#xa;OS:Y%DF=Y%T=40%W=FE88%S=O%A=O%F=AS%O=M5B4ST11NW7%RD=0%Q=)T5(R=N)T6(R=Y%DF=Y&#xa;OS:%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T6(R=N)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=&#xa;OS:AR%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%&#xa;OS:RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="431874" lastboot="Mon Mar 14 15:29:06 2022"/>
+<distance value="1"/>
+<tcpsequence index="257" difficulty="Good luck!" values="18C4B8F8,DA9CDAE2,8F4BB8D5,B418FE59,C27C9ABE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="19BDD463,19BDD4C8,19BDD52C,19BDD590,19BDD5F4"/>
+<times srtt="88" rttvar="29" to="100000"/>
+</host>
+<host starttime="1647703531" endtime="1647703620"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.80.3" addrtype="ipv4"/>
+<address addr="02:42:C0:A8:50:03" addrtype="mac"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="371">
+<extrareasons reason="resets" count="371"/>
+</extraports>
+<port protocol="tcp" portid="27017"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mongod" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="27017"/>
+<portused state="closed" proto="tcp" portid="21"/>
+<portused state="closed" proto="udp" portid="42646"/>
+<osmatch name="Linux 2.6.32" accuracy="96" line="55173">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="96" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="96" line="56381">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4 - 3.10" accuracy="95" line="65366">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="94" line="62708">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="94" line="64455">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.2-5644" accuracy="94" line="101159">
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="94"><cpe>cpe:/a:synology:diskstation_manager:5.2</cpe></osclass>
+</osmatch>
+<osmatch name="Netgear RAIDiator 4.2.28" accuracy="94" line="88023">
+<osclass type="storage-misc" vendor="Netgear" osfamily="RAIDiator" osgen="4.X" accuracy="94"><cpe>cpe:/o:netgear:raidiator:4.2.28</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 2.6.35" accuracy="94" line="56153">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=3/19%OT=27017%CT=21%CU=42646%PV=Y%DS=1%DC=D%G=Y%M=0242&#xa;OS:C0%TM=6235F644%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10D%TI=Z%CI=Z%&#xa;OS:TS=A)SEQ(SP=FF%GCD=1%ISR=10C%TI=Z%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7&#xa;OS:%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=FE88%W&#xa;OS:2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5B4NN&#xa;OS:SNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y&#xa;OS:%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=&#xa;OS:S+%F=AR%O=%RD=0%Q=)T5(R=N)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T6&#xa;OS:(R=N)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=&#xa;OS:40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S&#xa;OS:)&#xa;"/>
+</os>
+<uptime seconds="1912122" lastboot="Fri Feb 25 12:18:18 2022"/>
+<distance value="1"/>
+<tcpsequence index="255" difficulty="Good luck!" values="B39163F2,5B081EB2,7F279F61,CF8D5272,21B79219"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="71F8A135,71F8A199,71F8A1FD,71F8A261,71F8A2C5"/>
+<times srtt="138" rttvar="11" to="100000"/>
+</host>
+<host starttime="1647703548" endtime="1647703629"><status state="up" reason="reset" reason_ttl="55"/>
+<address addr="45.33.32.156" addrtype="ipv4"/>
+<hostnames>
+<hostname name="scanme.nmap.org" type="user"/>
+</hostnames>
+<ports><extraports state="closed" count="370">
+<extrareasons reason="resets" count="370"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="56"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="21"/>
+<portused state="closed" proto="udp" portid="37423"/>
+<osmatch name="Linux 2.6.32" accuracy="87" line="54126">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.4" accuracy="87" line="65288">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.5" accuracy="87" line="65384">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+</osmatch>
+<osmatch name="Synology DiskStation Manager 5.1" accuracy="87" line="68116">
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" accuracy="87"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+<osclass type="storage-misc" vendor="Synology" osfamily="DiskStation Manager" osgen="5.X" accuracy="87"><cpe>cpe:/a:synology:diskstation_manager:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="87" line="62928">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 or 3.10" accuracy="86" line="56650">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.39" accuracy="86" line="58036">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:2.6.39</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="86" line="63130">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="86" line="67020">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="86" line="67202">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="982576" lastboot="Tue Mar  8 06:30:53 2022"/>
+<distance value="9"/>
+<tcpsequence index="265" difficulty="Good luck!" values="AB8D694,91BCA1BF,258F8710,30C1640E,33573067,C8240230"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="3A90E6CD,3A90E731,3A90E796,3A90E7FA,3A90E85E,3A90E8C3"/>
+<times srtt="189292" rttvar="12697" to="240080"/>
+</host>
+<runstats><finished time="1647703629" timestr="Sat Mar 19 15:27:09 2022" elapsed="104.95" summary="Nmap done at Sat Mar 19 15:27:09 2022; 258 IP addresses (3 hosts up) scanned in 104.95 seconds" exit="success"/><hosts up="3" down="255" total="258"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Jan 22 18:54:29 2022 as: nmap -p 21 -oA nmap/ftp -iL hostlist.txt -->
+<nmaprun scanner="nmap" args="nmap -p 21 -oA nmap/ftp -iL hostlist.txt" start="1642895669" startstr="Sat Jan 22 18:54:29 2022" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="21"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="172.16.16.30" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="46036" rttvar="34543" to="184208"/>
+</host>
+<host starttime="1642895669" endtime="1642895671"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="18.116.252.88" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ec2-18-116-252-88.us-east-2.compute.amazonaws.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="45958" rttvar="45958" to="229790"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.25" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="46214" rttvar="34732" to="185142"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="46005" rttvar="34515" to="184065"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="172.16.16.77" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="45979" rttvar="34493" to="183951"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.67" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="45996" rttvar="34507" to="184024"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="172.16.16.35" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="46015" rttvar="34524" to="184111"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.9" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="45719" rttvar="34550" to="183919"/>
+</host>
+<host starttime="1642895669" endtime="1642895670"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+</ports>
+<times srtt="45987" rttvar="34500" to="183987"/>
+</host>
+<runstats><finished time="1642895671" timestr="Sat Jan 22 18:54:31 2022" elapsed="1.79" summary="Nmap done at Sat Jan 22 18:54:31 2022; 10 IP addresses (9 hosts up) scanned in 1.79 seconds" exit="success"/><hosts up="9" down="1" total="10"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Sat Feb  4 19:57:23 2023 as: nmap -A -v -p22,80,443,4369,5000,5672,8080,25672,35357 -oA HTB/PikaTwoo/nmap/nmapTCPALL 10.129.73.114 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p22,80,443,4369,5000,5672,8080,25672,35357 -oA HTB/PikaTwoo/nmap/nmapTCPALL 10.129.73.114" start="1675558643" startstr="Sat Feb  4 19:57:23 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="9" services="22,80,443,4369,5000,5672,8080,25672,35357"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1675558644"/>
+<taskend task="NSE" time="1675558644"/>
+<taskbegin task="NSE" time="1675558644"/>
+<taskend task="NSE" time="1675558644"/>
+<taskbegin task="NSE" time="1675558644"/>
+<taskend task="NSE" time="1675558644"/>
+<taskbegin task="Ping Scan" time="1675558644"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.129.73.114" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1675558644" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1675558644"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1675558644"/>
+<taskbegin task="Connect Scan" time="1675558644"/>
+<taskend task="Connect Scan" time="1675558644" extrainfo="9 total ports"/>
+<taskbegin task="Service scan" time="1675558644"/>
+<taskend task="Service scan" time="1675558771" extrainfo="9 services on 1 host"/>
+<taskbegin task="NSE" time="1675558771"/>
+<taskend task="NSE" time="1675558786"/>
+<taskbegin task="NSE" time="1675558786"/>
+<taskend task="NSE" time="1675558787"/>
+<taskbegin task="NSE" time="1675558787"/>
+<taskend task="NSE" time="1675558787"/>
+<host starttime="1675558644" endtime="1675558787"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.129.73.114" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.129.73.114" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.4p1 Debian 5+deb11u1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 f3922dfd8422d78df6b09e788eb93be7 (RSA)&#xa;  256 01e43ec06643df25af8a71b83906df9f (ECDSA)&#xa;  256 4fec39764e719471befa7ffaa6a81674 (ED25519)"><table>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCUgrPWhxrM4Epe1OsRhO/bK6Ia60iZxi2MeCOte1LtDilz/gr+TLed4Qo5KRpcUiMOoc/3+M8lO0qfIqY8IsugoxANoz7kQGpo6InjMpkGc/L/eYQ7/h4xGZNJtkEHwOXo+B6/4/voVRdCZ803M3qmE1slR7snmbFkbB+InN6ngQK5UTg7JsRTrFGSlVLayRqJbvQmVan8dUzN7uPRRDB67Bs987QxLunTbLL2EE1llTW2aWnGE2OwKJPuosLBp7fQg746/1U7YwJEDev5CmCF09xNjqu2z2XFOOCPN6bM+KW0uETJhGaDs93QLSdbcwbbGHis6GZx7weVppsRrlAp</elem>
+<elem key="fingerprint">f3922dfd8422d78df6b09e788eb93be7</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHbdLAGYaDKiHbX9soX7zMiwoE/c1mAPuc/rGjPBWOtFlQ4c6c6AoiMF2J48M+XK5rZK/1Py0qErOkld2BxPRlU=</elem>
+<elem key="fingerprint">01e43ec06643df25af8a71b83906df9f</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAILOLaTaHUClZYxoDLPFYXZOOgR5clmcJfRtaFqHxeODE</elem>
+<elem key="fingerprint">4fec39764e719471befa7ffaa6a81674</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe></service><script id="http-title" output="Pikaboo"><elem key="title">Pikaboo</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-cors" output="HEAD GET POST PUT DELETE PATCH"/><script id="http-server-header" output="nginx/1.18.0"><elem>nginx/1.18.0</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe></service><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-title" output="Site doesn&apos;t have a title (text/plain; charset=utf-8)."></script><script id="http-server-header" output="APISIX/2.10.1"><elem>APISIX/2.10.1</elem>
+</script><script id="ssl-cert" output="Subject: commonName=api.pokatmon-app.htb/organizationName=Pokatmon Ltd/stateOrProvinceName=United Kingdom/countryName=UK&#xa;Issuer: commonName=api.pokatmon-app.htb/organizationName=Pokatmon Ltd/stateOrProvinceName=United Kingdom/countryName=UK&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-12-29T20:33:08&#xa;Not valid after:  3021-05-01T20:33:08&#xa;MD5:   3adcd3adcd9c0cb703fd37ed45bbf230&#xa;SHA-1: a4266f1577d64382cb8ac251386bc0b42e49c3a6"><table key="subject">
+<elem key="commonName">api.pokatmon-app.htb</elem>
+<elem key="countryName">UK</elem>
+<elem key="organizationName">Pokatmon Ltd</elem>
+<elem key="stateOrProvinceName">United Kingdom</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">api.pokatmon-app.htb</elem>
+<elem key="countryName">UK</elem>
+<elem key="organizationName">Pokatmon Ltd</elem>
+<elem key="stateOrProvinceName">United Kingdom</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E9A6A820386325FF458D3C47370398D4A43A09CC065DB242617203A3D02115D797875AC21B2565B93FE4CAB7770F6BFF2FD09E4FBF49BC4AE4170502E1FB9F24355D671BF63BDB54B8B7EE31B0BE80A30926235F8EA4A03E28024F619C470C2EB0D77928E60DF97B320309D352EFA6C1070EED0E081D6E411DCAB7A70B46C63B928513E7122BA95306DA960EE13FBCCDB287912A72BFFC40986ABB42581108CD38223C94361C9B9C81A9F9D7519FE031597287186A2FE886CF187BD4F586A9F959A96AA9A56BD8115A062AD468965D4A55B05F12364E80219DDBAAF4E0F93F43503BD86D2745D88D62D1997607E2552E778E508B18564032C86BE103DAFD671F</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">1E:36:5B:2C:F4:36:7E:F1:5A:30:B0:B2:7D:C8:5A:B8:29:6F:FF:80</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">1E:36:5B:2C:F4:36:7E:F1:5A:30:B0:B2:7D:C8:5A:B8:29:6F:FF:80</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-12-29T20:33:08</elem>
+<elem key="notAfter">3021-05-01T20:33:08</elem>
+</table>
+<elem key="md5">3adcd3adcd9c0cb703fd37ed45bbf230</elem>
+<elem key="sha1">a4266f1577d64382cb8ac251386bc0b42e49c3a6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDmzCCAoOgAwIBAgIUc+lphhioCsS1kb5YJlVmse6kAawwDQYJKoZIhvcNAQEL&#xa;BQAwXDELMAkGA1UEBhMCVUsxFzAVBgNVBAgMDlVuaXRlZCBLaW5nZG9tMRUwEwYD&#xa;VQQKDAxQb2thdG1vbiBMdGQxHTAbBgNVBAMMFGFwaS5wb2thdG1vbi1hcHAuaHRi&#xa;MCAXDTIxMTIyOTIwMzMwOFoYDzMwMjEwNTAxMjAzMzA4WjBcMQswCQYDVQQGEwJV&#xa;SzEXMBUGA1UECAwOVW5pdGVkIEtpbmdkb20xFTATBgNVBAoMDFBva2F0bW9uIEx0&#xa;ZDEdMBsGA1UEAwwUYXBpLnBva2F0bW9uLWFwcC5odGIwggEiMA0GCSqGSIb3DQEB&#xa;AQUAA4IBDwAwggEKAoIBAQDppqggOGMl/0WNPEc3A5jUpDoJzAZdskJhcgOj0CEV&#xa;15eHWsIbJWW5P+TKt3cPa/8v0J5Pv0m8SuQXBQLh+58kNV1nG/Y721S4t+4xsL6A&#xa;owkmI1+OpKA+KAJPYZxHDC6w13ko5g35ezIDCdNS76bBBw7tDggdbkEdyrenC0bG&#xa;O5KFE+cSK6lTBtqWDuE/vM2yh5Eqcr/8QJhqu0JYEQjNOCI8lDYcm5yBqfnXUZ/g&#xa;MVlyhxhqL+iGzxh71PWGqflZqWqppWvYEVoGKtRoll1KVbBfEjZOgCGd26r04Pk/&#xa;Q1A72G0nRdiNYtGZdgfiVS53jlCLGFZAMshr4QPa/WcfAgMBAAGjUzBRMB0GA1Ud&#xa;DgQWBBQeNlss9DZ+8VowsLJ9yFq4KW//gDAfBgNVHSMEGDAWgBQeNlss9DZ+8Vow&#xa;sLJ9yFq4KW//gDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDQ&#xa;NMSaQp8MB7qlRvmCZ62TkRljms+gSq7BTRR8vyfW1HfGBeHg1LulRRABqmYi6EbD&#xa;OmBLiETvOcN2M4APtiZgsmTiDhtWWi2q75OkMdXNd/IcnYNNHv4kVPvriExELjyN&#xa;ik86AMBfnUF167MywAG36HC3Fw+6MG7UWDLuW0d7Y/MyMRGOVWGbV8NhrQidnIqV&#xa;EThQ9oCP96MTkByXi9k8cF3qcYq7K8rJTx8xfAgW9OLK2GOiG0xbwCGeRbMOstZs&#xa;Vqln/bwgaIHjxhC0doWx/ka/2TonVi7Ger2ORGdADZvwz3u6P+SOwDYrwkOy1uPj&#xa;ju2e0y5y/lyk+PFCiC01&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="tls-nextprotoneg" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="4369"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="epmd" product="Erlang Port Mapper Daemon" method="probed" conf="10"/><script id="epmd-info" output="&#xa;  epmd_port: 4369&#xa;  nodes: &#xa;    rabbit: 25672"><elem key="epmd_port">4369</elem>
+<table key="nodes">
+<elem key="rabbit">25672</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rtsp" servicefp="SF-Port5000-TCP:V=7.93%I=7%D=2/4%Time=63DEFEFC%P=x86_64-pc-linux-gnu%r(GetRequest,1DC,&quot;HTTP/1\.0\x20300\x20MULTIPLE\x20CHOICES\r\nContent-Type:\x20application/json\r\nLocation:\x20http://pikatwoo\.pokatmon\.htb:5000/v3/\r\nVary:\x20X-Auth-Token\r\nx-openstack-request-id:\x20req-799bf014-86c7-48c5-b68b-3321e7e537ce\r\n\r\n{\&quot;versions\&quot;:\x20{\&quot;values\&quot;:\x20\[{\&quot;id\&quot;:\x20\&quot;v3\.14\&quot;,\x20\&quot;status\&quot;:\x20\&quot;stable\&quot;,\x20\&quot;updated\&quot;:\x20\&quot;2020-04-07T00:00:00Z\&quot;,\x20\&quot;links\&quot;:\x20\[{\&quot;rel\&quot;:\x20\&quot;self\&quot;,\x20\&quot;href\&quot;:\x20\&quot;http://pikatwoo\.pokatmon\.htb:5000/v3/\&quot;}\],\x20\&quot;media-types\&quot;:\x20\[{\&quot;base\&quot;:\x20\&quot;application/json\&quot;,\x20\&quot;type\&quot;:\x20\&quot;application/vnd\.openstack\.identity-v3\+json\&quot;}\]}\]}}&quot;)%r(RTSPRequest,AC,&quot;RTSP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20HEAD,\x20GET,\x20OPTIONS\r\nVary:\x20X-Auth-Token\r\nx-openstack-request-id:\x20req-609619f0-e8e9-44dc-913e-52f1b0a1c18f\r\n\r\n&quot;)%r(HTTPOptions,AC,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20HEAD,\x20GET,\x20OPTIONS\r\nVary:\x20X-Auth-Token\r\nx-openstack-request-id:\x20req-76611789-844c-41ae-a185-ebbe00b6ae43\r\n\r\n&quot;)%r(FourOhFourRequest,180,&quot;HTTP/1\.0\x20404\x20NOT\x20FOUND\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nVary:\x20X-Auth-Token\r\nx-openstack-request-id:\x20req-50b760de-f866-47a9-bdb2-d1b9cf869824\r\n\r\n&lt;!DOCTYPE\x20HTML\x20PUBLIC\x20\&quot;-//W3C//DTD\x20HTML\x203\.2\x20Final//EN\&quot;&gt;\n&lt;title&gt;404\x20Not\x20Found&lt;/title&gt;\n&lt;h1&gt;Not\x20Found&lt;/h1&gt;\n&lt;p&gt;The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\.&lt;/p&gt;\n&quot;)%r(SIPOptions,12,&quot;SIP/2\.0\x20200\x20OK\r\n\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.0 404 NOT FOUND&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-50b760de-f866-47a9-bdb2-d1b9cf869824&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;&#xa;    &lt;title&gt;404 Not Found&lt;/title&gt;&#xa;    &lt;h1&gt;Not Found&lt;/h1&gt;&#xa;    &lt;p&gt;The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.&lt;/p&gt;&#xa;  GetRequest: &#xa;    HTTP/1.0 300 MULTIPLE CHOICES&#xa;    Content-Type: application/json&#xa;    Location: http://pikatwoo.pokatmon.htb:5000/v3/&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-799bf014-86c7-48c5-b68b-3321e7e537ce&#xa;    {&quot;versions&quot;: {&quot;values&quot;: [{&quot;id&quot;: &quot;v3.14&quot;, &quot;status&quot;: &quot;stable&quot;, &quot;updated&quot;: &quot;2020-04-07T00:00:00Z&quot;, &quot;links&quot;: [{&quot;rel&quot;: &quot;self&quot;, &quot;href&quot;: &quot;http://pikatwoo.pokatmon.htb:5000/v3/&quot;}], &quot;media-types&quot;: [{&quot;base&quot;: &quot;application/json&quot;, &quot;type&quot;: &quot;application/vnd.openstack.identity-v3+json&quot;}]}]}}&#xa;  HTTPOptions: &#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Allow: HEAD, GET, OPTIONS&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-76611789-844c-41ae-a185-ebbe00b6ae43&#xa;  RTSPRequest: &#xa;    RTSP/1.0 200 OK&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Allow: HEAD, GET, OPTIONS&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-609619f0-e8e9-44dc-913e-52f1b0a1c18f&#xa;  SIPOptions: &#xa;    SIP/2.0 200 OK"><elem key="FourOhFourRequest">&#xa;    HTTP/1.0 404 NOT FOUND&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-50b760de-f866-47a9-bdb2-d1b9cf869824&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;&#xa;    &lt;title&gt;404 Not Found&lt;/title&gt;&#xa;    &lt;h1&gt;Not Found&lt;/h1&gt;&#xa;    &lt;p&gt;The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.&lt;/p&gt;</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.0 300 MULTIPLE CHOICES&#xa;    Content-Type: application/json&#xa;    Location: http://pikatwoo.pokatmon.htb:5000/v3/&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-799bf014-86c7-48c5-b68b-3321e7e537ce&#xa;    {&quot;versions&quot;: {&quot;values&quot;: [{&quot;id&quot;: &quot;v3.14&quot;, &quot;status&quot;: &quot;stable&quot;, &quot;updated&quot;: &quot;2020-04-07T00:00:00Z&quot;, &quot;links&quot;: [{&quot;rel&quot;: &quot;self&quot;, &quot;href&quot;: &quot;http://pikatwoo.pokatmon.htb:5000/v3/&quot;}], &quot;media-types&quot;: [{&quot;base&quot;: &quot;application/json&quot;, &quot;type&quot;: &quot;application/vnd.openstack.identity-v3+json&quot;}]}]}}</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Allow: HEAD, GET, OPTIONS&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-76611789-844c-41ae-a185-ebbe00b6ae43</elem>
+<elem key="RTSPRequest">&#xa;    RTSP/1.0 200 OK&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Allow: HEAD, GET, OPTIONS&#xa;    Vary: X-Auth-Token&#xa;    x-openstack-request-id: req-609619f0-e8e9-44dc-913e-52f1b0a1c18f</elem>
+<elem key="SIPOptions">&#xa;    SIP/2.0 200 OK</elem>
+</script><script id="rtsp-methods" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="5672"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="amqp" product="RabbitMQ" version="3.8.9" extrainfo="0-9" method="probed" conf="10"/><script id="amqp-info" output="&#xa;  capabilities: &#xa;    publisher_confirms: YES&#xa;    exchange_exchange_bindings: YES&#xa;    basic.nack: YES&#xa;    consumer_cancel_notify: YES&#xa;    connection.blocked: YES&#xa;    consumer_priorities: YES&#xa;    authentication_failure_close: YES&#xa;    per_consumer_qos: YES&#xa;    direct_reply_to: YES&#xa;  cluster_name: rabbit@pikatwoo.pokatmon.htb&#xa;  copyright: Copyright (c) 2007-2020 VMware, Inc. or its affiliates.&#xa;  information: Licensed under the MPL 2.0. Website: https://rabbitmq.com&#xa;  platform: Erlang/OTP 23.2.6&#xa;  product: RabbitMQ&#xa;  version: 3.8.9&#xa;  mechanisms: AMQPLAIN PLAIN&#xa;  locales: en_US&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe></service><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."></script><script id="http-server-header" output="nginx/1.18.0"><elem>nginx/1.18.0</elem>
+</script></port>
+<port protocol="tcp" portid="25672"><state state="open" reason="syn-ack" reason_ttl="0"/></port>
+<port protocol="tcp" portid="35357"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe></service><script id="http-server-header" output="nginx/1.18.0"><elem>nginx/1.18.0</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Site doesn&apos;t have a title (application/json).&#xa;Requested resource was http://10.129.73.114:35357/v3/"><elem key="redirect_url">http://10.129.73.114:35357/v3/</elem>
+</script></port>
+</ports>
+<times srtt="32818" rttvar="3356" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1675558787"/>
+<taskend task="NSE" time="1675558787"/>
+<taskbegin task="NSE" time="1675558787"/>
+<taskend task="NSE" time="1675558787"/>
+<taskbegin task="NSE" time="1675558787"/>
+<taskend task="NSE" time="1675558787"/>
+<runstats><finished time="1675558787" timestr="Sat Feb  4 19:59:47 2023" summary="Nmap done at Sat Feb  4 19:59:47 2023; 1 IP address (1 host up) scanned in 143.67 seconds" elapsed="143.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

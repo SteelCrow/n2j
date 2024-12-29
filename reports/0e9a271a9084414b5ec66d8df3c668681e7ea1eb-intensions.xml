@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Sat Sep  9 15:52:59 2023 as: nmap -sC -sV -p22,80 -oA nmap/intensions 10.10.11.220 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p22,80 -oA nmap/intensions 10.10.11.220" start="1694267579" startstr="Sat Sep  9 15:52:59 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.220" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1694267580" endtime="1694267589"><status state="up" reason="reset" reason_ttl="63"/>
+<address addr="10.10.11.220" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 47:d2:00:66:27:5e:e6:9c:80:89:03:b5:8f:9e:60:e5 (ECDSA)&#xa;  256 c8:d0:ac:8d:29:9b:87:40:5f:1b:b0:a4:1d:53:8f:f1 (ED25519)"><table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCbEW8beTNeBRfWCUhSxjST5j/gsczjYvLp9vmAsclM2CG/L0KsthRQMThUc1L+eJC0mVYm46K2qkCVwni2zNHU=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">47d20066275ee69c808903b58f9e60e5</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIEdBQnXdYum2v3ky5zsqh2jiTOu8kbWYpKiDFJmRJ97m</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">c8d0ac8d299b87405f1bb0a41d538ff1</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-title" output="Intentions"><elem key="title">Intentions</elem>
+</script><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="65341" rttvar="40478" to="227253"/>
+</host>
+<runstats><finished time="1694267589" timestr="Sat Sep  9 15:53:09 2023" summary="Nmap done at Sat Sep  9 15:53:09 2023; 1 IP address (1 host up) scanned in 10.01 seconds" elapsed="10.01" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

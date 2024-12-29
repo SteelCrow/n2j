@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Mon Dec 11 12:36:00 2023 as: nmap -sC -sV -oA clicker -p- clicker.htb -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -oA clicker -p- clicker.htb" start="1702294560" startstr="Mon Dec 11 12:36:00 2023" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.232" addrtype="ipv4"/>
+<hostnames>
+<hostname name="clicker.htb" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1702294560" endtime="1702294589"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.11.232" addrtype="ipv4"/>
+<hostnames>
+<hostname name="clicker.htb" type="user"/>
+<hostname name="clicker.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65526">
+<extrareasons reason="conn-refused" count="65526" proto="tcp" ports="1-21,23-79,81-110,112-2048,2050-35888,35890-38896,38898-40964,40966-42776,42778-45676,45678-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3ubuntu0.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 89:d7:39:34:58:a0:ea:a1:db:c1:3d:14:ec:5d:5a:92 (ECDSA)&#xa;  256 b4:da:8d:af:65:9c:bb:f0:71:d5:13:50:ed:d8:11:30 (ED25519)"><table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBO8nDXVOrF/vxCNHYMVULY8wShEwVH5Hy3Bs9s9o/WCwsV52AV5K8pMvcQ9E7JzxrXkUOgIV4I+8hI0iNLGXTVY=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">89d7393458a0eaa1dbc13d14ec5d5a92</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIAjDCjag/Rh72Z4zXCLADSXbGjSPTH8LtkbgATATvbzv</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">b4da8daf659cbbf071d51350edd81130</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.52" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.52</cpe></service><script id="http-server-header" output="Apache/2.4.52 (Ubuntu)"><elem>Apache/2.4.52 (Ubuntu)</elem>
+</script><script id="http-title" output="Clicker - The Game"><elem key="title">Clicker - The Game</elem>
+</script><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100003  3,4         2049/tcp   nfs&#xa;  100003  3,4         2049/tcp6  nfs&#xa;  100005  1,2,3      45677/tcp   mountd&#xa;  100005  1,2,3      47861/tcp6  mountd&#xa;  100005  1,2,3      53014/udp   mountd&#xa;  100005  1,2,3      56834/udp6  mountd&#xa;  100021  1,3,4      36415/tcp6  nlockmgr&#xa;  100021  1,3,4      40965/tcp   nlockmgr&#xa;  100021  1,3,4      46952/udp6  nlockmgr&#xa;  100021  1,3,4      47412/udp   nlockmgr&#xa;  100024  1          35889/tcp   status&#xa;  100024  1          38468/udp6  status&#xa;  100024  1          43551/udp   status&#xa;  100024  1          46563/tcp6  status&#xa;  100227  3           2049/tcp   nfs_acl&#xa;  100227  3           2049/tcp6  nfs_acl&#xa;"><table key="100021">
+<table key="tcp6">
+<elem key="owner">superuser</elem>
+<elem key="port">36415</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<elem key="owner">superuser</elem>
+<elem key="port">47412</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<elem key="owner">superuser</elem>
+<elem key="port">46952</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<elem key="owner">superuser</elem>
+<elem key="port">40965</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100003">
+<table key="tcp6">
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100005">
+<table key="tcp6">
+<elem key="owner">superuser</elem>
+<elem key="port">47861</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<elem key="owner">superuser</elem>
+<elem key="port">53014</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<elem key="owner">superuser</elem>
+<elem key="port">56834</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<elem key="owner">superuser</elem>
+<elem key="port">45677</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100024">
+<table key="tcp6">
+<elem key="owner">116</elem>
+<elem key="port">46563</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<elem key="owner">116</elem>
+<elem key="port">43551</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<elem key="owner">116</elem>
+<elem key="port">38468</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<elem key="owner">116</elem>
+<elem key="port">35889</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100000">
+<table key="udp">
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp6">
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="local">
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">/run/rpcbind.sock</elem>
+</table>
+<table key="udp6">
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100227">
+<table key="tcp6">
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<elem key="owner">superuser</elem>
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nfs_acl" version="3" extrainfo="RPC #100227" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="35889"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="38897"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="40965"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="nlockmgr" version="1-4" extrainfo="RPC #100021" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="42777"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="45677"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+</ports>
+<times srtt="29210" rttvar="1121" to="100000"/>
+</host>
+<runstats><finished time="1702294589" timestr="Mon Dec 11 12:36:29 2023" summary="Nmap done at Mon Dec 11 12:36:29 2023; 1 IP address (1 host up) scanned in 29.44 seconds" elapsed="29.44" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

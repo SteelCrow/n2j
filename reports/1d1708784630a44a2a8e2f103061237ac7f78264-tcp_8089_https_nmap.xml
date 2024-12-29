@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Dec 13 14:19:00 2021 as: nmap -vv -&#45;reason -Pn -sV -p 8089 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/results/10.0.0.126/scans/tcp_8089_http_nmap.txt -oX /home/kali/results/10.0.0.126/scans/xml/tcp_8089_https_nmap.xml 10.0.0.126 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 8089 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/results/10.0.0.126/scans/tcp_8089_http_nmap.txt -oX /home/kali/results/10.0.0.126/scans/xml/tcp_8089_https_nmap.xml 10.0.0.126" start="1639423140" startstr="Mon Dec 13 14:19:00 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8089"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1639423141"/>
+<taskend task="NSE" time="1639423141"/>
+<taskbegin task="NSE" time="1639423141"/>
+<taskend task="NSE" time="1639423141"/>
+<taskbegin task="NSE" time="1639423141"/>
+<taskend task="NSE" time="1639423141"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1639423141"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1639423141"/>
+<taskbegin task="SYN Stealth Scan" time="1639423141"/>
+<taskend task="SYN Stealth Scan" time="1639423141" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1639423141"/>
+<taskend task="Service scan" time="1639423173" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1639423173"/>
+<taskprogress task="NSE" time="1639423204" percent="54.55" remaining="26" etc="1639423230"/>
+<taskprogress task="NSE" time="1639423234" percent="84.11" remaining="12" etc="1639423246"/>
+<taskprogress task="NSE" time="1639423264" percent="91.53" remaining="9" etc="1639423272"/>
+<taskprogress task="NSE" time="1639423294" percent="99.35" remaining="1" etc="1639423295"/>
+<taskprogress task="NSE" time="1639423324" percent="99.67" remaining="1" etc="1639423324"/>
+<taskprogress task="NSE" time="1639423354" percent="99.67" remaining="1" etc="1639423355"/>
+<taskprogress task="NSE" time="1639423384" percent="99.67" remaining="1" etc="1639423385"/>
+<taskprogress task="NSE" time="1639423414" percent="99.67" remaining="1" etc="1639423415"/>
+<taskprogress task="NSE" time="1639423444" percent="99.67" remaining="1" etc="1639423445"/>
+<taskprogress task="NSE" time="1639423474" percent="99.67" remaining="1" etc="1639423475"/>
+<taskend task="NSE" time="1639423501"/>
+<taskbegin task="NSE" time="1639423501"/>
+<taskend task="NSE" time="1639423506"/>
+<taskbegin task="NSE" time="1639423506"/>
+<taskend task="NSE" time="1639423507"/>
+<host starttime="1639423141" endtime="1639423507"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.126" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8089"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Splunkd httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:splunk:splunk</cpe></service><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.0.126&#xa;  url                                                         method&#xa;  https://10.0.0.126:8089/servicesNS                          HTTP: Basic&#xa;  https://10.0.0.126:8089/services                            HTTP: Basic&#xa;  https://10.0.0.126:8089/services/auth/user/%7batom:name%7d  HTTP: Basic&#xa;"/><script id="http-chrono" output="Request times for /; avg: 420.40ms; min: 414.62ms; max: 424.15ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.0.126&#xa;    &#xa;    Path: https://10.0.0.126:8089/&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45;This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .-&#45;&gt;&#xa;    &#xa;    Path: https://10.0.0.126:8089/static/atom.xsl&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45;  -&#45;&gt;&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.0.0.126&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: https://10.0.0.126:8089/static/atom.xsl&#xa;    Form id: controlpoint{position()}&#xa;    Form action: {@href}&#xa;"/><script id="http-date" output="Mon, 13 Dec 2021 19:20:12 GMT; -15s from local time."><elem key="date">2021-12-13T19:20:12+00:00</elem>
+<elem key="delta">-15.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /robots.txt: Robots file&#xa;  /services/: Potentially interesting folder (401 Unauthorized)&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=10.0.0.126&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 401&#xa;  &#x9;https://10.0.0.126:8089/services/auth/user/%7batom:name%7d&#xa;  &#xa;  Error Code: 401&#xa;  &#x9;https://10.0.0.126:8089/services&#xa;  &#xa;  Error Code: 401&#xa;  &#x9;https://10.0.0.126:8089/servicesNS&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://10.0.0.126:8089/static&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://10.0.0.126:8089/rpc&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://10.0.0.126:8089/static/%7batom:link%5b@rel=&#xa;  &#xa;  Error Code: 404&#xa;  &#x9;https://10.0.0.126:8089/static/%7b@href%7d&#xa;"/><script id="http-feed" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=10.0.0.126&#xa;  Found the following feeds: &#xa;    Atom (version 8.2.0): https://10.0.0.126:8089/&#xa;"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Mon, 13 Dec 2021 19:20:36 GMT&#xa;  Content-Type: text/xml; charset=UTF-8&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Length: 2168&#xa;  Connection: Close&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  Server: Splunkd&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-iis-webdav-vuln" output="WebDAV is DISABLED. Server is not currently vulnerable."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 7a837ea5bb65c752c52bdebd03eaed87&#xa;Credits query returned unknown hash 7a837ea5bb65c752c52bdebd03eaed87"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-robots.txt" output="1 disallowed entry &#xa;/"/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: SAMEORIGIN&#xa;    Description: The browser must not display this content in any frame from a page of different origin than the content itself.&#xa;  X_Content_Type_Options: &#xa;    Header: X-Content-Type-Options: nosniff&#xa;    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. "><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+<table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: SAMEORIGIN</elem>
+<elem>Description: The browser must not display this content in any frame from a page of different origin than the content itself.</elem>
+</table>
+<table key="X_Content_Type_Options">
+<elem>Header: X-Content-Type-Options: nosniff</elem>
+<elem>Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. </elem>
+</table>
+</script><script id="http-server-header" output="Splunkd"><elem>Splunkd</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /static/&#xa;      xsl: 1&#xa;  Longest directory structure:&#xa;    Depth: 1&#xa;    Dir: /static/&#xa;  Total files found (by extension):&#xa;    Other: 1; xsl: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="splunkd"><elem key="title">splunkd</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="ssl-cert" output="Subject: commonName=SplunkServerDefaultCert/organizationName=SplunkUser&#xa;Issuer: commonName=SplunkCommonCA/organizationName=Splunk/stateOrProvinceName=CA/countryName=US/localityName=San Francisco/emailAddress=support@splunk.com&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2021-12-03T21:43:44&#xa;Not valid after:  2024-12-02T21:43:44&#xa;MD5:   d82f 566a 969f 6944 2c48 8df2 8158 77bd&#xa;SHA-1: 0e01 6dc8 93cb 27f5 3dfb 3c55 aac4 3bf2 11b9 e0a1&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQDyjf5yluJp5TANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDMyMTQzNDRaFw0yNDEyMDIyMTQz&#xa;NDRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApiNn&#xa;ZAMyj4HjCXh7tKdqJKd4Cadqbql/VlToJvngdhrCDjKAt4S8zQFY3k6v8OR/xk1M&#xa;/BGKAkyiVCffxoYME4zHCgtx3qDP9WQTeaeNQAcp9tn3YgQFHWOPkDkaWhjoNZLK&#xa;ytz24Qqnsr5eA8DVPgAyPTNz69dlMdxVRIF4t1nJe4P5ay06Oe8tCqXSs6LQxBkQ&#xa;3piBlkk9Qx7GdqC92nzkCBr6OzjtIcVgrRsw2QfRrcHCMqrqcTldhn0Djf5oT4Bf&#xa;xQMvNcGYWXxafHuaDopa2ggKMCioRamzv2ReU4cN0v1w9WsZrLOU2/35W447MLa4&#xa;toUT7z+mLkN4lx1cnQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQDH322uGXWH5CFT&#xa;1O8fCfEIUXp+GdG1sCPwwYD1pd0XpYUljER3Nu1er+oyYTydzZSd/jZlNd/8hVRr&#xa;IMavG/ZaQXt+vpFSEWT6RpEL2+v19nx2HgqR+cXm6ZBlsYFlUWGlqQXFFvn8TRYD&#xa;uikUCkRMR9ra5osRyJrzM2BjuCmIY9r5+K9WcVmlmhM/i3ZSnlX03FHPLV+ChgZw&#xa;2CAxmNSiHIRmLV5HWWQgxFyRib10XylIi2zN9ZXlBt1h1Y8AoR2gMjVExU5egMPi&#xa;bbanBE2zroWEHNUj5kk+RwgxY1ddeXGyZESf7+MpkSRNxn3Jg/XFxq23x6WvBh0l&#xa;7EAWe1pb&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">SplunkServerDefaultCert</elem>
+<elem key="organizationName">SplunkUser</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SplunkCommonCA</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">support@splunk.com</elem>
+<elem key="localityName">San Francisco</elem>
+<elem key="organizationName">Splunk</elem>
+<elem key="stateOrProvinceName">CA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">A623676403328F81E309787BB4A76A24A77809A76A6EA97F5654E826F9E0761AC20E3280B784BCCD0158DE4EAFF0E47FC64D4CFC118A024CA25427DFC6860C138CC70A0B71DEA0CFF5641379A78D400729F6D9F76204051D638F90391A5A18E83592CACADCF6E10AA7B2BE5E03C0D53E00323D3373EBD76531DC55448178B759C97B83F96B2D3A39EF2D0AA5D2B3A2D0C41910DE988196493D431EC676A0BDDA7CE4081AFA3B38ED21C560AD1B30D907D1ADC1C232AAEA71395D867D038DFE684F805FC5032F35C198597C5A7C7B9A0E8A5ADA080A3028A845A9B3BF645E53870DD2FD70F56B19ACB394DBFDF95B8E3B30B6B8B68513EF3FA62E4378971D5C9D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-12-03T21:43:44</elem>
+<elem key="notAfter">2024-12-02T21:43:44</elem>
+</table>
+<elem key="md5">d82f566a969f69442c488df2815877bd</elem>
+<elem key="sha1">0e016dc893cb27f53dfb3c55aac43bf211b9e0a1</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDMjCCAhoCCQDyjf5yluJp5TANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV&#xa;UzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xDzANBgNVBAoM&#xa;BlNwbHVuazEXMBUGA1UEAwwOU3BsdW5rQ29tbW9uQ0ExITAfBgkqhkiG9w0BCQEW&#xa;EnN1cHBvcnRAc3BsdW5rLmNvbTAeFw0yMTEyMDMyMTQzNDRaFw0yNDEyMDIyMTQz&#xa;NDRaMDcxIDAeBgNVBAMMF1NwbHVua1NlcnZlckRlZmF1bHRDZXJ0MRMwEQYDVQQK&#xa;DApTcGx1bmtVc2VyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApiNn&#xa;ZAMyj4HjCXh7tKdqJKd4Cadqbql/VlToJvngdhrCDjKAt4S8zQFY3k6v8OR/xk1M&#xa;/BGKAkyiVCffxoYME4zHCgtx3qDP9WQTeaeNQAcp9tn3YgQFHWOPkDkaWhjoNZLK&#xa;ytz24Qqnsr5eA8DVPgAyPTNz69dlMdxVRIF4t1nJe4P5ay06Oe8tCqXSs6LQxBkQ&#xa;3piBlkk9Qx7GdqC92nzkCBr6OzjtIcVgrRsw2QfRrcHCMqrqcTldhn0Djf5oT4Bf&#xa;xQMvNcGYWXxafHuaDopa2ggKMCioRamzv2ReU4cN0v1w9WsZrLOU2/35W447MLa4&#xa;toUT7z+mLkN4lx1cnQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQDH322uGXWH5CFT&#xa;1O8fCfEIUXp+GdG1sCPwwYD1pd0XpYUljER3Nu1er+oyYTydzZSd/jZlNd/8hVRr&#xa;IMavG/ZaQXt+vpFSEWT6RpEL2+v19nx2HgqR+cXm6ZBlsYFlUWGlqQXFFvn8TRYD&#xa;uikUCkRMR9ra5osRyJrzM2BjuCmIY9r5+K9WcVmlmhM/i3ZSnlX03FHPLV+ChgZw&#xa;2CAxmNSiHIRmLV5HWWQgxFyRib10XylIi2zN9ZXlBt1h1Y8AoR2gMjVExU5egMPi&#xa;bbanBE2zroWEHNUj5kk+RwgxY1ddeXGyZESf7+MpkSRNxn3Jg/XFxq23x6WvBh0l&#xa;7EAWe1pb&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;    compressors: &#xa;      DEFLATE&#xa;      NULL&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">secp256r1</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>DEFLATE</elem>
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="66704" rttvar="66704" to="333520"/>
+</host>
+<taskbegin task="NSE" time="1639423507"/>
+<taskend task="NSE" time="1639423507"/>
+<taskbegin task="NSE" time="1639423507"/>
+<taskend task="NSE" time="1639423507"/>
+<taskbegin task="NSE" time="1639423507"/>
+<taskend task="NSE" time="1639423507"/>
+<runstats><finished time="1639423507" timestr="Mon Dec 13 14:25:07 2021" summary="Nmap done at Mon Dec 13 14:25:07 2021; 1 IP address (1 host up) scanned in 366.69 seconds" elapsed="366.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

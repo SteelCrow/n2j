@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94 scan initiated Wed Jul  5 13:24:08 2023 as: nmap -A -v -p0,22,25,80,139,199,445,60000 -oA PGPractice/ClamAV/nmap/nmapAllTCP.log 192.168.170.42 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p0,22,25,80,139,199,445,60000 -oA PGPractice/ClamAV/nmap/nmapAllTCP.log 192.168.170.42" start="1688577848" startstr="Wed Jul  5 13:24:08 2023" version="7.94" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="8" services="0,22,25,80,139,199,445,60000"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1688577848"/>
+<taskend task="NSE" time="1688577848"/>
+<taskbegin task="NSE" time="1688577848"/>
+<taskend task="NSE" time="1688577848"/>
+<taskbegin task="NSE" time="1688577848"/>
+<taskend task="NSE" time="1688577848"/>
+<taskbegin task="Ping Scan" time="1688577848"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.170.42" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1688577849" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1688577849"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1688577849"/>
+<taskbegin task="Connect Scan" time="1688577849"/>
+<taskend task="Connect Scan" time="1688577850" extrainfo="8 total ports"/>
+<taskbegin task="Service scan" time="1688577850"/>
+<taskend task="Service scan" time="1688577861" extrainfo="7 services on 1 host"/>
+<taskbegin task="NSE" time="1688577861"/>
+<taskend task="NSE" time="1688577891"/>
+<taskbegin task="NSE" time="1688577891"/>
+<taskend task="NSE" time="1688577892"/>
+<taskbegin task="NSE" time="1688577892"/>
+<taskend task="NSE" time="1688577892"/>
+<host starttime="1688577849" endtime="1688577892"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.170.42" addrtype="ipv4"/>
+<hostnames>
+<hostname name="192.168.170.42" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="0"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="3.8.1p1 Debian 8.sarge.6" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:3.8.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 30:3e:a4:13:5f:9a:32:c0:8e:46:eb:26:b3:5e:ee:6d (DSA)&#xa;  1024 af:a2:49:3e:d8:f2:26:12:4a:a0:b5:ee:62:76:b0:18 (RSA)"><table>
+<elem key="fingerprint">303ea4135f9a32c08e46eb26b35eee6d</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=</elem>
+</table>
+<table>
+<elem key="fingerprint">afa2493ed8f226124aa0b5ee6276b018</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0=</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="smtp" product="Sendmail" version="8.13.4/8.13.4/Debian-3sarge3" hostname="localhost.localdomain" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:sendmail:sendmail:8.13.4%2F8.13.4%2Fdebian-3sarge3</cpe></service><script id="smtp-commands" output="localhost.localdomain Hello [192.168.45.219], pleased to meet you, ENHANCEDSTATUSCODES, PIPELINING, EXPN, VERB, 8BITMIME, SIZE, DSN, ETRN, DELIVERBY, HELP&#xa; 2.0.0 This is sendmail version 8.13.4 2.0.0 Topics: 2.0.0 HELO EHLO MAIL RCPT DATA 2.0.0 RSET NOOP QUIT HELP VRFY 2.0.0 EXPN VERB ETRN DSN AUTH 2.0.0 STARTTLS 2.0.0 For more info use &quot;HELP &lt;topic&gt;&quot;. 2.0.0 To report bugs in the implementation send email to 2.0.0 sendmail-bugs@sendmail.org. 2.0.0 For local information send email to Postmaster at your site. 2.0.0 End of HELP info"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="1.3.33" extrainfo="(Debian GNU/Linux)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:1.3.33</cpe></service><script id="http-title" output="Ph33r"><elem key="title">Ph33r</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/1.3.33 (Debian GNU/Linux)"><elem>Apache/1.3.33 (Debian GNU/Linux)</elem>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="199"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="smux" product="Linux SNMP multiplexer" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="@&#xfe;z&#xd2;&#x88;U" product="Samba smbd" version="3.0.14a-Debian" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="60000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="3.8.1p1 Debian 8.sarge.6" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:3.8.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 30:3e:a4:13:5f:9a:32:c0:8e:46:eb:26:b3:5e:ee:6d (DSA)&#xa;  1024 af:a2:49:3e:d8:f2:26:12:4a:a0:b5:ee:62:76:b0:18 (RSA)"><table>
+<elem key="fingerprint">303ea4135f9a32c08e46eb26b35eee6d</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBALr/RyBq802QXa1Bh4SQEUHqD+p9TEx3SUvPHACbT0tQqR3aali+ifDiOpqMToVaRfWzYOOsoM2Neg0EPa4KsJIwSTkFqjd/3Ynp3Yzus0nN+gtmbQRKzo8QfStr6IGt6kaI6viXl4z3ww6ryEkjNnb74KCooHOjyeGPi3o89GVnAAAAFQDSg0dwMrSn9juW/XPvo8S8kVOhDQAAAIARaqFuvZCqiTY8i/PITsr5WvyZm8mQ0nuqB6gW6y1h4jDAvtHO4TIZEMJ5vtPst0w9mVSYGVFlukhCqhbJdBigqH1WB1p7kwC78M9k23zZmzuwbnzYPiLHpEdfFEWdO62ZoCSFBXWOqe1IZaTaRCgUZPeB1QFXRCQ96VrJizPLUAAAAIEArOALxR78fZrUqmUcYOs5tf8wu5xChAUqAfh1ElJ6r3EjcWwXId12jo1uAz0JmCTluUQhjhNDJB6XIgUzoFzW1NZPjGCkex7s1+2+TUTmqFr6Nr97k2RIy91Bpuxwg5jzE83cKPCOoWVbYlfzAqNkF4xxznfC3fRtmj2e/L9chzg=</elem>
+</table>
+<table>
+<elem key="fingerprint">afa2493ed8f226124aa0b5ee6276b018</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAviGcDkDxKzv7w++DXy6q+5AJDpG/q8Um8j4BheW9fgwsOvQCuDvLcPUIKMYEz4aUgkt/sSCXu29XTlu79pEkb48+BnaRCKrHLH/YWM79GT6Q5ie9jP47HjjJeCCBI/c02qpkH/fjz9FK4HQPC7WtXY9EgW4IMB+pzX2KZxK2PF0=</elem>
+</table>
+</script></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 5h59m59s, deviation: 2h49m42s, median: 3h59m59s"><elem key="mean">21599</elem>
+<elem key="median">14399</elem>
+<elem key="stddev">10182</elem>
+<elem key="count">2</elem>
+</script><script id="nbstat" output="NetBIOS name: 0XBABE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  0XBABE&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  0XBABE&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  0XBABE&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;"/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.14a-Debian)&#xa;  NetBIOS computer name: &#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2023-07-05T17:24:21-04:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.14a-Debian</elem>
+<elem key="domain">WORKGROUP\x00</elem>
+<elem key="server"></elem>
+<elem key="date">2023-07-05T17:24:21-04:00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: share (dangerous)&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">share</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script></hostscript><times srtt="34460" rttvar="6055" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1688577892"/>
+<taskend task="NSE" time="1688577892"/>
+<taskbegin task="NSE" time="1688577892"/>
+<taskend task="NSE" time="1688577892"/>
+<taskbegin task="NSE" time="1688577892"/>
+<taskend task="NSE" time="1688577892"/>
+<runstats><finished time="1688577892" timestr="Wed Jul  5 13:24:52 2023" summary="Nmap done at Wed Jul  5 13:24:52 2023; 1 IP address (1 host up) scanned in 43.60 seconds" elapsed="43.60" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

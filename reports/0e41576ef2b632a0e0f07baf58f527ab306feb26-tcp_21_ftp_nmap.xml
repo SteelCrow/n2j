@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Aug 19 09:22:13 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp21/tcp_21_ftp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp21/xml/tcp_21_ftp_nmap.xml 10.11.1.101 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp21/tcp_21_ftp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp21/xml/tcp_21_ftp_nmap.xml 10.11.1.101" start="1660915333" startstr="Fri Aug 19 09:22:13 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660915334"/>
+<taskend task="NSE" time="1660915334"/>
+<taskbegin task="NSE" time="1660915334"/>
+<taskend task="NSE" time="1660915334"/>
+<taskbegin task="NSE" time="1660915334"/>
+<taskend task="NSE" time="1660915334"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660915334"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660915334"/>
+<taskbegin task="SYN Stealth Scan" time="1660915334"/>
+<taskend task="SYN Stealth Scan" time="1660915335" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1660915335"/>
+<taskend task="Service scan" time="1660915335" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1660915335"/>
+<taskend task="NSE" time="1660915339"/>
+<taskbegin task="NSE" time="1660915339"/>
+<taskend task="NSE" time="1660915340"/>
+<taskbegin task="NSE" time="1660915340"/>
+<taskend task="NSE" time="1660915340"/>
+<host starttime="1660915335" endtime="1660915340"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="banner" output="220 (vsFTPd 3.0.3)"/></port>
+</ports>
+<times srtt="147351" rttvar="147351" to="736755"/>
+</host>
+<taskbegin task="NSE" time="1660915340"/>
+<taskend task="NSE" time="1660915340"/>
+<taskbegin task="NSE" time="1660915340"/>
+<taskend task="NSE" time="1660915340"/>
+<taskbegin task="NSE" time="1660915340"/>
+<taskend task="NSE" time="1660915340"/>
+<runstats><finished time="1660915340" timestr="Fri Aug 19 09:22:20 2022" summary="Nmap done at Fri Aug 19 09:22:20 2022; 1 IP address (1 host up) scanned in 7.16 seconds" elapsed="7.16" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

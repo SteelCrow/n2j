@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Mon May 22 12:33:48 2023 as: nmap -A -v -p21,25022,33414,40080 -oA PGPlay/Ameterasu/nmap/nmapAllTCP.log 192.168.155.249 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p21,25022,33414,40080 -oA PGPlay/Ameterasu/nmap/nmapAllTCP.log 192.168.155.249" start="1684773228" startstr="Mon May 22 12:33:48 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="4" services="21,25022,33414,40080"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1684773228"/>
+<taskend task="NSE" time="1684773228"/>
+<taskbegin task="NSE" time="1684773228"/>
+<taskend task="NSE" time="1684773228"/>
+<taskbegin task="NSE" time="1684773228"/>
+<taskend task="NSE" time="1684773228"/>
+<taskbegin task="Ping Scan" time="1684773228"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.155.249" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1684773228" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1684773228"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1684773228"/>
+<taskbegin task="Connect Scan" time="1684773228"/>
+<taskend task="Connect Scan" time="1684773229" extrainfo="4 total ports"/>
+<taskbegin task="Service scan" time="1684773229"/>
+<taskend task="Service scan" time="1684773316" extrainfo="4 services on 1 host"/>
+<taskbegin task="NSE" time="1684773316"/>
+<taskend task="NSE" time="1684773347"/>
+<taskbegin task="NSE" time="1684773347"/>
+<taskend task="NSE" time="1684773348"/>
+<taskbegin task="NSE" time="1684773348"/>
+<taskend task="NSE" time="1684773348"/>
+<host starttime="1684773228" endtime="1684773348"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.155.249" addrtype="ipv4"/>
+<hostnames>
+<hostname name="192.168.155.249" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;Can&apos;t get directory listing: TIMEOUT"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.45.232&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.45.232&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="25022"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.6" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.6</cpe></service><script id="ssh-hostkey" output="&#xa;  256 68c605e8dcf29a2a789beea1aef6381a (ECDSA)&#xa;  256 e989ccc21714f3bc6221064a5e7180ce (ED25519)"><table>
+<elem key="fingerprint">68c605e8dcf29a2a789beea1aef6381a</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD6xv/PZkusP5TZdYJWDT8TTNY2xojo5b2DU/zrXm1tP4kkjNCGmwq8UwFrjo5EbEbk3wMmgHBnE73XwgnqaPd4=</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="fingerprint">e989ccc21714f3bc6221064a5e7180ce</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIHRX3RvvSVPY3FJV9u7N2xIQbLJgQoEMkmRMey39/Jxz</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="33414"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port33414-TCP:V=7.93%I=7%D=5/22%Time=646B9973%P=x86_64-pc-linux-gnu%r(GetRequest,184,&quot;HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer:\x20Werkzeug/2\.2\.3\x20Python/3\.9\.13\r\nDate:\x20Mon,\x2022\x20May\x202023\x2016:33:54\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20207\r\nConnection:\x20close\r\n\r\n&lt;!doctype\x20html&gt;\n&lt;html\x20lang=en&gt;\n&lt;title&gt;404\x20Not\x20Found&lt;/title&gt;\n&lt;h1&gt;Not\x20Found&lt;/h1&gt;\n&lt;p&gt;The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\.&lt;/p&gt;\n&quot;)%r(HTTPOptions,184,&quot;HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer:\x20Werkzeug/2\.2\.3\x20Python/3\.9\.13\r\nDate:\x20Mon,\x2022\x20May\x202023\x2016:33:54\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20207\r\nConnection:\x20close\r\n\r\n&lt;!doctype\x20html&gt;\n&lt;html\x20lang=en&gt;\n&lt;title&gt;404\x20Not\x20Found&lt;/title&gt;\n&lt;h1&gt;Not\x20Found&lt;/h1&gt;\n&lt;p&gt;The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\.&lt;/p&gt;\n&quot;)%r(RTSPRequest,1F4,&quot;&lt;!DOCTYPE\x20HTML\x20PUBLIC\x20\&quot;-//W3C//DTD\x20HTML\x204\.01//EN\&quot;\n\x20\x20\x20\x20\x20\x20\x20\x20\&quot;http://www\.w3\.org/TR/html4/strict\.dtd\&quot;&gt;\n&lt;html&gt;\n\x20\x20\x20\x20&lt;head&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;charset=utf-8\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;title&gt;Error\x20response&lt;/title&gt;\n\x20\x20\x20\x20&lt;/head&gt;\n\x20\x20\x20\x20&lt;body&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;h1&gt;Error\x20response&lt;/h1&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code:\x20400&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Message:\x20Bad\x20request\x20version\x20\(&apos;RTSP/1\.0&apos;\)\.&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code\x20explanation:\x20HTTPStatus\.BAD_REQUEST\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.&lt;/p&gt;\n\x20\x20\x20\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;)%r(Help,1EF,&quot;&lt;!DOCTYPE\x20HTML\x20PUBLIC\x20\&quot;-//W3C//DTD\x20HTML\x204\.01//EN\&quot;\n\x20\x20\x20\x20\x20\x20\x20\x20\&quot;http://www\.w3\.org/TR/html4/strict\.dtd\&quot;&gt;\n&lt;html&gt;\n\x20\x20\x20\x20&lt;head&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;charset=utf-8\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;title&gt;Error\x20response&lt;/title&gt;\n\x20\x20\x20\x20&lt;/head&gt;\n\x20\x20\x20\x20&lt;body&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;h1&gt;Error\x20response&lt;/h1&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code:\x20400&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Message:\x20Bad\x20request\x20syntax\x20\(&apos;HELP&apos;\)\.&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code\x20explanation:\x20HTTPStatus\.BAD_REQUEST\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.&lt;/p&gt;\n\x20\x20\x20\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.1 404 NOT FOUND&#xa;    Server: Werkzeug/2.2.3 Python/3.9.13&#xa;    Date: Mon, 22 May 2023 16:33:54 GMT&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 207&#xa;    Connection: close&#xa;    &lt;!doctype html&gt;&#xa;    &lt;html lang=en&gt;&#xa;    &lt;title&gt;404 Not Found&lt;/title&gt;&#xa;    &lt;h1&gt;Not Found&lt;/h1&gt;&#xa;    &lt;p&gt;The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.&lt;/p&gt;&#xa;  Help: &#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&#xa;    &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Error response&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;Error response&lt;/h1&gt;&#xa;    &lt;p&gt;Error code: 400&lt;/p&gt;&#xa;    &lt;p&gt;Message: Bad request syntax (&apos;HELP&apos;).&lt;/p&gt;&#xa;    &lt;p&gt;Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;&#xa;  RTSPRequest: &#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&#xa;    &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Error response&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;Error response&lt;/h1&gt;&#xa;    &lt;p&gt;Error code: 400&lt;/p&gt;&#xa;    &lt;p&gt;Message: Bad request version (&apos;RTSP/1.0&apos;).&lt;/p&gt;&#xa;    &lt;p&gt;Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;"><elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.1 404 NOT FOUND&#xa;    Server: Werkzeug/2.2.3 Python/3.9.13&#xa;    Date: Mon, 22 May 2023 16:33:54 GMT&#xa;    Content-Type: text/html; charset=utf-8&#xa;    Content-Length: 207&#xa;    Connection: close&#xa;    &lt;!doctype html&gt;&#xa;    &lt;html lang=en&gt;&#xa;    &lt;title&gt;404 Not Found&lt;/title&gt;&#xa;    &lt;h1&gt;Not Found&lt;/h1&gt;&#xa;    &lt;p&gt;The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.&lt;/p&gt;</elem>
+<elem key="Help">&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&#xa;    &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Error response&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;Error response&lt;/h1&gt;&#xa;    &lt;p&gt;Error code: 400&lt;/p&gt;&#xa;    &lt;p&gt;Message: Bad request syntax (&apos;HELP&apos;).&lt;/p&gt;&#xa;    &lt;p&gt;Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+<elem key="RTSPRequest">&#xa;    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&#xa;    &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;&#xa;    &lt;title&gt;Error response&lt;/title&gt;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;    &lt;h1&gt;Error response&lt;/h1&gt;&#xa;    &lt;p&gt;Error code: 400&lt;/p&gt;&#xa;    &lt;p&gt;Message: Bad request version (&apos;RTSP/1.0&apos;).&lt;/p&gt;&#xa;    &lt;p&gt;Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;    &lt;/html&gt;</elem>
+</script></port>
+<port protocol="tcp" portid="40080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.53" extrainfo="(Fedora)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.53</cpe></service><script id="http-title" output="My test page"><elem key="title">My test page</elem>
+</script><script id="http-server-header" output="Apache/2.4.53 (Fedora)"><elem>Apache/2.4.53 (Fedora)</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="32814" rttvar="11149" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1684773348"/>
+<taskend task="NSE" time="1684773348"/>
+<taskbegin task="NSE" time="1684773348"/>
+<taskend task="NSE" time="1684773348"/>
+<taskbegin task="NSE" time="1684773348"/>
+<taskend task="NSE" time="1684773348"/>
+<runstats><finished time="1684773348" timestr="Mon May 22 12:35:48 2023" summary="Nmap done at Mon May 22 12:35:48 2023; 1 IP address (1 host up) scanned in 120.20 seconds" elapsed="120.20" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

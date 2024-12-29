@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Fri Jan  6 12:58:27 2023 as: nmap -A -v -p53,80,88,135,139,389,445,464,593,636,3210,3268,3269,3389,5517,5985,6830,7297,9278,9389,13992,15999,17627,20913,25300,27300,28687,31987,41492,41862,47001,47008,48365,49664,49665,49666,49669,49673,49675,49676,49679,49684,49696,49816,55188,59724,61245,61380,62589,64237,64816 -oA TryHackMe/AttacktiveDirectory/nmapScans/nmapAllTCP 10.10.125.213 -->
+<nmaprun scanner="nmap" args="nmap -A -v -p53,80,88,135,139,389,445,464,593,636,3210,3268,3269,3389,5517,5985,6830,7297,9278,9389,13992,15999,17627,20913,25300,27300,28687,31987,41492,41862,47001,47008,48365,49664,49665,49666,49669,49673,49675,49676,49679,49684,49696,49816,55188,59724,61245,61380,62589,64237,64816 -oA TryHackMe/AttacktiveDirectory/nmapScans/nmapAllTCP 10.10.125.213" start="1673027907" startstr="Fri Jan  6 12:58:27 2023" version="7.93" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="51" services="53,80,88,135,139,389,445,464,593,636,3210,3268-3269,3389,5517,5985,6830,7297,9278,9389,13992,15999,17627,20913,25300,27300,28687,31987,41492,41862,47001,47008,48365,49664-49666,49669,49673,49675-49676,49679,49684,49696,49816,55188,59724,61245,61380,62589,64237,64816"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1673027908"/>
+<taskend task="NSE" time="1673027908"/>
+<taskbegin task="NSE" time="1673027908"/>
+<taskend task="NSE" time="1673027908"/>
+<taskbegin task="NSE" time="1673027908"/>
+<taskend task="NSE" time="1673027908"/>
+<taskbegin task="Ping Scan" time="1673027908"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.125.213" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1673027908" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1673027908"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1673027908"/>
+<taskbegin task="Connect Scan" time="1673027908"/>
+<taskend task="Connect Scan" time="1673027909" extrainfo="51 total ports"/>
+<taskbegin task="Service scan" time="1673027909"/>
+<taskend task="Service scan" time="1673027969" extrainfo="27 services on 1 host"/>
+<taskbegin task="NSE" time="1673027969"/>
+<taskend task="NSE" time="1673027979"/>
+<taskbegin task="NSE" time="1673027979"/>
+<taskend task="NSE" time="1673027980"/>
+<taskbegin task="NSE" time="1673027980"/>
+<taskend task="NSE" time="1673027980"/>
+<host starttime="1673027908" endtime="1673027980"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.125.213" addrtype="ipv4"/>
+<hostnames>
+<hostname name="10.10.125.213" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_services:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2023-01-06 17:58:35Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: spookysec.local0., Site: Default-First-Site-Name" hostname="ATTACKTIVEDIREC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3210"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="flamenco-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: spookysec.local0., Site: Default-First-Site-Name" hostname="ATTACKTIVEDIREC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2023-01-06T17:59:39+00:00; 0s from scanner time."><elem key="delta">0.0</elem>
+<elem key="date">2023-01-06T17:59:39+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=AttacktiveDirectory.spookysec.local&#xa;Issuer: commonName=AttacktiveDirectory.spookysec.local&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2023-01-05T16:47:22&#xa;Not valid after:  2023-07-07T16:47:22&#xa;MD5:   2f042e3bfede2d53c82d508daf23815d&#xa;SHA-1: a724fc3513ed887bad55125d43b053584415c9cf"><table key="subject">
+<elem key="commonName">AttacktiveDirectory.spookysec.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">AttacktiveDirectory.spookysec.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BAE3988B01F81AF1081A631B09BBCF9F6D68EF3292103D570BA92A36A3B166E194442A948BC52F6D1A577F99C25A6502BFFF04385CDCE86C073B1DB09C1CC7A03918FBA329155C8F807443D672F46900FE0B40E78D799ACA94D87F32EF04E8A18BFF09532B2AA01C38A116BB4150278532EB8C9140671EBC24919ECE7B96D41A82E6340CC362A87B3434AC89D127D884678FB193C3B47C45BAD6B925A7160B76F9DECD42B62BA1A5BEC2B4BDDFC53E73FFE4B335C0E830E720818CCEB6761004D7C92B489BC9BE681C35A353DAE7A607408393BBB5B78DFB79376D2B26FCFE8777A08A8663BF4105DD65463A4E56F451A3A296A493ADA33C03F86E2AC22CBDDD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2023-01-05T16:47:22</elem>
+<elem key="notAfter">2023-07-07T16:47:22</elem>
+</table>
+<elem key="md5">2f042e3bfede2d53c82d508daf23815d</elem>
+<elem key="sha1">a724fc3513ed887bad55125d43b053584415c9cf</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDCjCCAfKgAwIBAgIQf7/NtOo3OqpMjoYf4OjQATANBgkqhkiG9w0BAQsFADAu&#xa;MSwwKgYDVQQDEyNBdHRhY2t0aXZlRGlyZWN0b3J5LnNwb29reXNlYy5sb2NhbDAe&#xa;Fw0yMzAxMDUxNjQ3MjJaFw0yMzA3MDcxNjQ3MjJaMC4xLDAqBgNVBAMTI0F0dGFj&#xa;a3RpdmVEaXJlY3Rvcnkuc3Bvb2t5c2VjLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEF&#xa;AAOCAQ8AMIIBCgKCAQEAuuOYiwH4GvEIGmMbCbvPn21o7zKSED1XC6kqNqOxZuGU&#xa;RCqUi8UvbRpXf5nCWmUCv/8EOFzc6GwHOx2wnBzHoDkY+6MpFVyPgHRD1nL0aQD+&#xa;C0DnjXmaypTYfzLvBOihi/8JUysqoBw4oRa7QVAnhTLrjJFAZx68JJGeznuW1BqC&#xa;5jQMw2KoezQ0rInRJ9iEZ4+xk8O0fEW61rklpxYLdvnezUK2K6GlvsK0vd/FPnP/&#xa;5LM1wOgw5yCBjM62dhAE18krSJvJvmgcNaNT2uemB0CDk7u1t437eTdtKyb8/od3&#xa;oIqGY79BBd1lRjpOVvRRo6KWpJOtozwD+G4qwiy93QIDAQABoyQwIjATBgNVHSUE&#xa;DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAHu3&#xa;SaP+eChhTGbiU5JBssl7KaBSaTAP+cSSh2UiSGkBH8z53BIq6j8h7/j6uHJYsPi4&#xa;SEo8SAwh7UcSkMcCFe2K0sVR0z2+O9N8vQ0HNzp+Vs4PtyKmmr5hM4UAhwImnRnT&#xa;rMDKSVWS+NXRIB/RH/A0IaGgMAKvhzAT9fSWCECGrZxjJzU5LOIaY5RYNkh3TuKa&#xa;dQfZVnMQqKwrIYH+CkwCchXKfrPYOjUJ4ZHYRJBascvO3QQkpiUj2OPwQfhzxUPQ&#xa;9Q3y78oRLIHCQ7BgJ0Kd0VI3/h5aiQD3BbgPoa38QN4qoHEikTzxYnJ37KFrUx9l&#xa;ngopMc5m0B/cGaC8o7g=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: THM-AD&#xa;  NetBIOS_Domain_Name: THM-AD&#xa;  NetBIOS_Computer_Name: ATTACKTIVEDIREC&#xa;  DNS_Domain_Name: spookysec.local&#xa;  DNS_Computer_Name: AttacktiveDirectory.spookysec.local&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2023-01-06T17:59:30+00:00"><elem key="Target_Name">THM-AD</elem>
+<elem key="NetBIOS_Domain_Name">THM-AD</elem>
+<elem key="NetBIOS_Computer_Name">ATTACKTIVEDIREC</elem>
+<elem key="DNS_Domain_Name">spookysec.local</elem>
+<elem key="DNS_Computer_Name">AttacktiveDirectory.spookysec.local</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2023-01-06T17:59:30+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5517"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="6830"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="7297"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="9278"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="pegasus" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="13992"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="15999"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="programmar" method="table" conf="3"/></port>
+<port protocol="tcp" portid="17627"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="20913"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="25300"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="27300"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="28687"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="31987"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="41492"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="41862"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="47008"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="48365"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49673"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49675"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49676"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49679"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49684"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49696"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49816"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="55188"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="59724"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="61245"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="61380"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="62589"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="64237"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+<port protocol="tcp" portid="64816"><state state="closed" reason="conn-refused" reason_ttl="0"/></port>
+</ports>
+<hostscript><script id="smb2-time" output="&#xa;  date: 2023-01-06T17:59:32&#xa;  start_date: N/A"><elem key="date">2023-01-06T17:59:32</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-security-mode" output="&#xa;  311: &#xa;    Message signing enabled and required"><table key="311">
+<elem>Message signing enabled and required</elem>
+</table>
+</script></hostscript><times srtt="60034" rttvar="87" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1673027980"/>
+<taskend task="NSE" time="1673027980"/>
+<taskbegin task="NSE" time="1673027980"/>
+<taskend task="NSE" time="1673027980"/>
+<taskbegin task="NSE" time="1673027980"/>
+<taskend task="NSE" time="1673027980"/>
+<runstats><finished time="1673027980" timestr="Fri Jan  6 12:59:40 2023" summary="Nmap done at Fri Jan  6 12:59:40 2023; 1 IP address (1 host up) scanned in 72.82 seconds" elapsed="72.82" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

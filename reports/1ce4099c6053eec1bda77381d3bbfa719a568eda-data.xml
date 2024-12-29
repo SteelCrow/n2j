@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Jun  7 12:57:10 2022 as: nmap -sn -PR -oX data.xml 192.168.10.32/24 -->
+<nmaprun scanner="nmap" args="nmap -sn -PR -oX data.xml 192.168.10.32/24" start="1654586830" startstr="Tue Jun  7 12:57:10 2022" version="7.80" xmloutputversion="1.04">
+<verbose level="0"/>
+<debugging level="0"/>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="5776" rttvar="5776" to="100000"/>
+</host>
+<host><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.10.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="3455" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.10" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="2781" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="28764" rttvar="28764" to="143820"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.32" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="725" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.46" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ubuntu" type="PTR"/>
+</hostnames>
+<times srtt="48440" rttvar="48440" to="242200"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="52031" rttvar="52031" to="260155"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.91" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="2526" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.114" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="32642" rttvar="32642" to="163210"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.117" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="84699" rttvar="84699" to="423495"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.156" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="51735" rttvar="51735" to="258675"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.158" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="3155" rttvar="5000" to="100000"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.172" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="78042" rttvar="62840" to="329402"/>
+</host>
+<host><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="192.168.10.198" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<times srtt="38027" rttvar="38027" to="190135"/>
+</host>
+<runstats><finished time="1654586837" timestr="Tue Jun  7 12:57:17 2022" elapsed="6.39" summary="Nmap done at Tue Jun  7 12:57:17 2022; 256 IP addresses (14 hosts up) scanned in 6.39 seconds" exit="success"/><hosts up="14" down="242" total="256"/>
+</runstats>
+</nmaprun>

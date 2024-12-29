@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Fri Feb 23 10:32:25 2018 as: nmap -oA 1-regular google.com -->
+<nmaprun args="nmap -oA 1-regular google.com" scanner="nmap" start="1519399945" startstr="Fri Feb 23 10:32:25 2018" version="7.60" xmloutputversion="1.04">
+	<scaninfo numservices="1000" protocol="tcp" services="1,3-4,6-7,9,13,17,19-26,30,32-33,37,42-43,49,53,70,79-85,88-90,99-100,106, ....." type="syn"/>
+	<verbose level="0"/>
+	<debugging level="0"/>
+	<host endtime="1519399960" starttime="1519399945">
+		<status reason="reset" reason_ttl="255" state="up"/>
+		<address addr="216.58.201.142" addrtype="ipv4"/>
+		<hostnames>
+			<hostname name="google.com" type="user"/>
+			<hostname name="mad06s25-in-f142.1e100.net" type="PTR"/>
+		</hostnames>
+		<ports>
+			<extraports count="990" state="filtered">
+				<extrareasons count="990" reason="no-responses"/>
+			</extraports>
+			<port portid="21" protocol="tcp">
+				<state reason="syn-ack" reason_ttl="64" state="open"/>
+				<service conf="3" method="table" name="ftp"/>
+			</port>
+			<port portid="25" protocol="tcp">
+				<state reason="syn-ack" reason_ttl="64" state="open"/>
+				<service conf="3" method="table" name="smtp"/>
+			</port>
+			<port portid="80" protocol="tcp">
+				<state reason="syn-ack" reason_ttl="64" state="open"/>
+				<service conf="3" method="table" name="http"/>
+			</port>
+			<port portid="110" protocol="tcp">
+				<state reason="syn-ack" reason_ttl="64" state="open"/>
+				<service conf="3" method="table" name="pop3"/>
+			</port>
+			<port portid="443" protocol="tcp">
+				<state reason="syn-ack" reason_ttl="64" state="open"/>
+				<service conf="3" method="table" name="https"/>
+			</port>
+			<port portid="2000" protocol="tcp">
+				<state reason="syn-ack" reason_ttl="64" state="open"/>
+				<service conf="3" method="table" name="cisco-sccp"/>
+			</port>
+		</ports>
+		<times rttvar="46949" srtt="31610" to="219406"/>
+	</host>
+	<runstats>
+		<finished elapsed="15.38" exit="success" summary="Nmap done at Fri Feb 23 10:32:40 2018; 1 IP address (1 host up) scanned in 15.38 seconds" time="1519399960" timestr="Fri Feb 23 10:32:40 2018"/>
+		<hosts down="0" total="1" up="1"/>
+	</runstats>
+</nmaprun>

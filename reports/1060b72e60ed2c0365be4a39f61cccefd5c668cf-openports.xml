@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Mar 10 22:42:33 2019 as: nmap -sT -p- -&#45;min-rate 1000 -oA openports 192.168.3.148 -->
+<nmaprun scanner="nmap" args="nmap -sT -p- -&#45;min-rate 1000 -oA openports 192.168.3.148" start="1552272153" startstr="Sun Mar 10 22:42:33 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Connect Scan" time="1552272168" percent="11.57" remaining="115" etc="1552272283"/>
+<taskprogress task="Connect Scan" time="1552272207" percent="45.90" remaining="64" etc="1552272271"/>
+<taskprogress task="Connect Scan" time="1552272207" percent="46.11" remaining="64" etc="1552272270"/>
+<taskprogress task="Connect Scan" time="1552272208" percent="46.73" remaining="63" etc="1552272271"/>
+<taskprogress task="Connect Scan" time="1552272208" percent="46.93" remaining="63" etc="1552272270"/>
+<host starttime="1552272153" endtime="1552272254"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.3.148" addrtype="ipv4"/>
+<address addr="00:0C:29:F4:9E:73" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65523">
+<extrareasons reason="no-responses" count="65523"/>
+</extraports>
+<port protocol="tcp" portid="20"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp-data" method="table" conf="3"/></port>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="123"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="137"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="138"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="666"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="doom" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="12380"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="502" rttvar="167" to="100000"/>
+</host>
+<runstats><finished time="1552272254" timestr="Sun Mar 10 22:44:14 2019" elapsed="100.54" summary="Nmap done at Sun Mar 10 22:44:14 2019; 1 IP address (1 host up) scanned in 100.54 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

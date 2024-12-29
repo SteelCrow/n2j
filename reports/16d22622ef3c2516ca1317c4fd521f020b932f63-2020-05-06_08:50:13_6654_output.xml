@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Wed May  6 08:50:13 2020 as: nmap -&#45;script vuln -p 6654 -T5 -oX /home/ryoma/Desktop/18731-demo/18731_control_logic/output/2020-05-06_08:50:13_6654_output.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p 6654 -T5 -oX /home/ryoma/Desktop/18731-demo/18731_control_logic/output/2020-05-06_08:50:13_6654_output.xml 127.0.0.1" start="1588769413" startstr="Wed May  6 08:50:13 2020" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="6654"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1588769423" endtime="1588769423"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="6654"><state state="open" reason="syn-ack" reason_ttl="64"/></port>
+</ports>
+<times srtt="55" rttvar="5000" to="50000"/>
+</host>
+<runstats><finished time="1588769423" timestr="Wed May  6 08:50:23 2020" elapsed="10.59" summary="Nmap done at Wed May  6 08:50:23 2020; 1 IP address (1 host up) scanned in 10.59 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

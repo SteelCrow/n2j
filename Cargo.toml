@@ -1,0 +1,12 @@
+[package] 
+name = "n2j"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+roxmltree = "0.20"
+thiserror = "2.0"
+error-stack = { version = "0.5", features = ["serde"] }
+strum = "0.26"
+strum_macros = "0.26"
+serde = { version = "1.0", features = ["derive"] }

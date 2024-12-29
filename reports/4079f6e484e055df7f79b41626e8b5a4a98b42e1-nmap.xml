@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1597589510" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Sun Aug 16 16:51:50 2020" args="nmap -p 1-65535 -T4 -A -v 172.31.3.8"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-08-16 16:51 CEST
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 16:51
+Completed NSE at 16:51, 0.00s elapsed
+Initiating NSE at 16:51
+Completed NSE at 16:51, 0.00s elapsed
+Initiating NSE at 16:51
+Completed NSE at 16:51, 0.00s elapsed
+Initiating Ping Scan at 16:51
+Scanning 172.31.3.8 [4 ports]
+Completed Ping Scan at 16:51, 1.66s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:51
+Completed Parallel DNS resolution of 1 host. at 16:51, 0.03s elapsed
+Initiating SYN Stealth Scan at 16:51
+Scanning 172.31.3.8 [65535 ports]
+Discovered open port 139/tcp on 172.31.3.8
+Discovered open port 445/tcp on 172.31.3.8
+Discovered open port 3389/tcp on 172.31.3.8
+Discovered open port 53/tcp on 172.31.3.8
+Discovered open port 135/tcp on 172.31.3.8
+Discovered open port 593/tcp on 172.31.3.8
+Discovered open port 3269/tcp on 172.31.3.8
+Discovered open port 49666/tcp on 172.31.3.8
+Discovered open port 49670/tcp on 172.31.3.8
+SYN Stealth Scan Timing: About 16.02% done; ETC: 16:55 (0:02:43 remaining)
+SYN Stealth Scan Timing: About 31.24% done; ETC: 16:55 (0:02:21 remaining)
+Discovered open port 49696/tcp on 172.31.3.8
+SYN Stealth Scan Timing: About 40.32% done; ETC: 16:56 (0:02:37 remaining)
+SYN Stealth Scan Timing: About 49.50% done; ETC: 16:56 (0:02:19 remaining)
+Discovered open port 88/tcp on 172.31.3.8
+Discovered open port 49671/tcp on 172.31.3.8
+SYN Stealth Scan Timing: About 34.93% done; ETC: 16:59 (0:05:09 remaining)
+SYN Stealth Scan Timing: About 44.73% done; ETC: 16:59 (0:04:02 remaining)
+SYN Stealth Scan Timing: About 45.68% done; ETC: 17:00 (0:04:29 remaining)
+SYN Stealth Scan Timing: About 52.08% done; ETC: 17:00 (0:04:04 remaining)
+SYN Stealth Scan Timing: About 61.42% done; ETC: 16:59 (0:03:05 remaining)
+Discovered open port 49667/tcp on 172.31.3.8
+Discovered open port 464/tcp on 172.31.3.8
+Discovered open port 3268/tcp on 172.31.3.8
+SYN Stealth Scan Timing: About 69.80% done; ETC: 16:59 (0:02:21 remaining)
+Discovered open port 636/tcp on 172.31.3.8
+Discovered open port 5985/tcp on 172.31.3.8
+Discovered open port 9389/tcp on 172.31.3.8
+SYN Stealth Scan Timing: About 77.33% done; ETC: 17:00 (0:01:54 remaining)
+Discovered open port 389/tcp on 172.31.3.8
+SYN Stealth Scan Timing: About 86.00% done; ETC: 16:59 (0:01:08 remaining)
+Discovered open port 49675/tcp on 172.31.3.8
+Completed SYN Stealth Scan at 17:00, 509.06s elapsed (65535 total ports)
+Initiating Service scan at 17:00
+Scanning 20 services on 172.31.3.8
+Completed Service scan at 17:02, 145.07s elapsed (20 services on 1 host)
+Initiating OS detection (try #1) against 172.31.3.8
+Retrying OS detection (try #2) against 172.31.3.8
+Initiating Traceroute at 17:02
+Completed Traceroute at 17:02, 1.12s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 17:02
+Completed Parallel DNS resolution of 2 hosts. at 17:02, 0.04s elapsed
+NSE: Script scanning 172.31.3.8.
+Initiating NSE at 17:02
+Completed NSE at 17:03, 40.08s elapsed
+Initiating NSE at 17:03
+Completed NSE at 17:05, 121.08s elapsed
+Initiating NSE at 17:05
+Completed NSE at 17:05, 0.00s elapsed
+Nmap scan report for 172.31.3.8
+Host is up (0.12s latency).
+Not shown: 65515 filtered ports
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2020-08-16 15:00:32Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: Toast.csl0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: Toast.csl0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: TOAST
+|   NetBIOS_Domain_Name: TOAST
+|   NetBIOS_Computer_Name: TOAST-DC
+|   DNS_Domain_Name: Toast.csl
+|   DNS_Computer_Name: Toast-DC.Toast.csl
+|   DNS_Tree_Name: Toast.csl
+|   Product_Version: 10.0.17763
+|_  System_Time: 2020-08-16T15:02:57+00:00
+| ssl-cert: Subject: commonName=Toast-DC.Toast.csl
+| Issuer: commonName=Toast-DC.Toast.csl
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-08-02T01:51:52
+| Not valid after:  2021-02-01T01:51:52
+| MD5:   b87a eb69 2ded d7c0 cb4d fb29 6e87 6b0f
+|_SHA-1: b41b 3162 a85d 369e 3271 acae 5f44 245f 4200 1363
+|_ssl-date: 2020-08-16T15:03:36+00:00; +3s from scanner time.
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        .NET Message Framing
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49671/tcp open  msrpc         Microsoft Windows RPC
+49675/tcp open  msrpc         Microsoft Windows RPC
+49696/tcp open  msrpc         Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=8/16%Time=5F394A11%P=x86_64-pc-linux-gnu%r(DNSV
+SF:ersionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\
+SF:x04bind\0\0\x10\0\x03");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): AVtech embedded (87%)
+Aggressive OS guesses: AVtech Room Alert 26W environmental monitor (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: TOAST-DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 3s, deviation: 0s, median: 2s
+| nbstat: NetBIOS name: TOAST-DC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 06:0c:ef:73:a8:fe (unknown)
+| Names:
+|   TOAST-DC&lt;00&gt;         Flags: &lt;unique&gt;&lt;active&gt;
+|   TOAST&lt;00&gt;            Flags: &lt;group&gt;&lt;active&gt;
+|   TOAST&lt;1c&gt;            Flags: &lt;group&gt;&lt;active&gt;
+|   TOAST-DC&lt;20&gt;         Flags: &lt;unique&gt;&lt;active&gt;
+|_  TOAST&lt;1b&gt;            Flags: &lt;unique&gt;&lt;active&gt;
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2020-08-16T15:02:57
+|_  start_date: N/A
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT       ADDRESS
+1   112.41 ms 10.10.0.1
+2   116.34 ms 172.31.3.8
+
+NSE: Script Post-scanning.
+Initiating NSE at 17:05
+Completed NSE at 17:05, 0.00s elapsed
+Initiating NSE at 17:05
+Completed NSE at 17:05, 0.00s elapsed
+Initiating NSE at 17:05
+Completed NSE at 17:05, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 824.43 seconds
+           Raw packets sent: 262550 (11.556MB) | Rcvd: 309 (16.414KB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="172.31.3.8"></address><hostnames></hostnames><ports><extraports count="65515" state="filtered"></extraports><port protocol="tcp" portid="53"><state reason="syn-ack" state="open" reason_ttl="127"></state><service method="table" conf="3" name="domain"></service></port><port protocol="tcp" portid="88"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows Kerberos" extrainfo="server time: 2020-08-16 15:00:32Z" method="probed" conf="10" name="kerberos-sec"></service></port><port protocol="tcp" portid="135"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="139"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows netbios-ssn" method="probed" conf="10" name="netbios-ssn"></service></port><port protocol="tcp" portid="389"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: Toast.csl0., Site: Default-First-Site-Name" method="probed" conf="10" name="ldap"></service></port><port protocol="tcp" portid="445"><state reason="syn-ack" state="open" reason_ttl="127"></state><service method="table" conf="3" name="microsoft-ds"></service></port><port protocol="tcp" portid="464"><state reason="syn-ack" state="open" reason_ttl="127"></state><service method="table" conf="3" name="kpasswd5"></service></port><port protocol="tcp" portid="593"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC over HTTP" version="1.0" method="probed" conf="10" name="ncacn_http"></service></port><port protocol="tcp" portid="636"><state reason="syn-ack" state="open" reason_ttl="127"></state><service method="probed" conf="8" name="tcpwrapped"></service></port><port protocol="tcp" portid="3268"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: Toast.csl0., Site: Default-First-Site-Name" method="probed" conf="10" name="ldap"></service></port><port protocol="tcp" portid="3269"><state reason="syn-ack" state="open" reason_ttl="127"></state><service method="probed" conf="8" name="tcpwrapped"></service></port><port protocol="tcp" portid="3389"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Terminal Services" method="probed" conf="10" name="ms-wbt-server"></service></port><port protocol="tcp" portid="5985"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft HTTPAPI httpd" name="http" extrainfo="SSDP/UPnP" version="2.0" conf="10" method="probed"></service></port><port protocol="tcp" portid="9389"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product=".NET Message Framing" method="probed" conf="10" name="mc-nmf"></service></port><port protocol="tcp" portid="49666"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49667"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49670"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC over HTTP" version="1.0" method="probed" conf="10" name="ncacn_http"></service></port><port protocol="tcp" portid="49671"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49675"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port><port protocol="tcp" portid="49696"><state reason="syn-ack" state="open" reason_ttl="127"></state><service product="Microsoft Windows RPC" method="probed" conf="10" name="msrpc"></service></port></ports><os><portused state="open" portid="53" proto="tcp"></portused><osmatch line="9077" name="AVtech Room Alert 26W environmental monitor" accuracy="87"><osclass type="specialized" osfamily="embedded" vendor="AVtech" osgen="" accuracy="87"></osclass></osmatch></os><uptime lastboot="" seconds=""></uptime><tcpsequence index="261" values="C8C50B69,DE531B53,93D9D9EB,7310128,58F38D14,754F7208" difficulty="Good luck!"></tcpsequence><ipidsequence values="AF03,AF04,AF05,AF06,AF07,AF08" class="Incremental"></ipidsequence><tcptssequence values="" class="none returned (unsupported)"></tcptssequence><trace port="139" proto="tcp"><hop rtt="112.41" host="" ipaddr="10.10.0.1" ttl="1"></hop><hop rtt="116.34" host="" ipaddr="172.31.3.8" ttl="2"></hop></trace></host><runstats><finished timestr="Sun Aug 16 17:05:34 2020" time="1597590334"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

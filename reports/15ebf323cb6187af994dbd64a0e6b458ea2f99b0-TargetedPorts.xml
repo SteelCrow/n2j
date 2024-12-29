@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Aug 18 19:27:47 2019 as: nmap -p135,139,445 -&#45;script vuln -oA nmap/TargetedPorts 10.11.1.218 -->
+<nmaprun scanner="nmap" args="nmap -p135,139,445 -&#45;script vuln -oA nmap/TargetedPorts 10.11.1.218" start="1566145667" startstr="Sun Aug 18 19:27:47 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="135,139,445"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1566145701" endtime="1566145707"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.218" addrtype="ipv4"/>
+<address addr="00:50:56:B8:30:E9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="observer.thinc.local" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="samba-vuln-cve-2012-1182" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script></hostscript><times srtt="14620" rttvar="6391" to="100000"/>
+</host>
+<runstats><finished time="1566145707" timestr="Sun Aug 18 19:28:27 2019" elapsed="39.73" summary="Nmap done at Sun Aug 18 19:28:27 2019; 1 IP address (1 host up) scanned in 39.73 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

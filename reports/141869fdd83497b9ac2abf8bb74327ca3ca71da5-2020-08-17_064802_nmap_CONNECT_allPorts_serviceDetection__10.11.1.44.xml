@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Aug 17 06:48:54 2020 as: nmap -sV -sT -p- -oA 2020-08-17_064802_nmap_CONNECT_allPorts_serviceDetection__10.11.1.44 10.11.1.44 -->
+<nmaprun scanner="nmap" args="nmap -sV -sT -p- -oA 2020-08-17_064802_nmap_CONNECT_allPorts_serviceDetection__10.11.1.44 10.11.1.44" start="1597661334" startstr="Mon Aug 17 06:48:54 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1597661334" endtime="1597661443"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.11.1.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="conn-refused" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="5.3p1 Debian 3ubuntu7" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.3p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-alt" tunnel="ssl" method="probed" conf="10"/></port>
+</ports>
+<times srtt="26496" rttvar="6579" to="100000"/>
+</host>
+<runstats><finished time="1597661443" timestr="Mon Aug 17 06:50:43 2020" elapsed="109.56" summary="Nmap done at Mon Aug 17 06:50:43 2020; 1 IP address (1 host up) scanned in 109.56 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

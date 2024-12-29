@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 18 11:36:15 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/_top_100_udp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/xml/_top_100_udp_nmap.xml 10.11.1.44 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/_top_100_udp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/xml/_top_100_udp_nmap.xml 10.11.1.44" start="1660836975" startstr="Thu Aug 18 11:36:15 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660836976"/>
+<taskend task="NSE" time="1660836976"/>
+<taskbegin task="NSE" time="1660836976"/>
+<taskend task="NSE" time="1660836976"/>
+<taskbegin task="NSE" time="1660836976"/>
+<taskend task="NSE" time="1660836976"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660836976"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660836976"/>
+<taskbegin task="UDP Scan" time="1660836976"/>
+<taskend task="UDP Scan" time="1660837073" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1660837073"/>
+<taskprogress task="Service scan" time="1660837129" percent="9.09" remaining="560" etc="1660837689"/>
+<taskend task="Service scan" time="1660837147" extrainfo="11 services on 1 host"/>
+<taskbegin task="Traceroute" time="1660837150"/>
+<taskend task="Traceroute" time="1660837150"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1660837150"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1660837150"/>
+<taskbegin task="NSE" time="1660837150"/>
+<taskend task="NSE" time="1660837176"/>
+<taskbegin task="NSE" time="1660837176"/>
+<taskend task="NSE" time="1660837177"/>
+<taskbegin task="NSE" time="1660837177"/>
+<taskend task="NSE" time="1660837177"/>
+<host starttime="1660836976" endtime="1660837177"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.44" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="89">
+<extrareasons reason="port-unreach" count="89" proto="udp" ports="7,9,17,19,49,53,67,69,88,120,123,135-138,158,161-162,177,427,443,445,497,500,514-515,518,520,623,626,631,996-997,999,1022,1025-1030,1433-1434,1645,1701,1718-1719,1812-1813,1900,2048-2049,2222-2223,3283,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49190-49194,49200-49201,65024"/>
+</extraports>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="80"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
+<port protocol="udp" portid="111"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="593"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="http-rpc-epmap" method="table" conf="3"/></port>
+<port protocol="udp" portid="998"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="puparp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1023"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="1646"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="radacct" method="table" conf="3"/></port>
+<port protocol="udp" portid="2000"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="udp" portid="3456"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="IISrpc-or-vat" method="table" conf="3"/></port>
+<port protocol="udp" portid="49188"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="7"/>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/18%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=62FE5D39%P=x86_64-pc-linux-gnu)&#xa;SEQ(II=I)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="2"/>
+<trace port="443" proto="udp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="141.67"/>
+<hop ttl="2" ipaddr="10.11.1.44" rtt="141.88"/>
+</trace>
+<times srtt="143067" rttvar="2807" to="154295"/>
+</host>
+<taskbegin task="NSE" time="1660837177"/>
+<taskend task="NSE" time="1660837177"/>
+<taskbegin task="NSE" time="1660837177"/>
+<taskend task="NSE" time="1660837177"/>
+<taskbegin task="NSE" time="1660837177"/>
+<taskend task="NSE" time="1660837177"/>
+<runstats><finished time="1660837177" timestr="Thu Aug 18 11:39:37 2022" summary="Nmap done at Thu Aug 18 11:39:37 2022; 1 IP address (1 host up) scanned in 202.67 seconds" elapsed="202.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

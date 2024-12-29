@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Wed May  6 12:37:29 2020 as: nmap -&#45;script vuln -p 631 -T4 -oX /home/ryoma/Desktop/18731-demo/18731_control_logic/output/2020-05-06_12:37:29_631_output.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -&#45;script vuln -p 631 -T4 -oX /home/ryoma/Desktop/18731-demo/18731_control_logic/output/2020-05-06_12:37:29_631_output.xml 127.0.0.1" start="1588783049" startstr="Wed May  6 12:37:29 2020" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="631"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1588783060" endtime="1588783092"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="631"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ipp" method="table" conf="3"/><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="63" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1588783092" timestr="Wed May  6 12:38:12 2020" elapsed="42.62" summary="Nmap done at Wed May  6 12:38:12 2020; 1 IP address (1 host up) scanned in 42.62 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

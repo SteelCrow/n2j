@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Feb 25 21:12:18 2021 as: nmap -v -Pn -p 80,443,8080,8443,9443 -n -iL /tmp/network.txt -&#45;open -oX /tmp/nmap.xml -->
+<nmaprun scanner="nmap" args="nmap -v -Pn -p 80,443,8080,8443,9443 -n -iL /tmp/network.txt -&#45;open -oX /tmp/nmap.xml" start="1614287538" startstr="Thu Feb 25 21:12:18 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="5" services="80,443,8080,8443,9443"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1614287538"/>
+<taskend task="SYN Stealth Scan" time="1614287540" extrainfo="10 total ports"/>
+<host starttime="1614287538" endtime="1614287539"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="74.125.138.101" addrtype="ipv4"/>
+<hostnames>
+<hostname name="google.com" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="3">
+<extrareasons reason="no-responses" count="3"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="55"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="22811" rttvar="17132" to="100000"/>
+</host>
+<host starttime="1614287538" endtime="1614287540"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="40.76.4.15" addrtype="ipv4"/>
+<hostnames>
+<hostname name="microsoft.com" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="3">
+<extrareasons reason="no-responses" count="3"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="44"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="51087" rttvar="38706" to="205911"/>
+</host>
+<runstats><finished time="1614287540" timestr="Thu Feb 25 21:12:20 2021" summary="Nmap done at Thu Feb 25 21:12:20 2021; 2 IP addresses (2 hosts up) scanned in 1.62 seconds" elapsed="1.62" exit="success"/><hosts up="2" down="0" total="2"/>
+</runstats>
+</nmaprun>

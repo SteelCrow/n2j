@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?><nmaprun start="1594715392" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Tue Jul 14 10:29:52 2020" args="nmap -p 1-65535 -T4 -A -v 172.31.1.3"><scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2020-07-14 10:29 CEST
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 10:29
+Completed NSE at 10:29, 0.00s elapsed
+Initiating NSE at 10:29
+Completed NSE at 10:29, 0.00s elapsed
+Initiating NSE at 10:29
+Completed NSE at 10:29, 0.00s elapsed
+Initiating Ping Scan at 10:29
+Scanning 172.31.1.3 [4 ports]
+Completed Ping Scan at 10:29, 0.18s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 10:29
+Completed Parallel DNS resolution of 1 host. at 10:29, 0.03s elapsed
+Initiating SYN Stealth Scan at 10:29
+Scanning 172.31.1.3 [65535 ports]
+Discovered open port 22/tcp on 172.31.1.3
+Discovered open port 80/tcp on 172.31.1.3
+Discovered open port 21/tcp on 172.31.1.3
+Increasing send delay for 172.31.1.3 from 0 to 5 due to 16 out of 39 dropped probes since last increase.
+SYN Stealth Scan Timing: About 5.80% done; ETC: 10:38 (0:08:24 remaining)
+SYN Stealth Scan Timing: About 11.73% done; ETC: 10:38 (0:07:39 remaining)
+SYN Stealth Scan Timing: About 17.82% done; ETC: 10:38 (0:07:00 remaining)
+SYN Stealth Scan Timing: About 23.86% done; ETC: 10:38 (0:06:26 remaining)
+SYN Stealth Scan Timing: About 29.67% done; ETC: 10:38 (0:05:58 remaining)
+SYN Stealth Scan Timing: About 35.91% done; ETC: 10:38 (0:05:23 remaining)
+SYN Stealth Scan Timing: About 41.90% done; ETC: 10:38 (0:04:53 remaining)
+SYN Stealth Scan Timing: About 47.82% done; ETC: 10:38 (0:04:23 remaining)
+SYN Stealth Scan Timing: About 53.88% done; ETC: 10:38 (0:03:52 remaining)
+SYN Stealth Scan Timing: About 59.99% done; ETC: 10:38 (0:03:21 remaining)
+SYN Stealth Scan Timing: About 66.09% done; ETC: 10:38 (0:02:50 remaining)
+SYN Stealth Scan Timing: About 72.32% done; ETC: 10:38 (0:02:18 remaining)
+SYN Stealth Scan Timing: About 79.00% done; ETC: 10:38 (0:01:44 remaining)
+SYN Stealth Scan Timing: About 85.36% done; ETC: 10:38 (0:01:12 remaining)
+SYN Stealth Scan Timing: About 91.55% done; ETC: 10:38 (0:00:42 remaining)
+Completed SYN Stealth Scan at 10:38, 494.57s elapsed (65535 total ports)
+Initiating Service scan at 10:38
+Scanning 3 services on 172.31.1.3
+Completed Service scan at 10:38, 6.22s elapsed (3 services on 1 host)
+Initiating OS detection (try #1) against 172.31.1.3
+adjust_timeouts2: packet supposedly had rtt of -145080 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -145080 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -186646 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -186646 microseconds.  Ignoring time.
+Retrying OS detection (try #2) against 172.31.1.3
+Retrying OS detection (try #3) against 172.31.1.3
+adjust_timeouts2: packet supposedly had rtt of -147464 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -147464 microseconds.  Ignoring time.
+Retrying OS detection (try #4) against 172.31.1.3
+Retrying OS detection (try #5) against 172.31.1.3
+Initiating Traceroute at 10:38
+Completed Traceroute at 10:38, 0.11s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 10:38
+Completed Parallel DNS resolution of 2 hosts. at 10:38, 0.03s elapsed
+NSE: Script scanning 172.31.1.3.
+Initiating NSE at 10:38
+Completed NSE at 10:38, 4.21s elapsed
+Initiating NSE at 10:38
+Completed NSE at 10:38, 0.45s elapsed
+Initiating NSE at 10:38
+Completed NSE at 10:38, 0.00s elapsed
+Nmap scan report for 172.31.1.3
+Host is up (0.11s latency).
+Not shown: 65532 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 12:ee:09:94:d5:4b:4a:d9:3b:95:3a:d6:63:e7:98:6f (RSA)
+|   256 b9:f8:52:aa:62:02:af:6c:09:ca:dc:3e:7b:b3:94:b7 (ECDSA)
+|_  256 53:5d:98:f7:61:e0:57:df:38:96:f9:be:59:77:6c:f4 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Steak House Shock
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=7/14%OT=21%CT=1%CU=38818%PV=Y%DS=2%DC=T%G=Y%TM=5F0D6F0
+OS:C%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=104%TI=Z%CI=Z%TS=A)SEQ(SP=1
+OS:01%GCD=1%ISR=104%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M54EST11NW7%O2=M54EST11NW7%O
+OS:3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)WIN(W1=F4B3%W2=
+OS:F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M54ENNSN
+OS:W7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%R
+OS:IPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 8.656 days (since Sun Jul  5 18:53:33 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT       ADDRESS
+1   111.77 ms 10.10.0.1
+2   111.90 ms 172.31.1.3
+
+NSE: Script Post-scanning.
+Initiating NSE at 10:38
+Completed NSE at 10:38, 0.00s elapsed
+Initiating NSE at 10:38
+Completed NSE at 10:38, 0.00s elapsed
+Initiating NSE at 10:38
+Completed NSE at 10:38, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 525.70 seconds
+           Raw packets sent: 66959 (2.954MB) | Rcvd: 111652 (12.623MB)
+</output><host comment=""><status state="up"></status><address addrtype="ipv4" vendor="" addr="172.31.1.3"></address><hostnames></hostnames><ports><extraports count="65532" state="closed"></extraports><port protocol="tcp" portid="21"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="vsftpd" version="3.0.3" method="probed" conf="10" name="ftp"></service></port><port protocol="tcp" portid="22"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="OpenSSH" name="ssh" extrainfo="Ubuntu Linux; protocol 2.0" version="7.6p1 Ubuntu 4ubuntu0.3" conf="10" method="probed"></service></port><port protocol="tcp" portid="80"><state reason="syn-ack" state="open" reason_ttl="63"></state><service product="Apache httpd" name="http" extrainfo="(Ubuntu)" version="2.4.29" conf="10" method="probed"></service></port></ports><os><portused state="open" portid="21" proto="tcp"></portused><portused state="closed" portid="1" proto="tcp"></portused><portused state="closed" portid="38818" proto="udp"></portused><osmatch line="62708" name="Linux 3.1" accuracy="95"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="95"></osclass></osmatch><osmatch line="64455" name="Linux 3.2" accuracy="95"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="95"></osclass></osmatch><osmatch line="61606" name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94"><osclass type="webcam" osfamily="embedded" vendor="AXIS" osgen="" accuracy="94"></osclass></osmatch><osmatch line="8344" name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93"><osclass type="WAP" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch line="63962" name="Linux 3.16" accuracy="93"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="93"></osclass></osmatch><osmatch line="1579" name="Adtran 424RG FTTH gateway" accuracy="92"><osclass type="specialized" osfamily="embedded" vendor="Adtran" osgen="" accuracy="92"></osclass></osmatch><osmatch line="55173" name="Linux 2.6.32" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="2.6.X" accuracy="92"></osclass></osmatch><osmatch line="58074" name="Linux 2.6.39 - 3.2" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="92"></osclass></osmatch><osmatch line="63314" name="Linux 3.11" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="3.X" accuracy="92"></osclass></osmatch><osmatch line="65105" name="Linux 3.2 - 4.9" accuracy="92"><osclass type="general purpose" osfamily="Linux" vendor="Linux" osgen="4.X" accuracy="92"></osclass></osmatch></os><uptime lastboot="Sun Jul  5 18:53:33 2020" seconds="747903"></uptime><tcpsequence index="257" values="22AE801C,4A9A7C69,9D6F3670,900601C9,80DC6FCD,5BAEBD7C" difficulty="Good luck!"></tcpsequence><ipidsequence values="0,0,0,0,0,0" class="All zeros"></ipidsequence><tcptssequence values="2C9400BC,2C940123,2C94018B,2C9401EC,2C94024D,2C9402B4" class="1000HZ"></tcptssequence><trace port="8080" proto="tcp"><hop rtt="111.77" host="" ipaddr="10.10.0.1" ttl="1"></hop><hop rtt="111.90" host="" ipaddr="172.31.1.3" ttl="2"></hop></trace></host><runstats><finished timestr="Tue Jul 14 10:38:36 2020" time="1594715916"></finished><hosts down="0" total="1" up="1"></hosts></runstats></nmaprun>

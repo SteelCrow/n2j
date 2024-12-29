@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Wed Aug 21 13:02:08 2024 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Notes/Labs/OSCP-A/192.168.196.141/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/Notes/Labs/OSCP-A/192.168.196.141/scans/tcp80/xml/tcp_80_http_nmap.xml 192.168.196.141 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Notes/Labs/OSCP-A/192.168.196.141/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/Notes/Labs/OSCP-A/192.168.196.141/scans/tcp80/xml/tcp_80_http_nmap.xml 192.168.196.141" start="1724259728" startstr="Wed Aug 21 13:02:08 2024" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1724259730"/>
+<taskend task="NSE" time="1724259730"/>
+<taskbegin task="NSE" time="1724259730"/>
+<taskend task="NSE" time="1724259730"/>
+<taskbegin task="NSE" time="1724259730"/>
+<taskend task="NSE" time="1724259730"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1724259730"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1724259735"/>
+<taskbegin task="SYN Stealth Scan" time="1724259735"/>
+<taskend task="SYN Stealth Scan" time="1724259735" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1724259736"/>
+<taskend task="Service scan" time="1724259745" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1724259745"/>
+<taskprogress task="NSE" time="1724259776" percent="83.93" remaining="6" etc="1724259782"/>
+<taskprogress task="NSE" time="1724259806" percent="85.95" remaining="10" etc="1724259816"/>
+<taskprogress task="NSE" time="1724259836" percent="86.97" remaining="14" etc="1724259850"/>
+<taskprogress task="NSE" time="1724259866" percent="99.03" remaining="2" etc="1724259867"/>
+<taskprogress task="NSE" time="1724259896" percent="99.68" remaining="1" etc="1724259896"/>
+<taskprogress task="NSE" time="1724259926" percent="99.68" remaining="1" etc="1724259927"/>
+<taskend task="NSE" time="1724259941"/>
+<taskbegin task="NSE" time="1724259941"/>
+<taskend task="NSE" time="1724259944"/>
+<taskbegin task="NSE" time="1724259944"/>
+<taskend task="NSE" time="1724259944"/>
+<host starttime="1724259735" endtime="1724259944"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.196.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="125"/><service name="http" product="Apache httpd" version="2.4.51" extrainfo="(Win64) PHP/7.4.26" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.51</cpe></service><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-title" output="Home"><elem key="title">Home</elem>
+</script><script id="http-malware-host" output="Host appears to be clean"/><script id="http-headers" output="&#xa;  Date: Wed, 21 Aug 2024 17:02:33 GMT&#xa;  Server: Apache/2.4.51 (Win64) PHP/7.4.26&#xa;  Last-Modified: Fri, 01 Apr 2022 12:37:15 GMT&#xa;  ETag: &quot;901a-5db9709d9433b&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 36890&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.141&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 21&#xa;    Comment: &#xa;        /*!&#xa;        Waypoints - 4.0.1&#xa;        Copyright \xC2\xA9 2011-2016 Caleb Troughton&#xa;        Licensed under the MIT license.&#xa;        https://github.com/imakewebthings/waypoints/blob/master/licenses.txt&#xa;        */&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 7&#xa;    Comment: &#xa;        /*! PhotoSwipe - v4.1.3 - 2019-01-08&#xa;        * http://photoswipe.com&#xa;        * Copyright (c) 2019 Dmitry Semenov; */&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 2&#xa;    Comment: &#xa;        /*!&#xa;         * https://github.com/gilmoreorless/css-background-parser&#xa;         * Copyright \xC2\xA9 2015 Gilmore Davidson under the MIT license: http://gilmoreorless.mit-license.org/&#xa;         */&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 35&#xa;    Comment: &#xa;        /*!&#xa;         * gumshoejs v5.1.2&#xa;         * A simple, framework-agnostic scrollspy script.&#xa;         * (c) 2019 Chris Ferdinandi&#xa;         * MIT License&#xa;         * http://github.com/cferdinandi/gumshoe&#xa;         */&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 13&#xa;    Comment: &#xa;        /*!&#xa;         * skrollr core&#xa;         *&#xa;         * Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr&#xa;         *&#xa;         * Free to use under terms of MIT license&#xa;         */&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 28&#xa;    Comment: &#xa;        /*!&#xa;         * JavaScript Cookie v2.2.1&#xa;         * https://github.com/js-cookie/js-cookie&#xa;         *&#xa;         * Copyright 2006, 2015 Klaus Hartl &amp; Fagner Brack&#xa;         * Released under the MIT license&#xa;         */&#xa;    &#xa;    Path: http://192.168.196.141:80/nicepage.js&#xa;    Line number: 10&#xa;    Comment: &#xa;        /*! PhotoSwipe Default UI - 4.1.3 - 2019-01-08&#xa;        * http://photoswipe.com&#xa;        * Copyright (c) 2019 Dmitry Semenov; */&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-date" output="Wed, 21 Aug 2024 17:02:45 GMT; -3s from local time."><elem key="date">2024-08-21T17:02:45+00:00</elem>
+<elem key="delta">-3.0</elem>
+</script><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-dombased-xss" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.141&#xa;  Found the following indications of potential DOM based XSS: &#xa;    &#xa;    Source: window.open(i.href,&quot;pswp_share&quot;,&quot;scrollbars=yes,resizable=yes,toolbar=no,&quot;+&quot;location=yes,width=550,height=420,top=100,left=&quot;+(window.screen?Math.round(screen.width/2-275)&#xa;    Pages: http://192.168.196.141:80/nicepage.js&#xa;"/><script id="http-chrono" output="Request times for /; avg: 4684.46ms; min: 3292.66ms; max: 6117.38ms"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-server-header" output="Apache/2.4.51 (Win64) PHP/7.4.26"><elem>Apache/2.4.51 (Win64) PHP/7.4.26</elem>
+</script><script id="http-php-version" output="Logo query returned unknown hash 37e6bb29ab0ac359102ab80e86c0bdb8&#xa;Credits query returned unknown hash 37e6bb29ab0ac359102ab80e86c0bdb8"/><script id="http-apache-negotiation" output="mod_negotiation enabled."/><script id="http-generator" output="Nicepage 4.8.2, nicepage.com"/><script id="http-security-headers" output=""></script><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.196.141&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://192.168.196.141:80/&#xa;    Form id: name-2e40&#xa;    Form action: #&#xa;    &#xa;    Path: http://192.168.196.141:80/&#xa;    Form id: name-61fc&#xa;    Form action: #&#xa;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-methods" output="&#xa;  Supported Methods: GET POST OPTIONS HEAD TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-trace" output="TRACE is enabled&#xa;Headers:&#xa;Date: Wed, 21 Aug 2024 17:02:25 GMT&#xa;Server: Apache/2.4.51 (Win64) PHP/7.4.26&#xa;Connection: close&#xa;Transfer-Encoding: chunked&#xa;Content-Type: message/http&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-exif-spider" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; css: 2; js: 2&#xa;    /images/&#xa;      jpeg: 1; jpg: 3; png: 8&#xa;  Longest directory structure:&#xa;    Depth: 1&#xa;    Dir: /images/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 2; jpeg: 1; jpg: 3; js: 2; png: 8&#xa;"/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-enum" output="&#xa;  /blog/: Blog&#xa;  /home.html: Possible admin folder&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /images/: Potentially interesting directory w/ listing on &apos;apache/2.4.51 (win64) php/7.4.26&apos;&#xa;  /script/: Potentially interesting directory w/ listing on &apos;apache/2.4.51 (win64) php/7.4.26&apos;&#xa;"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-grep" output="&#xa;  (1) http://192.168.196.141:80/%25url%25: &#xa;    (1) ip: &#xa;      + 192.168.196.141"><table key="(1) http://192.168.196.141:80/%25url%25">
+<table key="(1) ip">
+<elem>+ 192.168.196.141</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="454378" rttvar="454378" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1724259944"/>
+<taskend task="NSE" time="1724259944"/>
+<taskbegin task="NSE" time="1724259944"/>
+<taskend task="NSE" time="1724259944"/>
+<taskbegin task="NSE" time="1724259944"/>
+<taskend task="NSE" time="1724259944"/>
+<runstats><finished time="1724259944" timestr="Wed Aug 21 13:05:44 2024" summary="Nmap done at Wed Aug 21 13:05:44 2024; 1 IP address (1 host up) scanned in 215.72 seconds" elapsed="215.72" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

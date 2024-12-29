@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Tue Jul 26 18:59:30 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 123 &quot;-&#45;script=banner,(ntp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/forest/results/10.10.10.161/scans/udp123/udp_123_ntp_nmap.txt -oX /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/forest/results/10.10.10.161/scans/udp123/xml/udp_123_ntp_nmap.xml 10.10.10.161 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 123 &quot;-&#45;script=banner,(ntp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/forest/results/10.10.10.161/scans/udp123/udp_123_ntp_nmap.txt -oX /home/Default/Documents/Repos/Default_/Platforms/HacktheBox/machines/easy/forest/results/10.10.10.161/scans/udp123/xml/udp_123_ntp_nmap.xml 10.10.10.161" start="1658876370" startstr="Tue Jul 26 18:59:30 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="123"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1658876370"/>
+<taskend task="NSE" time="1658876370"/>
+<taskbegin task="NSE" time="1658876370"/>
+<taskend task="NSE" time="1658876370"/>
+<taskbegin task="NSE" time="1658876370"/>
+<taskend task="NSE" time="1658876370"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1658876370"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1658876370"/>
+<taskbegin task="UDP Scan" time="1658876370"/>
+<taskend task="UDP Scan" time="1658876370" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1658876370"/>
+<taskend task="Service scan" time="1658876370" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1658876370"/>
+<taskend task="NSE" time="1658876381"/>
+<taskbegin task="NSE" time="1658876381"/>
+<taskend task="NSE" time="1658876381"/>
+<taskbegin task="NSE" time="1658876381"/>
+<taskend task="NSE" time="1658876381"/>
+<host starttime="1658876370" endtime="1658876381"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.161" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="123"><state state="open" reason="udp-response" reason_ttl="127"/><service name="ntp" product="NTP" version="v3" method="probed" conf="10"/><script id="ntp-info" output="&#xa;  receive time stamp: 2022-07-26T23:07:05"><elem key="receive time stamp">2022-07-26T23:07:05</elem>
+</script></port>
+</ports>
+<times srtt="13949" rttvar="13949" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1658876381"/>
+<taskend task="NSE" time="1658876381"/>
+<taskbegin task="NSE" time="1658876381"/>
+<taskend task="NSE" time="1658876381"/>
+<taskbegin task="NSE" time="1658876381"/>
+<taskend task="NSE" time="1658876381"/>
+<runstats><finished time="1658876381" timestr="Tue Jul 26 18:59:41 2022" summary="Nmap done at Tue Jul 26 18:59:41 2022; 1 IP address (1 host up) scanned in 10.74 seconds" elapsed="10.74" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Aug 20 21:59:03 2019 as: nmap -sC -sV -p 10443 -&#45;script vuln -oA nmap/targetedPort 10.11.1.234 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p 10443 -&#45;script vuln -oA nmap/targetedPort 10.11.1.234" start="1566327543" startstr="Tue Aug 20 21:59:03 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="10443"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1566327578" endtime="1566327687"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.234" addrtype="ipv4"/>
+<address addr="00:50:56:B8:AC:94" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="core.thinc.local" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="10443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="CoreHTTP httpd" version="0.5.3.1" method="probed" conf="10"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /dev/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-server-header" output="corehttp-0.5.3.1"><elem>corehttp-0.5.3.1</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/></port>
+</ports>
+<times srtt="16520" rttvar="12396" to="100000"/>
+</host>
+<runstats><finished time="1566327687" timestr="Tue Aug 20 22:01:27 2019" elapsed="143.76" summary="Nmap done at Tue Aug 20 22:01:27 2019; 1 IP address (1 host up) scanned in 143.76 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

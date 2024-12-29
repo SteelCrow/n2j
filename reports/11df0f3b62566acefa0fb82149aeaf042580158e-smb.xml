@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Jan 22 20:02:12 2022 as: nmap -p 135 -oA nmap/smb -iL hostlist.txt -->
+<nmaprun scanner="nmap" args="nmap -p 135 -oA nmap/smb -iL hostlist.txt" start="1642899732" startstr="Sat Jan 22 20:02:12 2022" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="135"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="172.16.16.30" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="88007" rttvar="73666" to="382671"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="18.116.252.88" addrtype="ipv4"/>
+<hostnames>
+<hostname name="ec2-18-116-252-88.us-east-2.compute.amazonaws.com" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="53269" rttvar="53269" to="266345"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.25" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="99017" rttvar="88921" to="454701"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="86782" rttvar="68660" to="361422"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="172.16.16.77" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="85445" rttvar="67291" to="354609"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.67" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="84795" rttvar="68902" to="360403"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="172.16.16.35" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="86797" rttvar="72214" to="375653"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.9" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="84282" rttvar="66343" to="349654"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.83" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="85440" rttvar="67221" to="354324"/>
+</host>
+<host starttime="1642899732" endtime="1642899732"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="172.16.16.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="85054" rttvar="68167" to="357722"/>
+</host>
+<runstats><finished time="1642899732" timestr="Sat Jan 22 20:02:12 2022" elapsed="1.04" summary="Nmap done at Sat Jan 22 20:02:12 2022; 10 IP addresses (10 hosts up) scanned in 1.04 seconds" exit="success"/><hosts up="10" down="0" total="10"/>
+</runstats>
+</nmaprun>

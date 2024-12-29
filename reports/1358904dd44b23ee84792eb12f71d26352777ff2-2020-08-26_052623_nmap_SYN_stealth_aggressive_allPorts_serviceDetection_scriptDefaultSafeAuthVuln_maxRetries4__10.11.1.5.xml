@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Aug 26 05:27:57 2020 as: nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-08-26_052623_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.5 10.11.1.5 -->
+<nmaprun scanner="nmap" args="nmap -sS -A -p- -sV -&#45;script default,safe,auth,vuln -&#45;max-retries 4 -oA 2020-08-26_052623_nmap_SYN_stealth_aggressive_allPorts_serviceDetection_scriptDefaultSafeAuthVuln_maxRetries4__10.11.1.5 10.11.1.5" start="1598434077" startstr="Wed Aug 26 05:27:57 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-dhcp-discover" output="&#xa;  Response 1 of 1: &#xa;    IP Offered: 192.168.0.25&#xa;    Server Identifier: 192.168.0.1&#xa;    Subnet Mask: 255.255.255.0&#xa;    Router: 192.168.0.1&#xa;    Domain Name Server: 75.75.75.75, 75.75.76.76"><table key="Response 1 of 1">
+<elem key="IP Offered">192.168.0.25</elem>
+<elem key="Server Identifier">192.168.0.1</elem>
+<elem key="Subnet Mask">255.255.255.0</elem>
+<elem key="Router">192.168.0.1</elem>
+<table key="Domain Name Server">
+<elem>75.75.75.75</elem>
+<elem>75.75.76.76</elem>
+</table>
+</table>
+</script><script id="broadcast-igmp-discovery" output="&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.22&#xa;    Description: IGMP&#xa;  192.168.0.29&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 224.0.0.251&#xa;    Description: mDNS (rfc6762)&#xa;  192.168.0.1&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  192.168.0.254&#xa;    Interface: eth0&#xa;    Version: 2&#xa;    Group: 239.255.255.250&#xa;    Description: Organization-Local Scope (rfc2365)&#xa;  Use the newtargets script-arg to add the results as targets&#xa;"/><script id="broadcast-listener" output="&#xa;  udp&#xa;      DHCP&#xa;        srv ip       cli ip        mask           gw           dns                       vendor&#xa;        192.168.0.1  192.168.0.23  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.23  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.25  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;        192.168.0.1  192.168.0.25  255.255.255.0  192.168.0.1  75.75.75.75, 75.75.76.76  -&#xa;      Netbios&#xa;        Query&#xa;          ip            query&#xa;          192.168.0.34  &#xa;"/><script id="broadcast-netbios-master-browser" output="&#xa;ip  server  domain&#xa;"/><script id="broadcast-upnp-info" output="&#xa;  239.255.255.250&#xa;      Server: Unspecified, UPnP/1.0, Unspecified&#xa;      Location: http://192.168.0.254:49152/wps_device.xml&#xa;"/><script id="eap-info" output="please specify an interface with -e"/><script id="targets-asn" output="&#xa;  targets-asn.asn is a mandatory parameter&#xa;"/></prescript><host starttime="1598434118" endtime="1598434214"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.11.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="resets" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows XP microsoft-ds" ostype="Windows XP" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows_xp</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="1025"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="40147"/>
+<osmatch name="Microsoft Windows XP" accuracy="95" line="80047">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="95"><cpe>cpe:/o:microsoft:windows_xp</cpe></osclass>
+</osmatch>
+<osmatch name="Belkin OmniView KVM switch or SMA Sunny WebBox solar panel monitor" accuracy="91" line="9578">
+<osclass type="specialized" vendor="Belkin" osfamily="embedded" accuracy="91"/>
+<osclass type="power-device" vendor="SMA" osfamily="embedded" accuracy="91"/>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="91" line="76100">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2" accuracy="90" line="82015">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="90"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="90" line="82881">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="90"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 Server SP4 or Windows XP Professional SP3" accuracy="89" line="69821">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="89"><cpe>cpe:/o:microsoft:windows_2000::sp4:server</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="89"><cpe>cpe:/o:microsoft:windows_xp::sp3:professional</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 SP4" accuracy="89" line="70626">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="89"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003 SP2" accuracy="88" line="72922">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2003::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows CE 6.0" accuracy="86" line="79225">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="PocketPC/CE" accuracy="86"><cpe>cpe:/o:microsoft:windows_ce:6.0</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003 SP0 or Windows XP SP2" accuracy="86" line="79955">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="86"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="86"><cpe>cpe:/o:microsoft:windows_server_2003::-</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/26%OT=135%CT=1%CU=40147%PV=Y%DS=2%DC=T%G=Y%TM=5F462B&#xa;OS:A6%P=x86_64-pc-linux-gnu)SEQ(SP=83%GCD=1%ISR=9D%TI=I%II=I%SS=S%TS=0)OPS(&#xa;OS:O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS&#xa;OS:%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%&#xa;OS:W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=80%W=FAF0%O=M54DNW0NNS%CC=N%Q=)T1(R=Y%DF=&#xa;OS:Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=N%T=80%W=0%S&#xa;OS:=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=38%UN=0%RIPL=&#xa;OS:G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="127" difficulty="Good luck!" values="13A4A2E2,13A5F784,13A72DAE,13A84FBC,13A963E5,13AA90EE"/>
+<ipidsequence class="Incremental" values="9CF,9D0,9D1,9D2,9D3,9D4"/>
+<tcptssequence class="zero timestamp" values="0,0,0,0,0,0"/>
+<hostscript><script id="clock-skew" output="mean: -29m59s, deviation: 42m24s, median: -59m59s"><elem key="median">-3599</elem>
+<elem key="mean">-1799</elem>
+<elem key="count">2</elem>
+<elem key="stddev">2544</elem>
+</script><script id="fcrdns" output="FAIL (No PTR record)"><table key="&lt;none&gt;">
+<elem key="status">fail</elem>
+<elem key="reason">No PTR record</elem>
+</table>
+</script><script id="ipidseq" output="Unknown"/><script id="msrpc-enum" output="&#xa;  &#xa;    ip_addr: 0.0.0.0&#xa;    udp_port: 1028&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    ncalrpc: OLE3&#xa;    exe: mstask.exe atsvc interface (Scheduler service)&#xa;    uuid: 1ff70682-0a51-30e8-076d-740be8cee98b&#xa;  &#xa;    tcp_port: 1025&#xa;    ip_addr: 0.0.0.0&#xa;    exe: mstask.exe atsvc interface (Scheduler service)&#xa;    uuid: 1ff70682-0a51-30e8-076d-740be8cee98b&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\atsvc&#xa;    exe: mstask.exe atsvc interface (Scheduler service)&#xa;    uuid: 1ff70682-0a51-30e8-076d-740be8cee98b&#xa;  &#xa;    ncalrpc: OLE3&#xa;    uuid: 378e52b0-c0a9-11cf-822d-00aa0051e40f&#xa;  &#xa;    tcp_port: 1025&#xa;    ip_addr: 0.0.0.0&#xa;    uuid: 378e52b0-c0a9-11cf-822d-00aa0051e40f&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\atsvc&#xa;    uuid: 378e52b0-c0a9-11cf-822d-00aa0051e40f&#xa;  &#xa;    ncalrpc: OLE3&#xa;    uuid: 0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53&#xa;  &#xa;    tcp_port: 1025&#xa;    ip_addr: 0.0.0.0&#xa;    uuid: 0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\atsvc&#xa;    uuid: 0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53&#xa;  &#xa;    ncalrpc: OLE3&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    tcp_port: 1025&#xa;    ip_addr: 0.0.0.0&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\atsvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    ncalrpc: AudioSrv&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\wkssvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\SECLOGON&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \pipe\trkwks&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    ncalrpc: trkwks&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \pipe\keysvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    ncalrpc: keysvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    ncalrpc: senssvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\srvsvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service&#xa;  &#xa;    netbios: \\ALICE&#xa;    ncacn_np: \PIPE\msgsvc&#xa;    exe: messenger msgsvcsend interface (Messenger service)&#xa;    uuid: 5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc&#xa;    annotation: Messenger Service"><table>
+<elem key="ip_addr">0.0.0.0</elem>
+<elem key="udp_port">1028</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="ncalrpc">OLE3</elem>
+<elem key="exe">mstask.exe atsvc interface (Scheduler service)</elem>
+<elem key="uuid">1ff70682-0a51-30e8-076d-740be8cee98b</elem>
+</table>
+<table>
+<elem key="tcp_port">1025</elem>
+<elem key="ip_addr">0.0.0.0</elem>
+<elem key="exe">mstask.exe atsvc interface (Scheduler service)</elem>
+<elem key="uuid">1ff70682-0a51-30e8-076d-740be8cee98b</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\atsvc</elem>
+<elem key="exe">mstask.exe atsvc interface (Scheduler service)</elem>
+<elem key="uuid">1ff70682-0a51-30e8-076d-740be8cee98b</elem>
+</table>
+<table>
+<elem key="ncalrpc">OLE3</elem>
+<elem key="uuid">378e52b0-c0a9-11cf-822d-00aa0051e40f</elem>
+</table>
+<table>
+<elem key="tcp_port">1025</elem>
+<elem key="ip_addr">0.0.0.0</elem>
+<elem key="uuid">378e52b0-c0a9-11cf-822d-00aa0051e40f</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\atsvc</elem>
+<elem key="uuid">378e52b0-c0a9-11cf-822d-00aa0051e40f</elem>
+</table>
+<table>
+<elem key="ncalrpc">OLE3</elem>
+<elem key="uuid">0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53</elem>
+</table>
+<table>
+<elem key="tcp_port">1025</elem>
+<elem key="ip_addr">0.0.0.0</elem>
+<elem key="uuid">0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\atsvc</elem>
+<elem key="uuid">0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53</elem>
+</table>
+<table>
+<elem key="ncalrpc">OLE3</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="tcp_port">1025</elem>
+<elem key="ip_addr">0.0.0.0</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\atsvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="ncalrpc">AudioSrv</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\wkssvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\SECLOGON</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\pipe\trkwks</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="ncalrpc">trkwks</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\pipe\keysvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="ncalrpc">keysvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="ncalrpc">senssvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\srvsvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+<table>
+<elem key="netbios">\\ALICE</elem>
+<elem key="ncacn_np">\PIPE\msgsvc</elem>
+<elem key="exe">messenger msgsvcsend interface (Messenger service)</elem>
+<elem key="uuid">5a7b91f8-ff00-11d0-a9b2-00c04fb6e6fc</elem>
+<elem key="annotation">Messenger Service</elem>
+</table>
+</script><script id="nbstat" output="NetBIOS name: ALICE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:8a:44:97 (VMware)"/><script id="path-mtu" output="PMTU == 1500"/><script id="qscan" output="&#xa;PORT  FAMILY  MEAN (us)  STDDEV    LOSS (%)&#xa;1     0       24844.00   7902.60   0.0%&#xa;135   0       22102.90   4001.78   0.0%&#xa;139   1       45640.00   34318.80  0.0%&#xa;445   0       20414.70   2987.53   0.0%&#xa;1025  0       24210.60   6117.83   0.0%&#xa;"/><script id="smb-mbenum" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-os-discovery" output="&#xa;  OS: Windows XP (Windows 2000 LAN Manager)&#xa;  OS CPE: cpe:/o:microsoft:windows_xp::-&#xa;  Computer name: alice&#xa;  NetBIOS computer name: ALICE\x00&#xa;  Domain name: thinc.local&#xa;  Forest name: thinc.local&#xa;  FQDN: alice.thinc.local&#xa;  System time: 2020-08-26T10:29:47+01:00&#xa;"><elem key="os">Windows 5.1</elem>
+<elem key="lanmanager">Windows 2000 LAN Manager</elem>
+<elem key="server">ALICE\x00</elem>
+<elem key="date">2020-08-26T10:29:47+01:00</elem>
+<elem key="fqdn">alice.thinc.local</elem>
+<elem key="domain_dns">thinc.local</elem>
+<elem key="forest_dns">thinc.local</elem>
+<elem key="workgroup">THINC\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_xp::-</elem>
+</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms08-067" output="&#xa;  VULNERABLE:&#xa;  Microsoft Windows system vulnerable to remote code execution (MS08-067)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2008-4250&#xa;          The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,&#xa;          Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary&#xa;          code via a crafted RPC request that triggers the overflow during path canonicalization.&#xa;          &#xa;    Disclosure date: 2008-10-23&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250&#xa;      https://technet.microsoft.com/en-us/library/security/ms08-067.aspx&#xa;"><table key="CVE-2008-4250">
+<elem key="title">Microsoft Windows system vulnerable to remote code execution (MS08-067)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2008-4250</elem>
+</table>
+<table key="description">
+<elem>    The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,&#xa;    Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary&#xa;    code via a crafted RPC request that triggers the overflow during path canonicalization.&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="year">2008</elem>
+<elem key="month">10</elem>
+<elem key="day">23</elem>
+</table>
+</table>
+<elem key="disclosure">2008-10-23</elem>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250</elem>
+<elem>https://technet.microsoft.com/en-us/library/security/ms08-067.aspx</elem>
+</table>
+</table>
+</script><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_OBJECT_NAME_NOT_FOUND">false</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="year">2017</elem>
+<elem key="month">03</elem>
+<elem key="day">14</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+</table>
+</table>
+</script><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/><script id="traceroute-geolocation" output="&#xa;  HOP  RTT    ADDRESS        GEOLOCATION&#xa;  1    16.22  192.168.119.1  - ,- &#xa;  2    16.54  10.11.1.5      - ,- &#xa;"><table>
+<elem key="rtt">16.22</elem>
+<elem key="hop">1</elem>
+<elem key="ip">192.168.119.1</elem>
+</table>
+<table>
+<elem key="rtt">16.54</elem>
+<elem key="hop">2</elem>
+<elem key="ip">10.11.1.5</elem>
+</table>
+</script></hostscript><trace port="443" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="16.22"/>
+<hop ttl="2" ipaddr="10.11.1.5" rtt="16.54"/>
+</trace>
+<times srtt="18583" rttvar="3185" to="100000"/>
+</host>
+<postscript><script id="reverse-index" output="&#xa;  135/tcp: 10.11.1.5&#xa;  139/tcp: 10.11.1.5&#xa;  445/tcp: 10.11.1.5&#xa;  1025/tcp: 10.11.1.5"><table key="135/tcp">
+<elem>10.11.1.5</elem>
+</table>
+<table key="139/tcp">
+<elem>10.11.1.5</elem>
+</table>
+<table key="445/tcp">
+<elem>10.11.1.5</elem>
+</table>
+<table key="1025/tcp">
+<elem>10.11.1.5</elem>
+</table>
+</script></postscript><runstats><finished time="1598434214" timestr="Wed Aug 26 05:30:14 2020" elapsed="137.18" summary="Nmap done at Wed Aug 26 05:30:14 2020; 1 IP address (1 host up) scanned in 137.18 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

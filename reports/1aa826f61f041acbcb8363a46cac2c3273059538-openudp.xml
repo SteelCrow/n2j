@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Mar 15 02:07:16 2019 as: nmap -sU -p- -&#45;min-rate 10000 -oA openudp 192.168.3.155 -->
+<nmaprun scanner="nmap" args="nmap -sU -p- -&#45;min-rate 10000 -oA openudp 192.168.3.155" start="1552630036" startstr="Fri Mar 15 02:07:16 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="UDP Scan" time="1552630038" percent="12.29" remaining="15" etc="1552630052"/>
+<taskprogress task="UDP Scan" time="1552630040" percent="14.46" remaining="24" etc="1552630064"/>
+<taskprogress task="UDP Scan" time="1552630090" percent="74.48" remaining="19" etc="1552630109"/>
+<host starttime="1552630036" endtime="1552630111"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.3.155" addrtype="ipv4"/>
+<address addr="00:0C:29:13:07:B2" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="open|filtered" count="65457">
+<extrareasons reason="no-responses" count="65457"/>
+</extraports>
+<extraports state="closed" count="77">
+<extrareasons reason="port-unreaches" count="77"/>
+</extraports>
+<port protocol="udp" portid="111"><state state="open" reason="udp-response" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+</ports>
+<times srtt="1064" rttvar="1236" to="100000"/>
+</host>
+<runstats><finished time="1552630111" timestr="Fri Mar 15 02:08:31 2019" elapsed="75.55" summary="Nmap done at Fri Mar 15 02:08:31 2019; 1 IP address (1 host up) scanned in 75.55 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
