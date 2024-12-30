@@ -6,7 +6,7 @@ use crate::{Attribute, Error, Result};
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Distance {
-    value: u32,
+    pub value: u32,
 }
 
 impl Distance {

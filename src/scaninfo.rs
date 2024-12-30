@@ -8,10 +8,10 @@ use crate::{ports::PortProtocol, Attribute, Error, Result};
 #[serde(rename_all = "snake_case")]
 pub struct ScanInfo {
     #[serde(rename = "type")]
-    ttype: String,
-    protocol: PortProtocol,
-    numservices: u32,
-    services: String,
+    pub ttype: String,
+    pub protocol: PortProtocol,
+    pub numservices: u32,
+    pub services: String,
 }
 
 impl ScanInfo {

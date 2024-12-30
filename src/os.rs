@@ -39,7 +39,7 @@ pub struct Portused {
 }
 
 impl Portused {
-    fn parse(node: Node) -> Result<Portused> {
+    pub fn parse(node: Node) -> Result<Portused> {
         let state = node
             .attribute("state")
             .ok_or(Error::MissedAttribute)
@@ -82,7 +82,7 @@ pub struct Osmatch {
 }
 
 impl Osmatch {
-    fn parse(node: Node) -> Result<Osmatch> {
+    pub fn parse(node: Node) -> Result<Osmatch> {
         let name = node
             .attribute("name")
             .ok_or(Error::MissedAttribute)
@@ -140,7 +140,7 @@ pub struct Osclass {
 }
 
 impl Osclass {
-    fn parse(node: Node) -> Result<Osclass> {
+    pub fn parse(node: Node) -> Result<Osclass> {
         let ttype = node
             .attribute("type")
             .ok_or(Error::MissedAttribute)
@@ -194,7 +194,7 @@ impl Osclass {
 pub struct Cpe(String);
 
 impl Cpe {
-    fn parse(node: Node) -> Result<Cpe> {
+    pub fn parse(node: Node) -> Result<Cpe> {
         let cpe = node
             .text()
             .ok_or(Error::MissedElement)
@@ -211,7 +211,7 @@ pub struct Osfingerprint {
 }
 
 impl Osfingerprint {
-    fn parse(node: Node<'_, '_>) -> Result<Osfingerprint> {
+    pub fn parse(node: Node<'_, '_>) -> Result<Osfingerprint> {
         let fingerprint = node
             .attribute("fingerprint")
             .ok_or(Error::MissedAttribute)

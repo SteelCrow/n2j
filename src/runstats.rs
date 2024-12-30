@@ -8,8 +8,8 @@ use crate::{Attribute, Error, Result};
 #[derive(Default, Debug, Clone, Serialize, Deserialize)]
 #[skip_serializing_none]
 pub struct RunStats {
-    finished: Option<Finished>,
-    hosts: Option<Hosts>,
+    pub finished: Option<Finished>,
+    pub hosts: Option<Hosts>,
 }
 
 impl RunStats {
@@ -30,12 +30,12 @@ impl RunStats {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[skip_serializing_none]
 pub struct Finished {
-    time: i64,
-    elapsed: Option<f64>,
+    pub time: i64,
+    pub elapsed: Option<f64>,
 }
 
 impl Finished {
-    fn parse(node: Node) -> Result<Finished> {
+    pub fn parse(node: Node) -> Result<Finished> {
         let time = node
             .attribute("time")
             .ok_or(Error::MissedAttribute)
@@ -57,13 +57,13 @@ impl Finished {
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Hosts {
-    up: i64,
-    down: i64,
-    total: i64,
+    pub up: i64,
+    pub down: i64,
+    pub total: i64,
 }
 
 impl Hosts {
-    fn parse(node: Node) -> Result<Hosts> {
+    pub fn parse(node: Node) -> Result<Hosts> {
         let up = node
             .attribute("up")
             .ok_or(Error::MissedAttribute)

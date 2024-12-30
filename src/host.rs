@@ -33,7 +33,7 @@ pub struct Host {
 }
 
 impl Host {
-    pub(crate) fn parse(node: Node) -> Result<Self> {
+    pub fn parse(node: Node) -> Result<Self> {
         let start_time = node
             .attribute("starttime")
             .map(str::parse::<u32>)

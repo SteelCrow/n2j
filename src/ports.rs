@@ -15,7 +15,7 @@ pub struct Ports {
 }
 
 impl Ports {
-    pub(crate) fn parse(node: Node) -> Result<Self> {
+    pub fn parse(node: Node) -> Result<Self> {
         let mut ports = Vec::new();
         let mut extraports = Vec::new();
 
@@ -131,7 +131,7 @@ pub struct Port {
 }
 
 impl Port {
-    fn parse(node: Node) -> Result<Self> {
+    pub fn parse(node: Node) -> Result<Self> {
         let protocol = node
             .attribute("protocol")
             .ok_or(Error::MissedAttribute)
@@ -191,7 +191,7 @@ pub struct PortStatus {
 }
 
 impl PortStatus {
-    fn parse(node: Node) -> Result<Self> {
+    pub fn parse(node: Node) -> Result<Self> {
         let state = node
             .attribute("state")
             .ok_or(Error::MissedAttribute)
@@ -243,7 +243,7 @@ pub struct Service {
 }
 
 impl Service {
-    fn parse(node: Node) -> Result<Self> {
+    pub fn parse(node: Node) -> Result<Self> {
         let name = node
             .attribute("name")
             .ok_or(Error::MissedAttribute)
