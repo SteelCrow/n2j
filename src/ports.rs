@@ -1,18 +1,41 @@
 use error_stack::ResultExt;
 use roxmltree::Node;
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 use std::str::FromStr;
 use strum_macros::EnumString;
 
 use crate::{Attribute, Error, Result};
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Ports {
     pub ports: Vec<Port>,
     pub extraports: Option<Vec<Extraports>>,
 }
 
+impl Ports {
+    pub(crate) fn parse(node: Node) -> Result<Self> {
+        let mut ports = Vec::new();
+        let mut extraports = Vec::new();
+
+        for child in node.children() {
+            match child.tag_name().name() {
+                "port" => ports.push(Port::parse(child)?),
+                "extraports" => extraports.push(Extraports::parse(child)?),
+                _ => {}
+            }
+        }
+
+        Ok(Ports {
+            ports,
+            extraports: Some(extraports).filter(|x| !x.is_empty()),
+        })
+    }
+}
+
 #[derive(Clone, Debug, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Extraports {
     pub state: PortState,
     pub count: u32,
@@ -47,18 +70,16 @@ impl Extraports {
             }
         }
 
-        let extrareasons = Option::from(extrareasons).filter(|x| !x.is_empty());
-
         Ok(Extraports {
             state,
             count,
-            extrareasons,
+            extrareasons: Some(extrareasons).filter(|x| !x.is_empty()),
         })
     }
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
-
+#[skip_serializing_none]
 pub struct Extrareasons {
     pub reason: String,
     pub count: u32,
@@ -100,26 +121,8 @@ impl Extrareasons {
     }
 }
 
-impl Ports {
-    pub(crate) fn parse(node: Node) -> Result<Self> {
-        let mut ports = Vec::new();
-        let mut extraports = Vec::new();
-
-        for child in node.children() {
-            match child.tag_name().name() {
-                "port" => ports.push(Port::parse(child)?),
-                "extraports" => extraports.push(Extraports::parse(child)?),
-                _ => {}
-            }
-        }
-
-        let extraports = Option::from(extraports).filter(|x| !x.is_empty());
-
-        Ok(Ports { ports, extraports })
-    }
-}
-
 #[derive(Clone, Debug, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Port {
     pub protocol: PortProtocol,
     pub port_number: u16,
@@ -180,6 +183,7 @@ pub enum PortProtocol {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct PortStatus {
     pub state: PortState,
     pub reason: Option<String>,
@@ -229,6 +233,7 @@ pub enum PortState {
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Service {
     pub name: String,
     pub product: Option<String>,

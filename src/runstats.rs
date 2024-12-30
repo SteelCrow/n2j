@@ -1,10 +1,12 @@
 use error_stack::ResultExt;
 use roxmltree::Node;
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 
 use crate::{Attribute, Error, Result};
 
 #[derive(Default, Debug, Clone, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct RunStats {
     finished: Option<Finished>,
     hosts: Option<Hosts>,
@@ -26,6 +28,7 @@ impl RunStats {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Finished {
     time: i64,
     elapsed: Option<f64>,

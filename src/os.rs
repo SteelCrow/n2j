@@ -6,6 +6,7 @@ use error_stack::ResultExt;
 use roxmltree::Node;
 use serde::Deserialize;
 use serde::Serialize;
+use serde_with::skip_serializing_none;
 
 #[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct Os {
@@ -72,6 +73,7 @@ impl Portused {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Osmatch {
     pub name: String,
     pub accuracy: i64,
@@ -105,6 +107,7 @@ impl Osmatch {
             .attach_printable(Attribute(("line", "osmatch")))?;
 
         let mut osclass = Vec::new();
+
         for child in node.children() {
             #[allow(clippy::single_match)]
             match child.tag_name().name() {
@@ -115,22 +118,17 @@ impl Osmatch {
             }
         }
 
-        let osclass = if osclass.is_empty() {
-            None
-        } else {
-            Some(osclass)
-        };
-
         Ok(Osmatch {
             name,
             accuracy,
             line,
-            osclass,
+            osclass: Some(osclass).filter(|v| !v.is_empty()),
         })
     }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Osclass {
     #[serde(rename = "type")]
     pub ttype: String,
@@ -143,7 +141,7 @@ pub struct Osclass {
 
 impl Osclass {
     fn parse(node: Node) -> Result<Osclass> {
-        let type_field = node
+        let ttype = node
             .attribute("type")
             .ok_or(Error::MissedAttribute)
             .attach_printable(Attribute(("type", "osclass")))?
@@ -171,26 +169,23 @@ impl Osclass {
             .change_context(Error::FailedToParseAttribute)
             .attach_printable(Attribute(("accuracy", "osclass")))?;
 
-        let mut cpe = None;
+        let mut cpe = Vec::new();
+
         for child in node.children() {
             #[allow(clippy::single_match)]
             match child.tag_name().name() {
-                "cpe" => {
-                    let mut t_cpe = cpe.unwrap_or(Vec::new());
-                    t_cpe.push(Cpe::parse(child)?);
-                    cpe = Some(t_cpe);
-                }
+                "cpe" => cpe.push(Cpe::parse(child)?),
                 _ => {}
             }
         }
 
         Ok(Osclass {
-            ttype: type_field,
+            ttype,
             vendor,
             osfamily,
             osgen,
             accuracy,
-            cpe,
+            cpe: Some(cpe).filter(|v| !v.is_empty()),
         })
     }
 }

@@ -1,6 +1,7 @@
 use error_stack::ResultExt;
 use roxmltree::Node;
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 use strum_macros::EnumString;
 
 use crate::{Attribute, Error, Result};
@@ -16,6 +17,7 @@ pub enum HostState {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct Status {
     pub state: HostState,
     pub reason: Option<String>,

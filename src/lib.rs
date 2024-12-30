@@ -17,6 +17,7 @@ pub mod status;
 use error_stack::ResultExt;
 use roxmltree::Document;
 use serde::{Deserialize, Serialize};
+use serde_with::skip_serializing_none;
 use std::{borrow::Cow, fmt};
 
 use crate::host::Host;
@@ -63,6 +64,7 @@ impl fmt::Display for Attribute {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
+#[skip_serializing_none]
 pub struct NmapRun {
     pub scanner: String,
     pub args: String,
@@ -138,30 +140,22 @@ impl NmapRun {
             .to_string();
 
         let parts = || -> Result<Self> {
-            let mut scaninfos = None;
+            let mut scaninfos = Vec::new();
+            let mut hosts = Vec::new();
             let mut runstats = None;
-            let mut hosts = None;
 
             for child in root_element.children() {
                 match child.tag_name().name() {
-                    "scaninfo" => {
-                        let mut t_scaninfos = scaninfos.unwrap_or(Vec::new());
-                        t_scaninfos.push(ScanInfo::parse(child)?);
-                        scaninfos = Some(t_scaninfos);
-                    }
-                    "host" => {
-                        let mut t_hosts = hosts.unwrap_or(Vec::new());
-                        t_hosts.push(Host::parse(child)?);
-                        hosts = Some(t_hosts);
-                    }
+                    "scaninfo" => scaninfos.push(ScanInfo::parse(child)?),
+                    "host" => hosts.push(Host::parse(child)?),
                     "runstats" => runstats = Some(RunStats::parse(child)?),
                     _ => {}
                 }
             }
 
             Ok(NmapRun {
-                scaninfos,
-                hosts,
+                scaninfos: Some(scaninfos).filter(|v| !v.is_empty()),
+                hosts: Some(hosts).filter(|v| !v.is_empty()),
                 scanner,
                 version: version.clone(),
                 xmloutputversion: xmloutputversion.clone(),
