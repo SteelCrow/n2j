@@ -1,5 +1,5 @@
 use crate::{
-    ports::{PortProtocol, PortState},
+    port::{PortProtocol, PortState},
     Attribute, Element, Error, Result,
 };
 use error_stack::ResultExt;
@@ -10,9 +10,9 @@ use serde_with::skip_serializing_none;
 
 #[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct Os {
-    pub portused: Vec<Portused>,
-    pub osmatch: Vec<Osmatch>,
-    pub osfingerprint: Osfingerprint,
+    pub portused: Vec<PortUsed>,
+    pub osmatch: Vec<OsMatch>,
+    pub osfingerprint: OsFingerprint,
 }
 
 impl Os {
@@ -20,9 +20,9 @@ impl Os {
         let mut os = Os::default();
         for child in node.children() {
             match child.tag_name().name() {
-                "portused" => os.portused.push(Portused::parse(child)?),
-                "osmatch" => os.osmatch.push(Osmatch::parse(child)?),
-                "osfingerprint" => os.osfingerprint = Osfingerprint::parse(child)?,
+                "portused" => os.portused.push(PortUsed::parse(child)?),
+                "osmatch" => os.osmatch.push(OsMatch::parse(child)?),
+                "osfingerprint" => os.osfingerprint = OsFingerprint::parse(child)?,
                 _ => {}
             }
         }
@@ -32,14 +32,14 @@ impl Os {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Portused {
+pub struct PortUsed {
     pub state: PortState,
     pub proto: PortProtocol,
     pub portid: i64,
 }
 
-impl Portused {
-    pub fn parse(node: Node) -> Result<Portused> {
+impl PortUsed {
+    pub fn parse(node: Node) -> Result<PortUsed> {
         let state = node
             .attribute("state")
             .ok_or(Error::MissedAttribute)
@@ -64,7 +64,7 @@ impl Portused {
             .change_context(Error::FailedToParseAttribute)
             .attach_printable(Attribute(("portid", "portused")))?;
 
-        Ok(Portused {
+        Ok(PortUsed {
             state,
             proto,
             portid,
@@ -74,15 +74,15 @@ impl Portused {
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Osmatch {
+pub struct OsMatch {
     pub name: String,
     pub accuracy: i64,
     pub line: Option<i64>,
-    pub osclass: Option<Vec<Osclass>>,
+    pub osclass: Option<Vec<OsClass>>,
 }
 
-impl Osmatch {
-    pub fn parse(node: Node) -> Result<Osmatch> {
+impl OsMatch {
+    pub fn parse(node: Node) -> Result<OsMatch> {
         let name = node
             .attribute("name")
             .ok_or(Error::MissedAttribute)
@@ -112,13 +112,13 @@ impl Osmatch {
             #[allow(clippy::single_match)]
             match child.tag_name().name() {
                 "osclass" => {
-                    osclass.push(Osclass::parse(child)?);
+                    osclass.push(OsClass::parse(child)?);
                 }
                 _ => {}
             }
         }
 
-        Ok(Osmatch {
+        Ok(OsMatch {
             name,
             accuracy,
             line,
@@ -129,7 +129,7 @@ impl Osmatch {
 
 #[skip_serializing_none]
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Osclass {
+pub struct OsClass {
     #[serde(rename = "type")]
     pub ttype: String,
     pub vendor: String,
@@ -139,8 +139,8 @@ pub struct Osclass {
     pub cpe: Option<Vec<Cpe>>,
 }
 
-impl Osclass {
-    pub fn parse(node: Node) -> Result<Osclass> {
+impl OsClass {
+    pub fn parse(node: Node) -> Result<OsClass> {
         let ttype = node
             .attribute("type")
             .ok_or(Error::MissedAttribute)
@@ -179,7 +179,7 @@ impl Osclass {
             }
         }
 
-        Ok(Osclass {
+        Ok(OsClass {
             ttype,
             vendor,
             osfamily,
@@ -206,12 +206,12 @@ impl Cpe {
 }
 
 #[derive(Default, Debug, Clone, Serialize, Deserialize)]
-pub struct Osfingerprint {
+pub struct OsFingerprint {
     pub fingerprint: String,
 }
 
-impl Osfingerprint {
-    pub fn parse(node: Node<'_, '_>) -> Result<Osfingerprint> {
+impl OsFingerprint {
+    pub fn parse(node: Node<'_, '_>) -> Result<OsFingerprint> {
         let fingerprint = node
             .attribute("fingerprint")
             .ok_or(Error::MissedAttribute)
@@ -220,6 +220,6 @@ impl Osfingerprint {
             .change_context(Error::FailedToParseAttribute)
             .attach_printable(Attribute(("fingerprint", "osfingerprint")))?;
 
-        Ok(Osfingerprint { fingerprint })
+        Ok(OsFingerprint { fingerprint })
     }
 }

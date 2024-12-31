@@ -8,7 +8,7 @@ use crate::{
     distance::Distance,
     hostname::Hostname,
     os::Os,
-    ports::{Extraports, Port, Ports},
+    port::{ExtraPorts, Port, Ports},
     script::Script,
     status::Status,
     Attribute, Element, Error, Result,
@@ -26,7 +26,7 @@ pub struct Host {
 
     pub host_names: Option<Vec<Hostname>>,
     pub ports: Option<Vec<Port>>,
-    pub extraports: Option<Vec<Extraports>>,
+    pub extraports: Option<Vec<ExtraPorts>>,
     pub os: Option<Os>,
     pub distance: Option<Distance>,
     pub host_scripts: Option<Vec<Script>>,

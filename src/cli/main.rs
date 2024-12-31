@@ -47,19 +47,19 @@ pub enum Error {
             after_help = cformat!(
 r#"<bold><underline>Examples:</underline></bold>
 
-  # Convert single report file and pretty print to console 
+  # Convert a single report file and pretty-print it to the console 
    
     <bold>n2j nmap.xml --pretty</bold>
 
-  # Convert all report files from directory and put them in another directory
+  # Convert all report files from a directory save them in another directory
   # <italic>/report/example.xml -> /reports/json/example.json</italic>
   # <italic>/report/example2.xml -> /reports/json/example2.json</italic>
-  <bold>[!]</bold> output directory should exists 
+  <bold>[!]</bold> The output directory must exist
 
     <bold>n2j /reports --output=/reports/json</bold>
 
-  # Convert all report files from directory and put them into one file
-  <bold>[!]</bold> output format ndjson by default
+  # Convert all report files from a directory and combine them into one file
+  <bold>[!]</bold> The default output format is NDJSON
 
     <bold>n2j /reports --output=reports.json</bold>
 "#))]

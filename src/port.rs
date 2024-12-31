@@ -11,7 +11,7 @@ use crate::{Attribute, Error, Result};
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Ports {
     pub ports: Option<Vec<Port>>,
-    pub extraports: Option<Vec<Extraports>>,
+    pub extraports: Option<Vec<ExtraPorts>>,
 }
 
 impl Ports {
@@ -22,7 +22,7 @@ impl Ports {
         for child in node.children() {
             match child.tag_name().name() {
                 "port" => ports.push(Port::parse(child)?),
-                "extraports" => extraports.push(Extraports::parse(child)?),
+                "extraports" => extraports.push(ExtraPorts::parse(child)?),
                 _ => {}
             }
         }
@@ -36,13 +36,13 @@ impl Ports {
 
 #[skip_serializing_none]
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct Extraports {
+pub struct ExtraPorts {
     pub state: PortState,
     pub count: u32,
-    pub extrareasons: Option<Vec<Extrareasons>>,
+    pub extrareasons: Option<Vec<ExtraReasons>>,
 }
 
-impl Extraports {
+impl ExtraPorts {
     pub fn parse(node: Node) -> Result<Self> {
         let state = node
             .attribute("state")
@@ -65,12 +65,12 @@ impl Extraports {
         for child in node.children() {
             #[allow(clippy::single_match)]
             match child.tag_name().name() {
-                "extrareasons" => extrareasons.push(Extrareasons::parse(child)?),
+                "extrareasons" => extrareasons.push(ExtraReasons::parse(child)?),
                 _ => {}
             }
         }
 
-        Ok(Extraports {
+        Ok(ExtraPorts {
             state,
             count,
             extrareasons: Some(extrareasons).filter(|x| !x.is_empty()),
@@ -80,14 +80,14 @@ impl Extraports {
 
 #[skip_serializing_none]
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct Extrareasons {
+pub struct ExtraReasons {
     pub reason: String,
     pub count: u32,
     pub proto: Option<PortProtocol>,
     pub ports: Option<String>,
 }
 
-impl Extrareasons {
+impl ExtraReasons {
     pub fn parse(node: Node) -> Result<Self> {
         let reason = node
             .attribute("reason")
@@ -112,7 +112,7 @@ impl Extrareasons {
 
         let ports = node.attribute("ports").map(Into::into);
 
-        Ok(Extrareasons {
+        Ok(ExtraReasons {
             reason,
             count,
             proto,

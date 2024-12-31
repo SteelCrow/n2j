@@ -8,7 +8,7 @@ pub mod distance;
 pub mod host;
 pub mod hostname;
 pub mod os;
-pub mod ports;
+pub mod port;
 pub mod runstats;
 pub mod scaninfo;
 pub mod script;

@@ -2,7 +2,7 @@ use error_stack::ResultExt;
 use roxmltree::Node;
 use serde::{Deserialize, Serialize};
 
-use crate::{ports::PortProtocol, Attribute, Error, Result};
+use crate::{port::PortProtocol, Attribute, Error, Result};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
