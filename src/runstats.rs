@@ -5,8 +5,8 @@ use serde_with::skip_serializing_none;
 
 use crate::{Attribute, Error, Result};
 
-#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct RunStats {
     pub finished: Option<Finished>,
     pub hosts: Option<Hosts>,
@@ -27,8 +27,8 @@ impl RunStats {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Finished {
     pub time: i64,
     pub elapsed: Option<f64>,

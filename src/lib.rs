@@ -63,8 +63,8 @@ impl fmt::Display for Attribute {
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct NmapRun {
     pub scanner: String,
     pub args: String,
@@ -77,7 +77,8 @@ pub struct NmapRun {
 }
 
 impl NmapRun {
-    pub fn parse_and_fix(xml: Cow<'_, str>) -> Result<Self> {
+    pub fn parse_and_fix<'a>(xml: impl Into<Cow<'a, str>>) -> Result<Self> {
+        let xml = xml.into();
         let mut nmaprun = NmapRun::parse(xml.as_ref());
         if let Err(ref e) = nmaprun {
             if e.downcast_ref::<roxmltree::Error>()
@@ -199,7 +200,7 @@ mod test {
                     .unwrap_or("unknown");
                 file.read_to_string(&mut content)?;
 
-                let report = NmapRun::parse_and_fix(content.into())
+                let report = NmapRun::parse_and_fix(content)
                     .attach_printable(format!("filename: {filename}"))
                     .attach_printable(format!("checked: {counter}"))?;
 

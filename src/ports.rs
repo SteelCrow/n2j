@@ -7,10 +7,10 @@ use strum_macros::EnumString;
 
 use crate::{Attribute, Error, Result};
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Ports {
-    pub ports: Vec<Port>,
+    pub ports: Option<Vec<Port>>,
     pub extraports: Option<Vec<Extraports>>,
 }
 
@@ -28,14 +28,14 @@ impl Ports {
         }
 
         Ok(Ports {
-            ports,
+            ports: Some(ports).filter(|v| !v.is_empty()),
             extraports: Some(extraports).filter(|x| !x.is_empty()),
         })
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Extraports {
     pub state: PortState,
     pub count: u32,
@@ -78,8 +78,8 @@ impl Extraports {
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Extrareasons {
     pub reason: String,
     pub count: u32,
@@ -121,8 +121,8 @@ impl Extrareasons {
     }
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Port {
     pub protocol: PortProtocol,
     pub port_number: u16,
@@ -182,8 +182,8 @@ pub enum PortProtocol {
     Sctp,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct PortStatus {
     pub state: PortState,
     pub reason: Option<String>,
@@ -232,8 +232,8 @@ pub enum PortState {
     Unknown,
 }
 
-#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Service {
     pub name: String,
     pub product: Option<String>,

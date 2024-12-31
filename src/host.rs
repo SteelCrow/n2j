@@ -14,8 +14,8 @@ use crate::{
     Attribute, Element, Error, Result,
 };
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Host {
     pub start_time: Option<u32>,
     pub end_time: Option<u32>,
@@ -25,7 +25,7 @@ pub struct Host {
     pub addresses: Vec<Address>,
 
     pub host_names: Option<Vec<Hostname>>,
-    pub ports: Vec<Port>,
+    pub ports: Option<Vec<Port>>,
     pub extraports: Option<Vec<Extraports>>,
     pub os: Option<Os>,
     pub distance: Option<Distance>,
@@ -58,7 +58,7 @@ impl Host {
         let mut status = None;
         let mut addresses = Vec::new();
         let mut host_names = None;
-        let mut ports = Vec::new();
+        let mut ports = None;
         let mut extraports = None;
         let mut os = None;
         let mut distance = None;

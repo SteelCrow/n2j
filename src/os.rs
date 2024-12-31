@@ -72,8 +72,8 @@ impl Portused {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Osmatch {
     pub name: String,
     pub accuracy: i64,
@@ -127,8 +127,8 @@ impl Osmatch {
     }
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Osclass {
     #[serde(rename = "type")]
     pub ttype: String,

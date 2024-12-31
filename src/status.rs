@@ -16,8 +16,8 @@ pub enum HostState {
     Skipped,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
 #[skip_serializing_none]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Status {
     pub state: HostState,
     pub reason: Option<String>,
