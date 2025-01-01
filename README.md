@@ -26,7 +26,7 @@ Install n2j using one of the following methods:
 1. Clone this repo:
 
 ```sh
-❯ git clone *this repo*
+❯ git clone https://github.com/SteelCrow/n2j.git
 ```
 
 2. Build library:
