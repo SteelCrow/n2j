@@ -103,8 +103,8 @@ Examples:
     n2j nmap.xml --pretty
 
   # Convert all report files from a directory save them in another directory
-  # /report/example.xml -> /reports/json/example.json
-  # /report/example2.xml -> /reports/json/example2.json
+  # /reports/example.xml -> /reports/json/example.json
+  # /reports/example2.xml -> /reports/json/example2.json
   [!] The output directory must exist
 
     n2j /reports --output=/reports/json
