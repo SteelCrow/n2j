@@ -52,8 +52,8 @@ r#"<bold><underline>Examples:</underline></bold>
     <bold>n2j nmap.xml --pretty</bold>
 
   # Convert all report files from a directory save them in another directory
-  # <italic>/report/example.xml -> /reports/json/example.json</italic>
-  # <italic>/report/example2.xml -> /reports/json/example2.json</italic>
+  # <italic>/reports/example.xml -> /reports/json/example.json</italic>
+  # <italic>/reports/example2.xml -> /reports/json/example2.json</italic>
   <bold>[!]</bold> The output directory must exist
 
     <bold>n2j /reports --output=/reports/json</bold>
