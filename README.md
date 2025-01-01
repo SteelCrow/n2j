@@ -44,7 +44,7 @@ Install n2j using one of the following methods:
 > [!NOTE] 
 > To quickly run cli-tool:
 > ```sh
-> cargo run --bin n2j --features=n2j_cli -- --help
+> ❯ cargo run --bin n2j --features=n2j_cli -- --help
 > ```
 
 ## Usage
