@@ -1,4 +1,4 @@
-name: Rust Release Workflow
+name: Release
 
 on:
   push:
