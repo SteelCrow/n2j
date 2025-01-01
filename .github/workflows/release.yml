@@ -1,0 +1,69 @@
+name: Rust Release Workflow
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+
+      - name: Install Cross (for cross-compilation)
+        run: cargo install cross
+
+      - name: Build binaries for release
+        run: |
+          # Build for all target platforms
+          cross build --bin n2j --features=n2j_cli --release --target x86_64-unknown-linux-gnu
+          cross build --bin n2j --features=n2j_cli --release --target x86_64-pc-windows-msvc
+          cross build --bin n2j --features=n2j_cli --release --target aarch64-apple-darwin
+          cross build --bin n2j --features=n2j_cli --release --target x86_64-apple-darwin
+          cross build --bin n2j --features=n2j_cli --release --target x86_64-unknown-linux-musl
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: |
+            target/x86_64-unknown-linux-gnu/release/n2j
+            target/x86_64-pc-windows-msvc/release/n2j.exe
+            target/aarch64-apple-darwin/release/n2j
+            target/x86_64-apple-darwin/release/n2j
+            target/x86_64-unknown-linux-musl/release/n2j
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifacts
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            target/x86_64-unknown-linux-gnu/release/n2j
+            target/x86_64-pc-windows-msvc/release/n2j.exe
+            target/aarch64-apple-darwin/release/n2j
+            target/x86_64-apple-darwin/release/n2j
+            target/x86_64-unknown-linux-musl/release/n2j
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
