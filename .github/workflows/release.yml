@@ -45,7 +45,7 @@ jobs:
           command: "build"
           target: ${{ matrix.platform.target }}
           toolchain: ${{ matrix.toolchain }}
-          args: "--bin n2j --features=n2j_cli --locked --release"
+          args: "--bin n2j --features=n2j_cli --release"
           strip: true
       - name: Rename binary (linux and macos)
         run: mv target/${{ matrix.platform.target }}/release/n2j target/${{ matrix.platform.target }}/release/${{ matrix.platform.bin }}
